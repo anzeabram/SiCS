@@ -1,0 +1,11 @@
+;WALLS Project File
+.BOOK	Mrzla jama
+.NAME	1 SIFON
+.STATUS	3
+.SURVEY	Suhi deli
+.NAME	SUHI
+.STATUS	8
+.SURVEY	Glavni rov
+.NAME	12.10.2019
+.STATUS	8
+.ENDBOOK

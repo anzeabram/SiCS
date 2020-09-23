@@ -1,0 +1,18 @@
+; Line name: Merjeno v jamo. Od zacetka ozkega dela s tremi SM ozinami do dvorane
+; Team: Alan Bizjak, Anze Abram
+#DATE  2020-07-15
+#UNITS meters ORDER=DA Tape=SS
+; From 	To 	Dist 	Az 	D-From  	D-To	LRUD	Comment
+T39	T40	4.76	150.9	16.34	14.31	<0,0,0,0>	;
+T40	T41	2.77	162.6	14.22	14.6	<0,0,0,0>	;
+T41	T42	5.53	173.3	14.67	14.53	<0,0,0,0>	;
+T42	T43	1.13	102.6	14.57	14.2	<0,0,0,0>	;
+T43	T44	4.11	113.9	14.2	14.7	<0,0,0,0>	;
+T44	T45	2.75	185	14.67	12.66	<0,0,0,0>	;
+T45	T46	3.2	24.1	12.63	11.63	<0,0,0,0>	;
+T46	T47	3.74	22.2	11.52	10.6	<0,0,0,0>	;
+T47	T48	8.24	71.7	10.5	8.66	<0,0,0,0>	;
+T48	T49	3.78	288	8.61	6.39	<0,0,0,0>	;
+T49	T50	12	334.7	6.21	3.31	<0,0,0,0>	;
+T50	T51	6.98	330.3	3.22	1.78	<0,0,0,0>	;
+T51	T52	5.46	8.4	1.79	0.14	<0,0,0,0>	; Kamen v dvorani na koncu S2 pred blatnim delom

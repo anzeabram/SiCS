@@ -1,0 +1,16 @@
+; Line name: Merjeno v jamo. Zadnji jump v levo pred 650m
+; Team: Alan Bizjak, Anze Abram
+#DATE  2018-11-18
+#UNITS meters ORDER=DA Tape=SS
+; From 	To 	Dist 	Az 	D-From  	D-To	LRUD	Comment
+ML103	F1	3.08	134.1	17.39	16.71	<0,0,0,0>	; Temporary line, jump
+F1	F2	4.65	159.7	16.62	16.21	<0,0,0,0>	;
+F2	F3	7.08	155.3	16.08	14.77	<0,0,0,0>	;
+F3	F4	5.09	244.7	15.07	15.82	<0,0,0,0>	;
+F4	F5	2.31	214.4	15.84	16.19	<0,0,0,0>	;
+F5	ML106	5.77	257.3	16.34	18.03	<0,0,0,0>	; Temporary line, jump
+
+; Line name: Dvojni T, levi krak, merjeno VEN iz jame.
+ML113	G2	1.91	29.4	22.63	22.46	<0,0,0,0>	; Permanent T
+G2	G1	1.77	72.2	22.41	22.22	<0,0,0,0>	;
+G1	ML110	7.27	358.6	22.13	21.58	<0,0,0,0>	; Permanent T

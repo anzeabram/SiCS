@@ -1,0 +1,13 @@
+; Line name: Merjeno iz jame.
+; Team: Alan Bizjak, Simon Burja, Igor Vrhovec, Sebastjan Gantar
+#DATE  2019-10-20
+#UNITS meters ORDER=DA Tape=SS
+; From 	To 	Dist 	Az 	D-From  	D-To	LRUD
+T39	T38	10.24	197.35	16.08	18.48	<0,0,0,0>
+T38	T37	12.42	205.4	18.64	21.77	<0,0,0,0>
+T37	T36	1.94	219.4	21.85	22.33	<0,0,0,0>
+T36	T35	6.94	246.65	22.4	24.02	<0,0,0,0>
+T35	T34	1.54	217.8	24.05	24.48	<0,0,0,0>
+T34	T33	0.96	248.65	24.67	24.75	<0,0,0,0>
+T33	T32	2.39	302.3	24.74	24.63	<0,0,0,0>
+T32	T31	2.23	224.1	24.72	25.3	<0,0,0,0>

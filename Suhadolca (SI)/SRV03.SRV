@@ -1,0 +1,12 @@
+; Line name: Merjeno IZ jame. Prvi jump na levi na poti IZ jame (po kanjoncku).
+; Team: Matej Korsic, Anze Abram
+#DATE  2018-01-26
+#UNITS meters ORDER=DA Tape=SS
+; From 	To 	Dist 	Az 	D-From  	D-To	LRUD	Comment
+ML53	B6	6.54	308.3	6.3	7.27	<0,0,0,0>	; jump
+B6	B5	5.26	26.2	7.25	6.77	<0,0,0,0>	;
+B5	B4	4.3	8.55	6.7	5.17	<0,0,0,0>	;
+B4	B3	7.58	21.2	4.77	3.03	<0,0,0,0>	;
+B3	B2	3.91	34.65	3.04	2.55	<0,0,0,0>	;
+B2	B1	2.33	32.3	2.45	1.82	<0,0,0,0>	;
+B1	ML46	1.98	133.55	1.59	3.3	<0,0,0,0>	; jump

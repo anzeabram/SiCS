@@ -1,0 +1,10 @@
+; Line name: Merjeno IZ stranskega rova na levi po jebici.
+; Team: Andraz Mulej, Anze Abram
+#DATE  2018-05-08
+#UNITS meters ORDER=DA Tape=SS
+; From 	To 	Dist 	Az 	D-From  	D-To	LRUD	Comment
+E5	E4	5.13	4.6	5.56	5.42	<0,0,0,0>	; podor
+E4	E3	5.94	15.1	5.41	2.81	<0,0,0,0>	;
+E3	E2	3.28	359.85	2.78	3.02	<0,0,0,0>	;
+E2	E1	4.43	321.5	3.31	4.35	<0,0,0,0>	;
+E1	ML78	0.9	280.5	4.5	4.53	<0,0,0,0>	; neoznacen jump

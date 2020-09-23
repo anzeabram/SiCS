@@ -1,0 +1,15 @@
+; Line name: Mereno V jamo. Kompoljska stranski rov, zadnji del do SM ozine							
+; Team: Alan Bizjak, Anze Abram							
+#DATE  2018-09-22							
+#UNITS meters ORDER=DA Tape=SS							
+; From 	To 	Dist 	Az 	D-From  	D-To	LRUD	Comment
+C21	C22	5.73	204.1	6.96	6.84	<0,0,0,0>	; 
+C22	C23	0.69	169.6	6.9	6.9	<0,0,0,0>	; 
+C23	C24	3.12	214.3	7.03	7.84	<0,0,0,0>	; 
+C24	C25	0.94	165.6	7.9	8.07	<0,0,0,0>	; 
+C25	C26	2.35	178	8.02	8.19	<0,0,0,0>	; 
+C26	C27	5.8	233.6	8.29	10.12	<0,0,0,0>	; 
+C27	C28	7.85	151.4	10.26	10.11	<0,0,0,0>	; 
+C28	C29	4.32	126.6	10.1	9.46	<0,0,0,0>	; 
+C29	C30	10.28	134.5	9.43	10.12	<0,0,0,0>	; 
+C30	C31	2.27	86.1	10.07	9.36	<0,0,0,0>	; konec parmanentnega strika, SM ozina in gap

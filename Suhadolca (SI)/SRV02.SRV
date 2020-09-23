@@ -1,0 +1,13 @@
+; Line name: Suhadolca. Prvi, zasigan, stranski rov v jami na levi (gledano od vhoda). Zadnje pritrdisce je kolut, ki je zavezan za eno palico, ki je zarita v "glino". Bi bilo za potegnit do konca in pospravit kolut.
+; Team: Matej Korsic, Anze Abram
+#DATE  2018-01-26
+#UNITS meters ORDER=DA Tape=SS
+; From 	To 	Dist 	Az 	D-From  	D-To	LRUD	Comment
+ML19	A1	1.83	101.65	1.13	0.51	<0,0,0,0>	;
+A1	A2	1.5	110.65	0.54	0.72	<0,0,0,0>	;
+A2	A3	7.83	104.8	0.72	0.58	<0,0,0,0>	;
+A3	A4	7.31	117.6	0.37	0.66	<0,0,0,0>	;
+A4	A5	3.53	84.95	0.61	0.47	<0,0,0,0>	;
+A5	A6	4.61	37.9	0.51	0.62	<0,0,0,0>	;
+A6	A7	2.14	75.8	0.63	0.51	<0,0,0,0>	;
+A7	A8	5.69	109.75	0.48	1.62	<0,0,0,0>	; Strik se konca na kolutu (bel), ki je zavezan na palci, zariti sredi rova. Rov gre se malo naprej.

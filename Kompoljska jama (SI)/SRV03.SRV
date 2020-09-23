@@ -1,0 +1,13 @@
+; Line name: Merjeno v jamo, ML, 2. sifon
+; Team: Alan Bizjak, Anze Abram
+#DATE  2018-04-10
+#UNITS meters ORDER=DA Tape=SS
+; From 	To 	Dist 	Az 	D-From  	D-To	LRUD	Comment
+A5	B1	2.79	197	-0.46	-0.17	<0,0,0,0>	; zacetek 2. sifona, jezerce
+B1	B2	8.1	150.4	-0.17	2.54	<0,0,0,0>	;
+B2	B3	7.31	151.65	2.57	2.82	<0,0,0,0>	;
+B3	B4	7.39	193	2.81	6.33	<0,0,0,0>	;
+B4	B5	5.09	237.05	6.39	7.89	<0,0,0,0>	;
+B5	B6	15.16	261.4	7.9	12.29	<0,0,0,0>	;
+B6	B7	1.48	248.1	12.18	11.27	<0,0,0,0>	; jump na drugo vrvico
+B7	B8	8.49	256.95	10.77	8.25	<0,0,0,0>	; podor

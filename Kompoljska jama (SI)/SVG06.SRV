@@ -1,0 +1,13 @@
+; Line name: Merjeno IZ jame. 20m po SM ozini v stranskem rovu							
+; Team: Alan Bizjak, Anze Abram							
+#DATE  2018-09-22							
+#UNITS meters ORDER=DA Tape=SS							
+; From 	To 	Dist 	Az 	D-From  	D-To	LRUD	Comment
+C39	C38	7.33	263.1	2.88	5.04	<0,0,0,0>	; Konec strika, SM ozina, ki jo je treba pogledat
+C38	C37	2.31	225.1	5.11	5.53	<0,0,0,0>	; 
+C37	C36	5.61	217.2	5.7	6.77	<0,0,0,0>	; 
+C36	C35	1.4	267	6.78	6.87	<0,0,0,0>	; 
+C35	C34	3.06	276	6.88	7.38	<0,0,0,0>	; 
+C34	C33	1.93	264.6	7.48	7.53	<0,0,0,0>	; 
+C33	C32	1.08	220.4	7.65	7.67	<0,0,0,0>	; 
+C32	C31	8.47	255.5	7.76	9.11	<0,0,0,0>	; Gap skozi SM ozino

@@ -1,0 +1,12 @@
+; Line name: Suhadolca. Merjeno IZ jame. Prvi jump na desni na poti IZ jame (po kanjoncku).
+; Team: Matej Korsic, Anze Abram
+#DATE  2018-01-26
+#UNITS meters ORDER=DA Tape=SS
+; From 	To 	Dist 	Az 	D-From  	D-To	LRUD	Comment
+ML65	D6	2.43	102.3	8.9	8.03	<0,0,0,0>	; jump
+D6	D5	12.93	30.25	7.77	6.3	<0,0,0,0>	;
+D5	D4	3.84	352.5	6.23	6.15	<0,0,0,0>	;
+D4	D3	4.07	49.45	6.13	5.68	<0,0,0,0>	;
+D3	D2	7.95	23.75	5.61	4.42	<0,0,0,0>	;
+D2	D1	12.89	307.1	4.53	7.5	<0,0,0,0>	;
+D1	ML60	2.6	288.7	7.61	8.14	<0,0,0,0>	; jump
