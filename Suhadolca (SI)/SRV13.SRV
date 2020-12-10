@@ -1,0 +1,16 @@
+; Line name: Merjeno iz jame. Globoki del po 1500 m.
+; Team: Sebastjan Gantar, Simon Burja
+#DATE  2020-10-30
+#UNITS meters ORDER=DA Tape=SS
+; From 	To 	Dist 	Az 	D-From  	D-To	LRUD	Comment
+ML262	ML261	8.7	43.8	31.17	35.63	<0,0,0,0>	; restriction sm
+ML261	ML260	9.2	15.15	35.75	38.76	<0,0,0,0>	;
+ML260	ML259	7.54	328.5	38.75	38.96	<0,0,0,0>	;
+ML259	ML258	7.16	21.2	38.94	38.21	<0,0,0,0>	;
+ML258	ML257	23.97	352.55	38.17	48.29	<0,0,0,0>	; restriction sm
+ML257	ML256	7.27	60.9	48.57	51.21	<0,0,0,0>	;
+ML256	ML255	6.17	59.6	51.22	48.63	<0,0,0,0>	;
+ML255	ML254	13.16	1.15	48.31	39.39	<0,0,0,0>	;
+ML254	ML253	8.8	4.2	39.28	37.46	<0,0,0,0>	; restriction sm
+ML253	ML252	10.2	55	37.4	45.2	<0,0,0,0>	;
+ML252	ML251	18.5	52.15	45.3	36.98	<0,0,0,0>	;
