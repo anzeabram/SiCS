@@ -1,10 +1,11 @@
-; Line name: Blatni del do velike dvorane. Merjeno IZ jame.							
-; Team: Sebastjan Gantar, Anze Abram							
-#DATE  2020-07-22							
-#UNITS meters ORDER=DA Tape=SS							
+; Line name: Blatni del do velike dvorane. Merjeno IZ jame.
+; Team: Sebastjan Gantar, Anze Abram
+#DATE  2020-07-22
+#UNITS meters ORDER=DA Tape=SS
 ; From 	To 	Dist 	Az 	D-From  	D-To	LRUD	Comment
-T57	T56	3.53	297.3	0.04	1.68	<0,0,0,0>	; 
-T56	T55	2.52	275.4	1.81	2.02	<0,0,0,0>	; 
+T58	T57	1.1	0	-1	0	<0,0,0,0>	;
+T57	T56	3.53	297.3	0.04	1.68	<0,0,0,0>	;
+T56	T55	2.52	275.4	1.81	2.02	<0,0,0,0>	;
 T55	T54	5.42	274.3	2.03	-0.4	<0,0,0,0>	; strik nad blatnim delom
 T54	T53	16.88	298.3	-0.4	-1	<0,0,0,0>	; strik nad blatnim delom
 T53	T52	7.58	276.7	-1	0	<0,0,0,0>	; kamen v dvorani na konci S2
