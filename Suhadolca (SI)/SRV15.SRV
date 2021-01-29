@@ -1,0 +1,10 @@
+; Line name: Merjeno iz jame. Simonov rov							
+; Team: Simon Burja, Sebastjan Gantar, Anze Abram							
+#DATE  2021-01-20							
+#UNITS meters ORDER=DA Tape=SS							
+; From 	To 	Dist 	Az 	D-From  	D-To	LRUD	Comment
+I5	I4	5.86	115.8	5.85	3.66	<0,0,0,0>	; tunnel continues to the left
+I4	I3	7.06	142.5	3.65	2.77	<0,0,0,0>	; 
+I3	I2	3.24	152.3	2.85	1.85	<0,0,0,0>	; 
+I2	I1	0.67	132.3	1.82	1.59	<0,0,0,0>	; 
+I1	ML282	4.74	65.3	1.46	3.11	<0,0,0,0>	; 
