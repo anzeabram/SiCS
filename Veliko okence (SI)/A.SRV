@@ -1,0 +1,8 @@
+; Line name: Zadnji jump pri EOL
+; Team: Alan Bizjak, Anze Abram, Jaka P
+#DATE  2022-02-26
+#UNITS meters ORDER=DA Tape=SS
+; From 	To 	Dist 	Az 	D-From  	D-To	LRUD	Comment
+ML55	A1	2.74	265.8	16.58	16.18	<0,0,0,0>	;
+A1	A2	9.45	230.1	16.02	14.77	<0,0,0,0>	;
+A2	A3	2.83	290.8	14.73	14.63	<0,0,0,0>	;

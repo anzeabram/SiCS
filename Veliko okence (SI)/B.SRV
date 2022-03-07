@@ -1,0 +1,16 @@
+; Line name: 1st jump, left, sidetunnel
+; Team: Alan Bizjak, Anze Abram
+#DATE  2022-03-06
+#UNITS meters ORDER=DA Tape=SS
+; From 	To 	Dist 	Az 	D-From  	D-To	LRUD	Comment
+B2	B3	0.5	251.5	13.22	13.05	<0,0,0,0>	; temp line
+B3	B4	0.86	216.1	12.99	13.28	<0,0,0,0>	; temp line
+B4	B5	1.71	128.1	13.37	13.33	<0,0,0,0>	;
+B5	B6	1.4	139.3	13.3	13.29	<0,0,0,0>	;
+B6	B7	9.66	75.2	13.26	9.75	<0,0,0,0>	;
+B7	B8	5.15	29.2	9.75	8.37	<0,0,0,0>	;
+B8	B9	4.16	5.4	8.33	7.64	<0,0,0,0>	;
+B9	B10	4.61	322.8	7.57	6.31	<0,0,0,0>	; temp line
+B10	B11	2.93	353.2	6.25	6.4	<0,0,0,0>	; temp line
+B2	ML17	0	0				;fix
+B11	ML12	0	0				;fix

@@ -1,0 +1,24 @@
+;WALLS Project File
+.BOOK	Veliko okence
+.NAME	VO
+.STATUS	3
+.BOOK	Main line
+.NAME	ML
+.STATUS	9
+.SURVEY	2022 02 26 - Main line
+.NAME	ML01
+.STATUS	8
+.SURVEY	2022 02 26 - Jump A
+.NAME	A
+.STATUS	8
+.SURVEY	2022 03 07 - Jump B
+.NAME	B
+.STATUS	8
+.SURVEY	2022 03 07 - Temp loop, Velika dvorana
+.NAME	T4
+.STATUS	8
+.ENDBOOK
+.BOOK	Temp
+.STATUS	8
+.ENDBOOK
+.ENDBOOK
