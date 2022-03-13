@@ -2,6 +2,7 @@
 ; Team:Alan Bizjak, Anze Abram, Jaka P
 #DATE  2022-02-26
 #UNITS meters ORDER=DA Tape=SS
+#FIX ML1 E14.29596 N45.9499 293
 ; From 	To 	Dist 	Az 	D-From  	D-To	LRUD	Comment
 ML1	ML2	2.18	141.5	0	0.28	<0,0,0,0>	; Rock in front of the cave
 ML2	ML3	6.83	160.6	0.41	3.49	<0,0,0,0>	;
