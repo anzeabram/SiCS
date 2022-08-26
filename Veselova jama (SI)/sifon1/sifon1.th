@@ -1,0 +1,31 @@
+encoding  utf-8
+# 2022.01.03 manual created MNemo
+
+survey sifon1
+
+  centerline
+     date 2022.07.08 
+#    cs lat-long
+#    team "Alan" instruments
+#    team "Jaka" notes
+#     team "Mihajlo" notes
+#    walls on    
+    units length depth meters 
+    units compass degrees
+    data diving from to length compass fromdepth todepth 
+    S0  S1    10.22     205.3      0.12   -4.09
+    S1	S2    13.39	217.3	  -4.16	  -8.51
+    S2	S3     5.01	207.1	  -8.55	  -9.86
+    S3	S4    17.71	210.6	  -9.91	 -16.57
+    S4	S5     8.22	188.6	 -16.58	 -21.23
+    S5	S6     7.54	193.8	 -21.33	 -22.57
+    S6	S7    12.77	186.8	 -22.62	 -29.76
+    S7	S8     9.57	196.7	 -29.81	 -29.72
+    S8	S9    39.41	215.1	 -29.54	  -6.74
+    S9	S10    2.56	221.8	  -6.61	  -4.97
+    S10	S11    3.93	228.6	  -4.83	  -2.92
+    S11	S12   14.99	231.1	  -2.90	   0.0	
+  endcenterline
+
+endsurvey
+

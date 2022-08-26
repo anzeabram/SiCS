@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+<Folder>
+<Style id="ThMapStyle"> <PolyStyle> <fill>1</fill> <outline>0</outline> </PolyStyle> </Style>
+<Style id="ThEntranceIcon"> <IconStyle> <Icon> <href>https://therion.speleo.sk/downloads/KmlIconEntrance.png</href> </Icon> <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction" /> </IconStyle> </Style>
+<Icon> <href>https://therion.speleo.sk/downloads/KmlIconMap.png</href> </Icon>
+<name><![CDATA[sifon0]]></name>
+<description><![CDATA[Length 20 m<br>Depth 2 m<br>]]></description>
+<Placemark>
+<styleUrl>#ThMapStyle</styleUrl>
+<name><![CDATA[]]></name>
+<Style> <PolyStyle> <color>bfffffff</color> </PolyStyle> </Style>
+<MultiGeometry>
+</MultiGeometry>
+</Placemark>
+</Folder>
+</kml>

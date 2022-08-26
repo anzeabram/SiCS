@@ -1,0 +1,10 @@
+encoding  utf-8
+
+
+source sifon0.th
+
+export map -projection plan -output VeselovaJama-tloris.pdf -layout-map-header 0 0 s -layout VeselovaJama-header
+#export map -projection extended -output VeselovaJama-profil.pdf -layout-map-header 0 110 sw -layout VeselovaJama-header #-layout water-blue
+export map -proj plan -fmt kml -o sifon0.kml
+export model -o sifon0.lox
+export model -fmt survex -o sifon0.3d

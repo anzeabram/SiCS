@@ -1,0 +1,7 @@
+encoding  utf-8
+source VeselovaJama.th
+
+
+export map -o VeselovaJama.pdf   
+export model -fmt kml -o VeselovaJama.kml
+export model -fmt survex -o VeselovaJama.3d

@@ -1,0 +1,41 @@
+encoding  utf-8
+source drycave0.th
+
+layout water-blue
+  code metapost
+  def a_water (expr p) =
+    T:=identity;
+    thfill p withcolor (0.0, 0.5, 1.0);
+  enddef;
+endlayout
+
+layout drycave0-header
+ 
+  map-header 0 0 nw
+
+  colour map-fg [80 80 80]
+  #colour map-bg [70 90 70]
+  symbol-hide group all
+  symbol-show line wall
+  symbol-show line survey
+
+  code metapost
+
+  def l_survey_cave (expr P) =
+    T:=identity;
+    pair zz[];
+    pickup PenC;
+    for t = 0 upto length P - 1:
+      zz1 := point t of P;
+      zz2 := point t+1 of P;
+      draw zz1 -- zz2 withcolor (0,0,1);
+    endfor;
+  enddef;
+
+endlayout
+
+
+export map -projection plan -output drycave0-tloris.pdf -layout-map-header 0 0 s -layout drycave0-header
+export map -projection extended -output drycave0-profil.pdf -layout-map-header 0 110 sw -layout drycave0-header #-layout water-blue
+export map -proj plan -fmt kml -o drycave0.kml
+export model -fmt survex -o drycave0.3d

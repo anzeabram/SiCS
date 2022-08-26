@@ -1,0 +1,21 @@
+encoding  utf-8
+# 2022.01.03 manual created MNemo
+
+survey drycave1-2
+
+  centerline
+     date 2022.07.08 
+#    cs lat-long
+#    team "Alan" instruments
+#    team "Jaka" notes
+#     team "Mihajlo" notes
+    walls on    
+    units length depth meters 
+    units compass degrees
+    data diving from to length compass fromdepth todepth 
+    D0  D1    0.79      308.9      0.0    0.0
+    D1  D2    9.45	28.4	   0.0	  0.0
+  endcenterline
+
+endsurvey
+

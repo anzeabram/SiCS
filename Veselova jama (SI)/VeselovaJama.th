@@ -1,0 +1,58 @@
+encoding  utf-8
+survey VeselovaJama
+
+input sifon0/sifon0.th
+input drycave0/drycave0.th
+input sifon1/sifon1.th
+input drycave1-2/drycave1-2.th
+input sifon2/sifon2.th
+input sifon3/sifon3.th
+input drycave3-4/drycave3-4.th
+input sifon4/sifon4.th
+input drycave4-5/drycave4-5.th
+input sifon5/sifon5.th
+input drycave5-6/drycave5-6.th
+input sifon6/sifon6.th
+input drycave6-7/drycave6-7.th
+
+#map swildonsMP
+#  sifon0MP@sifon0
+#  drycave0MP@drycave0
+#endmap
+
+centreline
+    date 2022.01.02 
+    cs lat-long
+    team "Alan" instruments
+    team "Jaka" notes
+    walls auto
+        
+    station S0@sifon0 "Veselova jama" entrance
+    fix S0@sifon0 45.763266 14.436418 564
+
+    station A "jama za zajčjim vrhom" entrance
+    fix A 45.770609 14.436524 712
+
+    station B "Skednenca pod Sovico" entrance
+    fix B 45.770567 14.44496 780
+
+    station C "Jama na Lisičinam" entrance
+    fix C 45.771769 14.445565 782
+    
+    equate S4@sifon0 1@drycave0
+    equate S12@sifon1 36@drycave0
+    equate S0@sifon1  D0@drycave1-2
+    equate S0@sifon2  D2@drycave1-2
+    equate S7@sifon3  S4@sifon2
+    equate S0@sifon3  D0@drycave3-4
+    equate D3@drycave3-4 S0@sifon4
+    equate S5@sifon4	 D0@drycave4-5
+    equate D6@drycave4-5 S11@sifon5
+    equate S0@sifon5	 D0@drycave5-6
+    equate D1@drycave5-6 S0@sifon6
+    equate S3@sifon6	 D0@drycave6-7    
+endcentreline
+
+
+endsurvey
+

@@ -1,0 +1,30 @@
+encoding  utf-8
+# 2022.01.03 manual created MNemo
+
+survey sifon0
+
+  centerline
+#    date 2022.01.02 
+#    cs lat-long
+#    team "Alan" instruments
+#    team "Jaka" notes
+    walls on    
+#    fix S0 45.763266 14.436418 564
+    units length depth meters 
+    units compass degrees
+    data diving from to length compass fromdepth todepth 
+    S0  S1    2.08     56.3    -1.37   -2.03
+    S1  S2    8.64     54.6    -2.09   -1.28  
+    S2  S3    6.58     53.1    -1.23   -0.61
+    S3  S4    2.29    130.5    -0.69   0.2
+    units left right up down meters
+    data dimensions station left right up down
+    S0   0.5 0.5 1.0 0.0
+    S1   5.0 5.0 1.3 0.0
+    S2   5.0 4.0 1.3 0.0
+    S3   2.0 1.0 1.2 0.0
+    #S4   3.5 1.7 1.7 0.2
+  endcenterline
+
+endsurvey
+
