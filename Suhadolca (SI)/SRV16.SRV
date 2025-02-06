@@ -1,0 +1,8 @@
+; Line name: Merjeno v jamo. Od dna poke pa do EOL.
+; Team: Sebastjan Gantar, Simon Burja
+#DATE  2022-10-10
+#UNITS meters ORDER=DA Tape=SS
+; From 	To 	Dist 	Az 	D-From  	D-To	LRUD	Comment
+ML301	ML302	2.72	282	27.95	26.11	<0,0,0,0>	; Bottom of the fissure
+ML302	ML303	7.72	284.8	25.97	20.07	<0,0,0,0>	;
+ML303	ML304	6.81	243.75	20.15	22.28	<0,0,0,0>	; EOL in a narrow gap, possible to squeeze but very tight. Anze tore his drysuit here.
