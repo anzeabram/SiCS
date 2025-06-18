@@ -17,7 +17,7 @@ Comments:
 
 Sometext .... [Povezava na meritve iz te akcije](SRV01.SRV)
 
-se nekaj teksta
+se nekaj teksta se malo dodam...
 
 ### 2024 01 01 - Setup dive
 Divers:
