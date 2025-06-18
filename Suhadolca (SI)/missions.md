@@ -15,4 +15,4 @@ Setup bailout tanks at 650m and 1000m stations.
 
 Comments:
 
-Sometext .... [text hyperlink](/Suhadolca (SI)/SRV01.SRV)
+Sometext .... [Povezava na meritve iz te akcije](SRV01.SRV)
