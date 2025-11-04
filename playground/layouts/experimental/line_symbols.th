@@ -1,0 +1,64 @@
+# 'Dolina' surface feature line symbol
+code metapost
+  def l_u_doline (expr P) =
+    T:=identity;
+    laenge:= arclength P;
+    symsize:=adjust_step(laenge,2u);
+    triangle_width:=symsize/10;
+    cur:=(symsize-triangle_width)/2;
+    pickup PenC;
+    forever:
+      t1 := arctime (cur) of P;
+      t  := arctime (cur + triangle_width/2) of P;
+      t2 := arctime (cur + triangle_width) of P;
+        thfill (subpath (t1,t2) of P) -- 
+          ((point t of P) + symsize/2 * unitvector(thdir(P,t) rotated 90)) -- 
+          cycle;
+        thdraw (point t2 of P) --((point t of P) + symsize/2 * unitvector(thdir(P,t) rotated 90)) -- 
+          (point t1 of P) withcolor (0.5, 0, 0);
+      cur := cur + symsize;
+      exitif cur > laenge - (1*symsize/3); % for rounding errors
+      t1:=arctime (cur) of P;
+    endfor;
+  enddef;
+
+# Break line symbol, it needs -clip off (https://therion.speleo.sk/wiki/metapost#break_line)
+code metapost
+  def l_u_break(expr P)=
+    begingroup;
+      save mainpath, parallel, orientation, direction, gapsize;
+      T:=identity;
+      gapsize:=u/3;
+      path mainpath;
+      %make the ends stick out beyond the passage
+      mainpath:=( (point 0 of P) + u * unitvector( thdir(P, 0) rotated 180 ) / 2 )
+                -- P --
+                ( (point (length P) of P) + u * unitvector( thdir(P, arclength P) ) / 2 );
+      path parallel;
+      string orientation;
+      orientation:=if known ATTR_orientation: ATTR_orientation; else: "horizontal"; fi;
+      if orientation = "vertical":
+        direction:=if (xpart (point 0 of mainpath)) > (xpart (point (length mainpath) of mainpath)): 1; else: -1; fi;
+        parallel:=mainpath shifted (0, direction * gapsize);
+      else:
+        direction:=if (ypart (point 0 of mainpath)) > (ypart (point (length mainpath) of mainpath)): -1; else: 1; fi;
+        parallel:=mainpath shifted (direction * gapsize, 0);
+      fi;
+      if known fill_l_u_break:
+        thfill (mainpath -- (reverse parallel) -- cycle) withcolor fill_l_u_break;
+      else:
+        thunfill (mainpath -- (reverse parallel) -- cycle);
+      fi;
+      pickup PenC;
+      thdraw mainpath;
+      thdraw parallel;
+    endgroup;
+  enddef;
+  initsymbol("l_u_break");
+  def l_u_break_legend =
+    l_wall_bedrock(((0,.2) .. controls (.3,.2) and (.4,.4) .. (.6,.4)) inscale);
+    l_wall_bedrock(((.7,.6) .. controls (.4,.6) and (.3,.4) .. (0,.4)) inscale);
+    l_u_break(((.6,.4) -- (.7,.6)) inscale);
+  enddef;
+endcode
+

@@ -1,0 +1,33 @@
+encoding  utf-8
+#_____________________________________________________________
+#                                                             |
+#             THIS IS A THERION LAYOUT DEFINITION FILE        |
+#                                                             |
+#             Used for sketching underwater passages.         |
+#                                                             |
+#_____________________________________________________________|
+
+layout sketch
+    grid bottom
+    grid-size 1 1 1 m
+    scale 1 100
+
+    map-header 0 0 off
+    legend off
+
+    debug station-names
+    opacity 50
+
+    # solid survey line
+    code metapost
+    def l_survey_cave (expr P) =
+        T:=identity;
+        pair zz[];
+        pickup PenC;
+            for t = 0 upto length P - 1:
+            zz1 := point t of P;
+            zz2 := point t+1 of P;
+            draw zz1 -- zz2 withcolor (0.1,0.3,0.1);
+            endfor;
+    enddef;
+endlayout

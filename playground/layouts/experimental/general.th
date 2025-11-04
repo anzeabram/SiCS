@@ -1,0 +1,86 @@
+# Setting pen thicknesses for MetaPost drawings
+code metapost
+  def minimumpen = 0.18pt enddef;
+  def PenA = pencircle scaled (minimumpen*1/0.35) enddef;
+  def PenB = pencircle scaled (minimumpen*0.7/0.35) enddef;
+  def PenC = pencircle scaled (minimumpen*0.5/0.35) enddef;
+  def PenD = pencircle scaled (minimumpen) enddef;
+  def PenX = pencircle scaled (minimumpen*1.2/0.35) enddef;
+endcode
+
+# PDF documentation metadata
+	doc-author "Name Surname"
+	doc-title ""
+
+# Scalebar
+code metapost
+  def s_scalebar (expr l, units, txt) =
+  % l = value of scale-bar length
+  % units = ??
+  % txt = string representing units
+    begingroup
+      interim warningcheck:=0;
+      tmpl:=l / Scale * cm * units / 2;
+      % tmpl = half plotted length of scale bar from central top insertion point  
+      tmpx:=l / Scale * cm * units / 5;
+      tmph:=5bp; % bar height
+    endgroup;
+    pickup PenC;
+    draw (-tmpl,0)--(tmpl,0)--(tmpl,-tmph)--(-tmpl,-tmph)--cycle;
+    p:=(0,0)--(tmpx,0)--(tmpx,-tmph)--(0,-tmph)--cycle;
+    for i:=-0.5 step 2 until 2:   % start drawing at the third block (leave space for smaller divisions)
+      fill p shifted (i * tmpx,0);
+    endfor;
+    
+    % Draw first part with subdivided blocks
+    p:=(0,0)--(tmpx/5,0)--(tmpx/5,-tmph)--(0,-tmph)--cycle;  % define width of segment (tmpx is length of a normal bar segment)
+    for i:=-2.5 step 2/5 until -0.75:                        % Startpos, segments, count-index
+      fill p shifted (i * tmpx,0) withcolor black;
+    endfor;
+    
+    % Label of scale: Scalebar top, values below
+    begingroup
+      interim labeloffset:=3.5bp;
+      for i:=0 step (l/5) until (l-1):
+        tmpx:=tmpl * (i * 2 / l - 1);
+        label.bot(thTEX(decimal (i)),(tmpx,-tmph));
+      endfor;
+      label.bot(thTEX(decimal (l) & "\thinspace" & txt),(tmpl,-tmph));
+      label.top(thTEX("Merilo/Scale 1 : " & decimal round(Scale*100)),(0,0));
+    endgroup;
+    
+  enddef;
+endcode
+
+# Change the layout of specific point symbol
+code metapost
+p_label_mode_height:=6;
+endcode
+
+% 0 = generic label
+% 1 = altitude with a dot and increased offset from the anchor point
+% 2 = semi circle up
+% 3 = semi circle down
+% 4 = semi circle up + semi circle down
+% 5 = circle
+% 6 = boxed label
+% 7 = generic label for station name with an increased offset from the anchor point
+% 8 = filled label; not implemented in the standard symbol sets, but see samples/q-marks for a usage example
+
+# Display altitude as relative height/depth
+cs epsg:3912
+grid-origin 0 0 564 m
+
+# color of the centerline, and uses a continuous line instead of only the ticks at the stations
+code metapost
+  def l_survey_cave (expr p) =
+    draw p withpen PenD withcolor (1.0, 0.0, 0.0);
+  enddef;
+endcode
+
+# dashed version for temporary line
+code metapost
+  def l_survey_cave (expr p) =
+    draw p withpen PenD withcolor (1.0, 0.0, 0.0) dashed evenly scaled 2;
+  enddef;
+endcode

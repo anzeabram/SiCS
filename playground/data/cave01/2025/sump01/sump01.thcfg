@@ -1,0 +1,109 @@
+encoding  utf-8
+
+
+source sump01.th
+# source sifon1.th
+
+layout drycave0-header
+ 
+   map-header 0 0 nw
+
+  colour map-fg [70 90 99]
+#   colour map-bg [70 90 70]
+#   symbol-hide group all
+  symbol-show line wall
+  symbol-show line survey
+
+#   code metapost
+
+#   def l_survey_cave (expr P) =
+#     T:=identity;
+#     pair zz[];
+#     pickup PenC;
+#     for t = 0 upto length P - 1:
+#       zz1 := point t of P;
+#       zz2 := point t+1 of P;
+#       draw zz1 -- zz2 withcolor (0,0,1);
+#     endfor;
+#   enddef;
+
+### Adds centerline
+
+code metapost
+
+  def l_survey_cave (expr P) =
+    T:=identity;
+    pair zz[];
+    pickup PenC;
+    for t = 0 upto length P - 1:
+      zz1 := point t of P;
+      zz2 := point t+1 of P;
+      draw zz1 -- zz2 withcolor (0.1,0.3,0.1);
+    endfor;
+  enddef;
+
+endlayout
+
+
+#custom Dive line
+# code metapost
+# def l_u_diveline (expr P) =
+# T:=identity;
+# pickup PenB;
+# thdraw P withcolor (1, 0.5, 0);
+# enddef;
+# initsymbol("l_u_diveline");
+# endcode
+
+# ChatGPT circle
+layout mylayout
+  code metapost
+
+    %--- Simple outline circle (user-defined point symbol u:circle)
+    def p_u_circle(expr P,R,S,A) =
+      % size box for correct alignment; symbol is 1u × 1u
+      U := (.5u,.5u);
+      % Therion's standard local transform: align → rotate → scale → shift
+      T := identity aligned A rotated R scaled S shifted P;
+
+      pickup PenC;                 % PenA..PenD exist; PenC = medium.  :contentReference[oaicite:0]{index=0}
+      thdraw fullcircle scaled 1.0u;  % 1u-diameter circle (hollow).   
+    enddef;
+
+    initsymbol("p_u_circle");       % register the symbol               :contentReference[oaicite:2]{index=2}
+
+    %--- (Optional) filled dot variant:
+    % def p_u_dot(expr P,R,S,A) =
+    %   U := (.5u,.5u);
+    %   T := identity aligned A rotated R scaled S shifted P;
+    %   thfill fullcircle scaled 0.6u; % solid disk ~60% of 1u
+    % enddef;
+    % initsymbol("p_u_dot");
+
+  endcode
+endlayout
+
+# TO INSERT
+# point 500 300 u:circle -scale m -align c
+# # or: -scale 1.2  (numeric), -orient 0..359 as needed
+
+
+# symbol-hide point cave-station
+
+#input "../layouts/sketch.thl"
+
+
+export map -projection plan -output a-plain.pdf
+export map -projection plan -output b-mylayout.pdf -layout mylayout -layout-legend on
+export map -projection plan -output c-alan.pdf -layout drycave0-header
+export map -projection extended -output e-extended-alan.pdf -layout-color map-fg 22 -layout drycave0-header
+#export map -projection plan -output f-grid.pdf -layout sketch
+#export map -projection plan -output f-grid.svg -layout sketch
+# export atlas -projection plan -layout drawing -output g-atlas.pdf
+#export map -projection extended -output VeselovaJama-profil.pdf -layout-map-header 0 110 sw -layout VeselovaJama-header #-layout water-blue
+# export map -proj plan -fmt kml -o sifon0.kml
+# export model -o 3d-all.lox -wall-source all
+# export model -o 3d-centerline.lox -wall-source centerline
+# export model -o 3d-maps.lox -wall-source maps
+# export model -o 3d-splays.lox -wall-source splays
+# export model -fmt survex -o sifon0.3d

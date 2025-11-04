@@ -1,0 +1,60 @@
+encoding  utf-8
+#----------------------------------------------------------------------------------|
+#                                                                                  |
+#                      THIS IS A CONFIGURATION FILE FOR:                           |
+#                                                                                  |
+#                      ********* (GARDENER's WORLD)                                |
+#                                                                                  |
+#----------------------------------------------------------------------------------|
+
+source cave01.th
+
+layout sics-plan
+
+	
+
+#    map-header 0 0 nw
+
+  colour map-fg [90 90 0]
+#   colour map-bg [70 90 70]
+#   symbol-hide group all
+  symbol-show line wall
+  symbol-show line survey
+
+  # symbol-colour area water [0 70 90]
+	symbol-assign area water MY
+  symbol-assign area sump MY
+
+
+#   code metapost
+
+#   def l_survey_cave (expr P) =
+#     T:=identity;
+#     pair zz[];
+#     pickup PenC;
+#     for t = 0 upto length P - 1:
+#       zz1 := point t of P;
+#       zz2 := point t+1 of P;
+#       draw zz1 -- zz2 withcolor (0,0,1);
+#     endfor;
+#   enddef;
+
+endlayout
+
+layout test
+
+cs epsg:3912
+grid-origin 0 0 564 m
+
+  code metapost
+    def l_survey_cave (expr p) =
+      draw p withpen PenD withcolor (1.0, 0.0, 0.0) dashed evenly scaled 2;
+    enddef;
+  endcode
+
+endlayout
+
+#export map -projection plan -output 1-plan.pdf
+#export map -projection extended -output 2-extended.pdf
+# export map -projection plan -output 3-sics.pdf -layout sics-plan
+export map -projection plan -output 4-test.pdf -layout test

@@ -1,0 +1,9 @@
+python3 scripts/create_2d.py.py data/system_migovec.th <survey_selector> --projection <projection>
+
+
+
+python3 scripts/create_2d.py data/cave01/cave01.th dry01@cave01 --projection plan
+
+EE needs to run from top tier, plan can do like this:
+
+python3 scripts/create_2d.py.py data/vrtnarija/2015/firstdraft/firstdraft-p.th2 firstdraft --projection plan

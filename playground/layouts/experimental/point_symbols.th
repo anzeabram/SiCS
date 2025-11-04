@@ -1,0 +1,250 @@
+# Shell symbol
+code metapost
+    def p_u_shell (expr pos,theta,sc,al)=
+    T:=identity shifted pos;
+    pickup PenB;
+    numeric turns, radius;
+    path ss, cesta;
+    pair za, zb;
+    turns = 1.55;
+    radius = .3u;
+    za = ( xpart(origin)+0, ypart(origin)+.1u ) rotated 370 turns;
+    zb = ( xpart(origin)+.3u, ypart(origin)+0 ) rotated 360 turns;
+    cesta := za--zb;
+    ss := (origin for t=1 upto 360 turns: -- dir t scaled t endfor) scaled (radius/turns/360);
+    thdraw ss withcolor (0.3);
+    thdraw (cesta cutbefore ss) withcolor (0.3);
+    enddef;
+
+# Stalagmite boss
+code metapost
+    def p_u_boss (expr pos,theta,sc,al)=
+    T:=identity aligned al rotated theta scaled sc shifted pos;
+    pickup PenD;
+    p := (0.08u,0.25u)..(0,0.29u)..(-0.08u,0.25u);
+    q := (0.16u,0.5u)..(0u,0.58u)..(-0.16u,0.5u);
+    for i=0 upto 9:
+    thdraw p rotated 36i;
+    thdraw q rotated 36i;
+    endfor
+    p := fullcircle scaled 0.15u; 
+    thdraw p;
+    enddef;
+
+# Large 3D block
+code metapost
+def p_u_block(expr pos,theta,sc,al) =
+  T:=identity aligned al rotated theta scaled sc shifted pos;
+  path p q;
+  p := (2.3u,0.9u)--(0.65u,1u)--(-0.9u,0.6u)--(-2.15u,-0.1u)--(-2.35u,-0.25u)--(-2.5u,-0.5u)--(-2u,-0.65u)--(-0.75u,-0.65u)--(0.6u,-0.7u)--(1.1u,-0.5u)--(2.1u,-0.15u)--cycle;
+  pickup PenB;
+  thdraw p;
+  % The following line uses the code from Colour Dependant Visualization of Symbols by Bruce Mutton
+  if known colour_block_bg: thfill p withcolor colour_block_bg; else: thfill p withcolor (0.75,0.75,0.75); fi;
+  q := (-2.5u,-0.5u)--(-2u,-0.65u)--(-0.75u,-0.65u)--(0.6u,-0.7u)--(1.1u,-0.5u)--(2.1u,-0.15u)--(2.3u,0.9u)--(2.5u,0.7u)--(2.5u,0.5u)--(2.25u,-0.9u)--(1.1u,-1.3u)--(0.5u,-1.5u)--(-0.75u,-1.4u)--(-2u,-1.15u)--(-2.35u,-0.65u)--cycle;
+  thdraw q;
+  thfill q withcolor(0.6,0.6,0.6);
+  pickup PenD;
+  path p;
+  p := (-2u,-0.65u)--(-1.9u,-1u);
+  thdraw p;
+  path p;
+  p := (0.6u,-0.7u)--(0.5u,-1.3u);
+  thdraw p;
+  path p;
+  p := (2.1u,-0.15u)--(2.3u,-0.4u);
+  thdraw p;
+enddef;
+
+initsymbol("p_u_block");
+
+# Electric light
+code metapost
+  def p_u_electriclight (expr pos,theta,sc,al) =
+    U:=(0.3u, 0.3u);
+    % Reduce size of the symbol.  The default size is too big.
+    interim defaultscale:=0.4sc;
+    T:=identity aligned al rotated theta scaled defaultscale shifted pos;
+    pickup PenC;
+    
+    thdraw fullcircle scaled 0.5u shifted (0.0u, 0.7u);
+    thdraw (-0.5u, -0.6u) -- (-0.5u, 0.0u);
+    thdraw (-0.5u, 0.0u) .. (-0.35u, 0.55u) .. (0.0u, 0.7u);
+    thdraw (0.0u, 0.7u) .. (0.35u, 0.55u) .. (0.5u, 0.0u);
+    thdraw (0.5u,0.0u) -- (0.5u, -0.6u);
+    thdraw (-0.7u, -0.6u) -- (0.7u, -0.6u);
+    
+  enddef;
+
+# Warning triangle
+code metapost
+  % a warning triangle
+  def p_u_warning (expr P,R,S,A)=
+    scale:=0.5u;
+    sin120:=sind(120);
+    cos120:=cosd(120);
+    U:=(sin120*scale,scale);
+    T:=identity aligned A rotated R scaled S shifted P;
+    % yellow triangle
+    thfill (0,scale)--(sin120*scale,cos120*scale)--(sind(240)*scale,cosd(240)*scale)--cycle withcolor (1,1,0);
+    % black triangle outline
+    thdraw (0,scale)--(sin120*scale,cos120*scale) withpen PenB withcolor black;
+    thdraw (sin120*scale,cos120*scale)--(sind(240)*scale,cosd(240)*scale) withpen PenB withcolor black;
+    thdraw (sind(240)*scale,cosd(240)*scale)--(0,scale) withpen PenB withcolor black;
+    % line of !
+    thdraw (0,0)--(0,.5*scale) withpen PenB withcolor black;
+    thdraw (0,-.25*scale)--(0,-.25*scale) withpen PenB withcolor black;
+    % dot of !
+  enddef;
+  initsymbol("p_u_warning");
+endcode
+
+# Spinning compass / problems with magnetism
+code metapost
+  % a spinning compass
+  def p_u_magnetism (expr P,R,S,A)=
+    begingroup;
+      save scale, cthick, pointheight, pointwidth, cutheight, cutwidth;
+      scale:=0.5u;
+      cthick:=(xpart (lrcorner PenC)) - (xpart (llcorner PenC));
+      pointheight:=scale*.9;
+      pointwidth:=scale*.4;
+      cutheight:=pointheight - (cthick / sind(angle(pointheight,pointwidth)));
+      cutwidth:=pointwidth - (cthick / sind(angle(pointwidth,pointheight)));
+      U:=(scale,scale);
+      T:=identity aligned A rotated (R-20) scaled S shifted P;
+      % a circle
+      thdraw fullcircle scaled 2scale withpen PenC;
+      % filled triangle
+      thfill (0,pointheight)--(pointwidth,0)--(-pointwidth,0)--cycle;
+      % black triangle outline
+      % this can be drawn with mitred pens, but it still ends up needing calculations to get the centre position of the pen thickness
+      % therefore it is easier to just use a filled path
+      % pointheight/2 is used to stop the thin unpainted gap between shapes
+      thfill (0,-pointheight)--(pointwidth,0)--(0,pointheight/2)--(cutwidth,0)--(0,-cutheight)--(-cutwidth,0)--(0,pointheight/2)--(-pointwidth,0)--cycle;
+      % spin arcs, a full circle is path 0-8, anticlockwise, starting from the right
+      thdraw subpath (2.4,3.5) of fullcircle scaled 1.5scale withpen PenC;
+      thdraw subpath (6.4,7.5) of fullcircle scaled 1.5scale withpen PenC;
+    endgroup;
+  enddef;
+  initsymbol("p_u_magnetism");
+endcode
+
+# Region name symbols with round corners (https://therion.speleo.sk/wiki/metapost#region_names_symbol)
+code metapost
+  # Symbol to denote assigned survey.
+  #   Option "-attr text <string>" shows given text; otherwise current survey is shown.
+  #   Option "-attr bordersmooth <num>" overrides edge smoothness (0 for sharp edges)
+  #   Option "-attr bordermargin <num>" overrides margin text/border
+  #   Option "-attr basescale <num>" overrides basic text sizing factor (default text size)
+  #   Option "-attr fillsize <s_pct>" fills with page background color; s_pct is percent of bbox size
+  def p_u_mappe(expr pos, theta, sc, al) =
+    T:=identity aligned al rotated theta scaled sc shifted pos;
+    begingroup;
+      % Basic config
+      bordersmooth:=4;         % smoothness of box corners  (0=90° edges)
+      bordermargin:=5.0bp;     % padding border->text
+      basescale:=1.0;          % basic scaling of default-sized text
+      fillsize:=-1.0;           % proportional size of label filling (percent)
+      if known(ATTR_bordersmooth): bordersmooth:=scantokens(ATTR_bordersmooth); fi;
+      if known(ATTR_bordermargin): bordermargin:=scantokens(ATTR_bordermargin); fi;
+      if known(ATTR_basescale):    basescale:=scantokens(ATTR_basescale);       fi;
+      if known(ATTR_fillsize):     fillsize:=scantokens(ATTR_fillsize);         fi;
+    
+      % GET LABEL TEXT:
+      string txt;
+      if known(ATTR_text):
+          txt := ATTR_text;
+      else:
+              txt := ATTR__survey;
+      fi;
+      
+      
+      % PREPARE LABEL:
+      lab:=thelabel(txt, (0.0,0.0));
+      pickup PenA;                       % border thickness
+      interim bboxmargin:=bordermargin;  % padding border->text
+      
+      % PREPARE BOX and DRAW BOX BACKGROUND:
+      % q is the box as drawed, but we fill the place first before drawing
+      q:=((bbox lab) smoothed bordersmooth) aligned al scaled (sc * basescale) rotated theta shifted pos;
+      if (fillsize <> -1.0):
+          % draw extending filled box around symbol
+          if known(MapBackground):
+              % from therion versions newer than 6.0.3+3551531+dev (23.11.2021) we use page background
+              thfill ((bbox lab) smoothed bordersmooth) scaled (sc * basescale * fillsize) withcolor MapBackground;
+          else:
+              thfill ((bbox lab) smoothed bordersmooth) scaled (sc * basescale * fillsize) withcolor label_fill_color;
+          fi;
+      fi;
+      % the following will draw the actual visible interiour-filling of the box
+      thfill ((bbox lab) smoothed bordersmooth) scaled (sc * basescale) withcolor label_fill_color;
+      
+      % DRAW BOX
+      draw q;
+      
+      % DRAW LABEL TEXT
+      lab:=lab aligned al;
+      lab:=lab scaled (sc * basescale);
+      lab:=lab rotated theta;
+      lab:=lab shifted pos;
+      process_label(pos, 0.001);   % for some weird reason "0.0" does not work here and puts the label to map-center at scrap-rotation.
+    endgroup;
+  enddef;
+
+# Gradient symbol
+code metapost
+  def p_gradient_MY (expr pos,theta,sc,al) =
+      U:=(.15u, .4u);
+      T:=identity aligned al rotated theta scaled sc shifted pos;
+      pickup PenC;
+
+      #Left Hand side
+      thdraw (-.2u, -.05u) -- (-.6u, .8u);
+
+      #Centerline
+      thdraw (0u, 0u) -- (0u, .9u);
+
+      #Right side
+      thdraw (.2u, -.05u) -- (.6u, .8u);
+  enddef;
+  
+  initsymbol ("p_gradient_MY");
+  endcode
+
+  symbol-assign point gradient MY
+
+# Plan-view symbol (add as u:symbol_plan, remove from legend: text sk "point u:symbol_plan" "")
+code metapost
+def p_u_symbol_plan (expr pos,theta,sc,al) =
+  U := (-3.25u, 3.25u);
+  T := identity aligned al rotated theta scaled sc shifted pos;
+  pickup PenB;
+  q := ((-3.26u, -.95u) -- (1.74u, -.95u) -- (2.8u, .82u) -- (-1.49u, .82u) -- cycle);
+  thfill q withcolor .85;
+  thdraw q;
+  q := ((-.175u, .5u) -- (0u, 0u) -- (.175u, .5u) .. (0u, .45u) .. cycle);
+  thfill q withcolor .5green;
+  thdraw q withcolor .5green;
+  thdraw (0u, 0u) -- (0u, 2.31u) withcolor .5green; 
+enddef;
+
+# Extended-view symbol (add as u:symbol_extend, remove from legend: text sk "point u:symbol_extend" "")
+def p_u_symbol_extend (expr pos,theta,sc,al) =
+  U := (-2.5u, 2.5u);
+  T := identity aligned al rotated theta scaled sc shifted pos;
+  pickup PenB;
+  q := ((-2.346u, -2.480u) -- (-.48u, -2.116u) -- (-.48u, 1.573u) -- (-2.346u, 1.354u) -- cycle);
+  thfill q withcolor .85;
+  q := ((-1.551u, -2.878u) -- (1.438u, -.766u) -- (1.438u, 2.388u) -- (-1.551u, 1.118u) -- cycle);
+  thfill q withcolor .75;
+  thdraw q;
+  thdraw (-.48u, -2.116u) -- (-.48u, 1.573u) dashed evenly;
+  q := ((.446u, -1.461u) -- (2.120u, -1.094u) -- (2.120u, 2.184u) -- (.446u, 1.965u) -- cycle);
+  thfill q withcolor .85;
+  thdraw (.446u, -1.461u) -- (.446u, 1.965u) dashed evenly;
+  q := ((-.175u, .5u) -- (0u, 0u) -- (.175u, .5u) .. (0u, .45u) .. cycle) rotated -90;
+  thfill q withcolor .5green;
+  thdraw q withcolor .5green;
+  thdraw (0u, 0u) -- (2.31u, 0u) withcolor .5green; 
+enddef;

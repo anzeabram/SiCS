@@ -1,0 +1,171 @@
+encoding  utf-8
+##XTHERION## xth_me_area_adjust -250.0 -500.0 250.0 500.0
+##XTHERION## xth_me_area_zoom_to 100
+
+
+
+scrap DELETE-ME-survey-legs-sump01-p -projection plan -scale [0.0 0.0 500 1000.0 -250 -500 250 500]
+
+line survey
+  -125.23 89.55
+  -103.36 48.42
+endline
+
+line survey
+  -103.36 48.42
+  -88.11 39.61
+endline
+
+line survey
+  -88.11 39.61
+  -68.82 28.48
+endline
+
+line survey
+  -68.82 28.48
+  -48.17 29.2
+endline
+
+line survey
+  -48.17 29.2
+  -26.76 35.34
+endline
+
+line survey
+  -26.76 35.34
+  -6.19 24.4
+endline
+
+line survey
+  -6.19 24.4
+  31.73 4.24
+endline
+
+line survey
+  31.73 4.24
+  43.78 -40.76
+endline
+
+line survey
+  43.78 -40.76
+  56.43 -45.86
+endline
+
+line survey
+  56.43 -45.86
+  74.04 -45.86
+endline
+
+line survey
+  74.04 -45.86
+  94.96 -53.48
+endline
+
+line survey
+  94.96 -53.48
+  125.23 -89.55
+endline
+
+point -125.23 89.55 station-name -align tr -scale xs -text 0
+
+point -103.36 48.42 station-name -align tr -scale xs -text 1
+
+point -88.11 39.61 station-name -align tr -scale xs -text 2
+
+point -68.82 28.48 station-name -align tr -scale xs -text 3
+
+point -48.17 29.2 station-name -align tr -scale xs -text 4
+
+point -26.76 35.34 station-name -align tr -scale xs -text 5
+
+point -6.19 24.4 station-name -align tr -scale xs -text 6
+
+point 31.73 4.24 station-name -align tr -scale xs -text 7
+
+point 43.78 -40.76 station-name -align tr -scale xs -text 8
+
+point 56.43 -45.86 station-name -align tr -scale xs -text 9
+
+point 74.04 -45.86 station-name -align tr -scale xs -text 10
+
+point 94.96 -53.48 station-name -align tr -scale xs -text 11
+
+point 125.23 -89.55 station-name -align tr -scale xs -text 12
+
+endscrap
+
+
+
+scrap sump01-1p -projection plan -scale [0.0 0.0 500 1000.0 -250 -500 250 500]
+
+line border -id d16584b6ca3449b1b03d7cf12050b460 -close on -visibility off
+  -14.4684 75.8126
+  -14.4684 75.8126 24.3386 48.9166 20.1121 40.0794
+  15.8856 31.2422 14.3487 20.4838 -0.6362 30.4737
+  -15.6211 40.4636 -24.4583 39.311 -23.3056 50.0693
+  -22.153 60.8277 -22.5372 78.5022 -19.4634 77.7337
+  -16.3895 76.9653 -14.4684 75.8126 -14.4684 75.8126
+endline
+
+area blocks
+  d16584b6ca3449b1b03d7cf12050b460
+endarea
+
+point 18.3029 87.278 altitude -value [fix 1300]
+
+point 19.3029 97.278 altitude
+
+point 20.3029 107.278 label -text "Velika dvorana"
+
+line wall -subtype bedrock
+  -149.6241 75.4802
+  -149.6241 75.4802 -139.3947 40.956 -115.7392 24.3333
+  -92.0838 7.7105 -72.2643 5.1531 -69.707 -18.5023
+  -67.1496 -42.1578 -94.0018 -54.3052 -61.3956 -64.5346
+  -28.7894 -74.764 -17.2813 -77.9607 -7.6913 -64.5346
+  1.8988 -51.1085 8.2922 -38.3218 23.6362 -46.6332
+  38.9803 -54.9445 31.3083 -53.6658 67.7505 -73.4853
+  104.1927 -93.3048 111.2254 -102.8948 114.4221 -106.7308
+endline
+
+line wall
+  136.1596 -84.9933
+  136.1596 -84.9933 86.2913 -36.4038 69.0292 -28.0924
+  51.7671 -19.781 29.3903 5.1531 32.587 20.4972
+  35.7837 35.8413 72.8652 74.8409 72.2259 88.267
+  71.5865 101.693 59.4391 136.2172 14.0462 120.8731
+  -31.3467 105.5291 -39.0188 72.2835 -44.1335 55.6608
+  -49.2482 39.038 -47.3302 29.448 -67.789 40.3167
+  -88.2477 51.1854 -90.8051 37.7593 -101.0345 69.0868
+  -111.2639 100.4144 -118.2966 113.8404 -118.2966 113.8404
+endline
+
+point -125.23 89.55 station -name 0
+
+point -103.36 48.42 station -name 1
+
+point -88.11 39.61 station -name 2
+
+point -68.82 28.48 station -name 3
+
+point -48.17 29.2 station -name 4
+
+point -26.76 35.34 station -name 5
+
+point -6.19 24.4 station -name 6
+
+point 31.73 4.24 station -name 7
+
+point 43.78 -40.76 station -name 8
+
+point 56.43 -45.86 station -name 9
+
+point 74.04 -45.86 station -name 10
+
+point 94.96 -53.48 station -name 11
+
+point 125.23 -89.55 station -name 12
+
+endscrap
+
+

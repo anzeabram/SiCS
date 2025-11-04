@@ -1,0 +1,9 @@
+encoding  utf-8
+
+# change the source
+source dry01.th
+
+# input the layout file
+input "../../../../layouts/sketch.thl"
+
+export map -projection plan -output ../../../../outputs/draw.svg -layout sketch

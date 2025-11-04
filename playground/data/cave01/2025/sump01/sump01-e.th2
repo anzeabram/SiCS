@@ -1,0 +1,152 @@
+encoding  utf-8
+##XTHERION## xth_me_area_adjust -250.0 -500.0 250.0 500.0
+##XTHERION## xth_me_area_zoom_to 100
+
+
+
+scrap DELETE-ME-survey-legs-sump01-e -projection extended -scale [0.0 0.0 500 1000.0 -250 -500 250 500]
+
+line survey
+  -171.41 27.56
+  -124.83 19.69
+endline
+
+line survey
+  -124.83 19.69
+  -107.22 3.94
+endline
+
+line survey
+  -107.22 3.94
+  -84.95 -3.94
+endline
+
+line survey
+  -84.95 -3.94
+  -64.28 -19.69
+endline
+
+line survey
+  -64.28 -19.69
+  -42.01 -27.56
+endline
+
+line survey
+  -42.01 -27.56
+  -18.72 -31.5
+endline
+
+line survey
+  -18.72 -31.5
+  24.23 -11.81
+endline
+
+line survey
+  24.23 -11.81
+  70.81 -3.94
+endline
+
+line survey
+  70.81 -3.94
+  84.45 3.94
+endline
+
+line survey
+  84.45 3.94
+  102.06 19.69
+endline
+
+line survey
+  102.06 19.69
+  124.33 27.56
+endline
+
+line survey
+  124.33 27.56
+  171.41 31.5
+endline
+
+point -171.41 27.56 station-name -align tr -scale xs -text 0
+
+point -124.83 19.69 station-name -align tr -scale xs -text 1
+
+point -107.22 3.94 station-name -align tr -scale xs -text 2
+
+point -84.95 -3.94 station-name -align tr -scale xs -text 3
+
+point -64.28 -19.69 station-name -align tr -scale xs -text 4
+
+point -42.01 -27.56 station-name -align tr -scale xs -text 5
+
+point -18.72 -31.5 station-name -align tr -scale xs -text 6
+
+point 24.23 -11.81 station-name -align tr -scale xs -text 7
+
+point 70.81 -3.94 station-name -align tr -scale xs -text 8
+
+point 84.45 3.94 station-name -align tr -scale xs -text 9
+
+point 102.06 19.69 station-name -align tr -scale xs -text 10
+
+point 124.33 27.56 station-name -align tr -scale xs -text 11
+
+point 171.41 31.5 station-name -align tr -scale xs -text 12
+
+endscrap
+
+
+
+scrap sump01-1e -projection extended -scale [0.0 0.0 500 1000.0 -250 -500 250 500]
+
+line wall
+  -188.0651 8.5895
+  -188.0651 8.5895 -127.0344 -7.6853 -119.8011 -12.2061
+  -112.5678 -16.7269 -71.4286 -42.0434 -57.4141 -44.7558
+  -43.3996 -47.4683 9.4937 -53.7974 21.6998 -49.7287
+  33.906 -45.66 54.7016 -33.0018 68.264 -26.6727
+  81.8264 -20.3436 108.9512 -4.5208 115.7323 0.0
+  122.5135 4.5208 146.4738 17.6311 156.4195 19.8915
+  166.3653 22.1519 180.8318 25.3165 180.8318 25.3165
+endline
+
+line wall
+  176.7631 46.5642
+  176.7631 46.5642 120.2531 47.0163 108.047 39.3309
+  95.8409 31.6456 75.0452 13.1103 65.0994 10.3979
+  55.1537 7.6854 29.8372 12.6583 4.0687 6.3291
+  -21.6998 0.0 -10.3978 -4.0687 -28.481 -3.1645
+  -46.5642 -2.2604 -60.1266 -9.4936 -78.2098 8.5895
+  -96.293 26.6727 -81.3743 16.2749 -105.7866 32.5498
+  -130.1989 48.8246 -129.2948 51.5371 -137.8843 52.4413
+  -146.4738 53.3454 -179.4756 59.2224 -181.736 59.2224
+endline
+
+point -171.41 27.56 station -name 0
+
+point -124.83 19.69 station -name 1
+
+point -107.22 3.94 station -name 2
+
+point -84.95 -3.94 station -name 3
+
+point -64.28 -19.69 station -name 4
+
+point -42.01 -27.56 station -name 5
+
+point -18.72 -31.5 station -name 6
+
+point 24.23 -11.81 station -name 7
+
+point 70.81 -3.94 station -name 8
+
+point 84.45 3.94 station -name 9
+
+point 102.06 19.69 station -name 10
+
+point 124.33 27.56 station -name 11
+
+point 171.41 31.5 station -name 12
+
+endscrap
+
+

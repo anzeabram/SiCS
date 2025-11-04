@@ -1,0 +1,220 @@
+encoding  utf-8
+source veliko2.th
+source outMala.th
+
+
+  lookup altitude:banded
+ [550 510] [82 98 93] "550m - 510m"
+ [510 480] [85 96 94] "510m - 480m"
+ [480 450] [64 86 82] "480m - 450m"
+endlookup
+
+
+layout jama
+ north true
+  language sl
+  units metric
+  legend on
+  color map-bg [80 80 80]  #Map background is grey
+  #color map-fg [85 96 94] 
+  scale 1 500    #Spremeni merilo
+  scale-bar 25 m
+  base-scale 1 500  #Changes Symbol Scale
+  map-header 0 -10 nw    #changes title/legend location. Replace nw with off to remove
+  cs epsg:3912
+  grid bottom
+  #grid-size 100 100 10  m  #adjusts size of grid for profile depths
+  grid-origin 432491.27  74966.84  491.08 m
+  #grid-coords border       #enables depths on the side of the grid lines. Only works in meters
+  #map-image 45 -10 nw znak1a.png
+  symbol-assign point station:temporary SKBB 
+  symbol-color point station [100 0 0]
+  symbol-assign point rope SKBB
+  symbol-show line survey
+  debug station-names
+  symbol-show point station
+  statistics topo-length off
+  statistics explo-length off
+ 
+
+ #Legenda
+
+#Okvir okoli načrt
+code metapost
+code tex-map
+   \framethickness=0.6mm
+endcode
+
+#mreža avtorja  Stacho Mudrak in Bruce Mutton 2007
+code metapost
+def s_hgrid (expr xpos, ypos, xsize, ysize) =
+      pickup PenD;
+      draw (
+        if xpos < 0: 0 else: -xsize/2 fi, 0
+      ) -- (
+        if xpos > 0: 0 else: xsize/2 fi, 0
+      ) withcolor 0.8black+0.1white;
+      draw (
+        0, if ypos < 0: 0 else: -ysize/2 fi
+      ) -- (
+        0, if ypos > 0: 0 else: ysize/2 fi
+      ) withcolor 0.8black+0.1white;
+    enddef;
+    endcode
+    
+   #Merilo avtor thomas-holder
+   code metapost
+   def s_scalebar (expr l, units, txt) =
+    begingroup
+      interim warningcheck:=0;
+      tmpl:=l / Scale * cm * units / 2;
+      tmpx:=l / Scale * cm * units / 5;
+      tmph:=5bp; % bar height
+    endgroup;
+    pickup PenC;
+    draw (-tmpl,0)--(tmpl,0)--(tmpl,-tmph)--(-tmpl,-tmph)--cycle;
+    p:=(0,0)--(tmpx,0)--(tmpx,-tmph)--(0,-tmph)--cycle;
+    for i:=-2.5 step 2 until 2:
+      fill p shifted (i * tmpx,0);
+    endfor;
+    begingroup
+      interim labeloffset:=3.5bp;
+      for i:=0 step (l/5) until (l-1):
+        tmpx:=tmpl * (i * 2 / l - 1);
+        label.bot(thTEX(decimal (i)),(tmpx,-tmph));
+      endfor;
+      label.bot(thTEX(decimal (l) & "\thinspace" & txt),(tmpl,-tmph));
+      label.top(thTEX("Merilo 1 : " & decimal round(Scale*100)),(0,0));
+    endgroup;
+  enddef;   
+  endcode
+  
+  #sever 
+ code metapost
+ def s_northarrow (expr rot) =
+  scale_value = 0.5;
+  decl := MagDecl; 
+  T := identity;
+
+  picture tmp_pic;
+  tmp_pic = image (
+      pickup pencircle scaled 1;
+      thdraw fullcircle scaled 4cm;
+      thdraw fullcircle scaled 2.75cm;
+      pickup pencircle scaled .5;
+      thdraw fullcircle scaled 3.75cm;
+      for whereto=11.25 step 22.5 until 360:
+        thdraw dir(whereto)*2.75/2cm--dir(whereto)*3.75/2cm;
+      endfor;
+% arrows
+      path halfarrow;
+      halfarrow = (+.3cm,.3cm)--(0,2cm)--(0,0)--cycle;
+      for whereto = 45 step 90 until 315:
+%          thfill halfarrow scaled .85 rotated whereto withcolor .30;
+        pickup pencircle scaled 1;
+        for halfarrowgrad = 1 step -.05 until 0:
+          thdraw ((halfarrowgrad*.3cm, halfarrowgrad*.3cm)--(0,2cm)) scaled .85 rotatedaround ((0, 0),whereto) withcolor .75halfarrowgrad;
+        endfor;  
+        pickup pencircle scaled .5;
+        thdraw halfarrow scaled .85 rotated whereto;;
+        thfill halfarrow xscaled -1 scaled .85 rotated whereto withcolor white;
+        thdraw halfarrow xscaled -1 scaled .85 rotated whereto;;
+      endfor;  
+      for whereto = 0 step 90 until 270:
+%          thfill halfarrow scaled 1.15 rotated whereto withcolor .30;
+        pickup pencircle scaled 1;
+        for halfarrowgrad = 1 step -.05 until 0:
+          thdraw ((halfarrowgrad*.3cm, halfarrowgrad*.3cm)--(0,2cm)) scaled 1.15 rotatedaround ((0, 0),whereto) withcolor .75halfarrowgrad;
+        endfor;  
+        pickup pencircle scaled .5;
+        thdraw halfarrow scaled 1.15 rotated whereto;;
+        thfill halfarrow xscaled -1 scaled 1.15 rotated whereto withcolor white;
+        thdraw halfarrow xscaled -1 scaled 1.15 rotated whereto;;
+      endfor;  
+% central circles
+      thfill fullcircle scaled .56cm withcolor 1white;
+      pickup pencircle scaled .5;
+      thdraw fullcircle scaled .56cm;
+      thfill fullcircle scaled .3cm withcolor .30;
+% characters
+      label.bot(thTEX("\bf{}N") scaled 1.5, (0,2.9cm));
+      label.lft(thTEX("\bf{}E") scaled 1.5, (2.9cm,0));
+      label.rt (thTEX("\bf{}W") scaled 1.5, (-2.95cm,0));
+      label.top(thTEX("\bf{}S") scaled 1.5, (0,-2.9cm));
+% space among characters
+      pickup pencircle scaled .5;
+      thdraw (dir(45)*2cm)--(dir(45)*2.5cm);
+      thdraw (dir(135)*2cm)--(dir(135)*2.5cm);
+      thdraw (dir(225)*2cm)--(dir(225)*2.5cm);
+      thdraw (dir(315)*2cm)--(dir(315)*2.5cm);
+  );
+  
+  thdraw tmp_pic scaled scale_value rotatedaround (origin, - rot);
+enddef; 
+endcode
+
+#Nadmorska
+code metapost
+ def p_altitude(expr pos)=
+    T:=identity shifted pos;
+    pickup PenD;
+    p:=(-.3u,0)--(.3u,0);
+    thdraw p; thdraw p rotated 90;
+    p:=fullcircle scaled .2u;
+    thclean p; thdraw p;
+  enddef;
+  
+  vardef p_label@#(expr txt,pos,rot,mode) =
+    if mode=1:
+      thdrawoptions(withcolor .8red + .4blue);
+      p_altitude(pos);
+      % append "m" to label
+      picture txtm;
+      txtm:=image(
+        draw txt;
+        interim labeloffset:=0;
+        label.urt(btex \thaltitude m etex, lrcorner txt);
+      );
+      % give extra offset in case of l/r/t/b alignment
+      pair ctmp;
+      ctmp:=center thelabel@#("x", (0,0));
+      if (xpart ctmp * ypart ctmp)=0:
+        interim labeloffset:=(.4u);
+      else: % diagonal alignment
+        interim labeloffset:=(.2u);
+      fi;
+      % draw label
+      lab:=thelabel@#(txtm, pos);
+      draw lab _thop_; % use color
+      thdrawoptions();
+      bboxmargin:=0.8bp;
+      write_circ_bbox((bbox lab) smoothed 2);
+    else:
+      if mode=7: interim labeloffset:=(u/8) fi;
+      lab:=thelabel@#(txt, pos);
+      if mode>1: pickup PenD fi;
+      if mode=2: process_uplabel;
+      elseif mode=3: process_downlabel;
+      elseif mode=4: process_updownlabel;
+      elseif mode=5: process_circledlabel;
+      elseif mode=6: process_boxedlabel;
+      elseif mode=7: process_label(pos,rot);  % station name
+      elseif mode=8: process_filledlabel(pos, rot);
+      else: process_label(pos,rot); fi;
+    fi;
+  enddef;
+  endcode
+  
+endlayout
+
+
+                          # Map Export Templates #
+
+export map -projection plan -layout jama -o "Delovni_tloris.pdf" 
+export map -projection extended -layout jama -o "iztegnjen.pdf" 
+export map -projection plan -layout jama -o "Delovni_tlorisB.pdf" -layout-color map-fg altitude
+#export map -o Debug_scrap.pdf -layout-debug on -layout-color map-fg scraps
+#export database -output "veliko.sql"
+export map -projection plan -layout jama -o veliko.kml
+export model -o 3d.lox
+export model -format esri -output esri-maps -wall-source all

@@ -1,0 +1,23 @@
+encoding  utf-8
+survey cave01 -title "Cave 1"
+
+    input ./2025/sump01/sump01.th
+    input ./2025/sump02/sump02.th
+    input ./2025/dry01/dry01.th
+
+    equate 12@sump01 0@sump02
+    equate 12@sump02 1@dry01
+    # equate S4@sifon1 S1@sifon2
+    # equate S2@sifon2 S1@sifon3
+    # equate S4@sifon3 S2@sifon1
+
+    join sump01-1p@sump01 sump02-1p@sump02
+    # join sifon0-1p@sifon0 sifon1-1p@sifon1
+    # join sifon1-1p@sifon1 sifon2-1p@sifon2
+
+    centerline
+        cs epsg:3912 #FIX THIS
+        station 0@sump01 "Cave 1 entrance" entrance
+        fix 0@sump01 14.436418 45.763266  564
+    endcenterline
+endsurvey

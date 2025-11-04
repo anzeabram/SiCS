@@ -1,0 +1,36 @@
+encoding  utf-8
+#----------------------------------------------------------------------------------|
+#                                                                                  |
+#                      THIS IS A CONFIGURATION FILE FOR:                           |
+#                                                                                  |
+#                      ********* (GARDENER's WORLD)                                |
+#                                                                                  |
+#----------------------------------------------------------------------------------|
+
+source cave01.th
+
+input "../../layouts/base-p.thl"
+input "../../layouts/mods.thl"
+
+# Create a source block to define a special map
+source
+  # This map includes the full vrtnarija map (m-all-p) as well as the survey
+  # itself (vrtnarija)
+  map include-centerline -projection plan
+    vrtnarija
+    m-all-p@vrtnarija
+  endmap
+endsource
+# Select the new map
+select include-centerline
+
+# Setup the layout with the show-centerline mod
+layout plan
+	copy show-centreline
+	map-header 0 0 off
+	scale 1 2000
+endlayout
+
+# And export as normal
+language en
+export map -projection plan -o ../outputs/plan_ENG.pdf -layout plan
