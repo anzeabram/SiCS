@@ -128,3 +128,12 @@ Certain points and lines can be further qualified,
 * "point height", "point height:specification"
     * specification: positive, negative, unsigned
 
+## Column in the passage
+
+the hole inside the area is bordered by a "wall" line (with "-outline in").
+
+## Labels
+
+Labels are points of type label. The text to display must be written in the "options" textbox as -text .... Enclose the text in double quotes if it contains blank spaces. You may use HTML tags to format the text: <it>for italics, <bf>for boldface, and so on. Use <br>for a new-line, and <right>to right justify the text. The switch <lang:XX>specifes the language. The position of the text can be aligned to the placed point with the "-align" option. This takes values "r" (right), "l" (left), "t" (top), "b" (bottom), "c" (center), "tl", "tr", etc. For example "-align tl" means that the text is placed to the top and left of the point, ie, the point is the bottom-right corner of the text rectangle.
+
+
