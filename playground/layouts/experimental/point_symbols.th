@@ -214,7 +214,7 @@ code metapost
 
   symbol-assign point gradient MY
 
-# Plan-view symbol (add as u:symbol_plan, remove from legend: text sk "point u:symbol_plan" "")
+# Plan-view symbol (add as u:symbol_plan, remove from legend: text en "point u:symbol_plan" "")
 code metapost
 def p_u_symbol_plan (expr pos,theta,sc,al) =
   U := (-3.25u, 3.25u);
@@ -229,7 +229,7 @@ def p_u_symbol_plan (expr pos,theta,sc,al) =
   thdraw (0u, 0u) -- (0u, 2.31u) withcolor .5green; 
 enddef;
 
-# Extended-view symbol (add as u:symbol_extend, remove from legend: text sk "point u:symbol_extend" "")
+# Extended-view symbol (add as u:symbol_extend, remove from legend: text en "point u:symbol_extend" "")
 def p_u_symbol_extend (expr pos,theta,sc,al) =
   U := (-2.5u, 2.5u);
   T := identity aligned al rotated theta scaled sc shifted pos;
@@ -248,3 +248,30 @@ def p_u_symbol_extend (expr pos,theta,sc,al) =
   thdraw q withcolor .5green;
   thdraw (0u, 0u) -- (2.31u, 0u) withcolor .5green; 
 enddef;
+
+# Restriction symbol, call with "point u:r"
+code metapost
+def p_u_r(expr P,R,S,A)=
+  U := (.4u,.4u);
+  T := identity aligned A rotated R scaled S shifted P;
+
+  save txt; picture txt;
+  txt := nullpicture;
+  addto txt also ("r" infont defaultfont scaled defaultscale) withcolor (0,0.2,0.4);
+  p_label.urt(txt, (0,0) transformed T, 0, 8);
+enddef;
+initsymbol("p_u_r");
+endcode
+
+# Sidemount restriction symbol, call with "point u:rsm"
+code metapost
+def p_u_rsm(expr P,R,S,A)=
+  U := (.4u,.4u);
+  T := identity aligned A rotated R scaled S shifted P;
+
+  save txt; picture txt;
+  txt := nullpicture;
+  addto txt also ("r-sm" infont defaultfont scaled defaultscale) withcolor (0,0.2,0.4);
+  p_label.urt(txt, (0,0) transformed T, 0, 8);
+enddef;
+initsymbol("p_u_rsm");

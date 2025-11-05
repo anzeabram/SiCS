@@ -11,3 +11,12 @@ Contributors:
 - Anže Abram
 - Sebastjan Gantar
 - Alan Bizjak
+
+# Placeholder
+
+## Coloring
+
+On the links below you can find a color brewers to be used with carographical data
+
+[Colorbrewer](https://colorbrewer2.org) 
+[Colorcodes](https://colorcodes.io)

@@ -54,7 +54,7 @@ endcode
 
 # Change the layout of specific point symbol
 code metapost
-p_label_mode_height:=6;
+  p_label_mode_height:=6;
 endcode
 
 % 0 = generic label
@@ -83,4 +83,36 @@ code metapost
   def l_survey_cave (expr p) =
     draw p withpen PenD withcolor (1.0, 0.0, 0.0) dashed evenly scaled 2;
   enddef;
+endcode
+
+# Background coloring options
+colour map-fg [100 0 0] # hard writes a single colour to entire output
+colour map-fg altitude
+colour map-fg altitude:banded
+colour map-fg explo-date
+colour map-fg topo-date
+colour map-fg map
+colour map-fg scrap
+
+# Add this outside of any layout to define the altitude bands (altitude:banded) [https://therion.speleo.sk/wiki/examples#colour_palette_scales_-_lookups]
+lookup altitude:banded
+ [550 510] [82 98 93] "550m - 510m"
+ [510 480] [85 96 94] "510m - 480m"
+ [480 450] [64 86 82] "480m - 450m"
+endlookup
+
+# Translations, add before layout in .thconfig
+
+text en "line wall" "stena / wall"
+text en "area water" "voda / water"
+text en "point u:r" "ožina / restriction (sidemount)"
+text en "point u:rsm" ""
+text en "point altitude" "globina / depth"
+text en "point gradient" "naklon / slope"
+text en "line u:diveline" "vrvica / guideline"
+text en "line u:jumpline" "začasna vrvica / jump line"
+
+# Altitude label modification (circled label)
+code metapost
+  p_label_mode_altitude:=5;
 endcode

@@ -98,6 +98,78 @@ endscrap
 
 scrap sump01-1p -projection plan -scale [0.0 0.0 500 1000.0 -250 -500 250 500]
 
+line u:jumpline
+  -125.3616 89.9189
+  -103.4916 48.7889
+endline
+
+line u:jumpline
+  -103.4916 48.7889
+  -88.2416 39.9789
+endline
+
+line u:diveline
+  -88.2416 39.9789
+  -68.9516 28.8489
+endline
+
+line u:diveline
+  -68.9516 28.8489
+  -48.3016 29.5689
+endline
+
+line u:diveline
+  -48.3016 29.5689
+  -26.8916 35.7089
+endline
+
+line u:diveline
+  -26.8916 35.7089
+  -6.3216 24.7689
+endline
+
+line u:diveline
+  -6.3216 24.7689
+  31.5984 4.6089
+endline
+
+line u:diveline
+  31.5984 4.6089
+  43.6484 -40.3911
+endline
+
+line u:diveline
+  43.6484 -40.3911
+  56.2984 -45.4911
+endline
+
+line u:diveline
+  56.2984 -45.4911
+  73.9084 -45.4911
+endline
+
+line u:diveline
+  73.9084 -45.4911
+  94.8284 -53.1111
+endline
+
+line u:diveline
+  94.8284 -53.1111
+  125.0984 -89.1811
+endline
+
+line border -id 67ebf444185e443f9468f27281deb474 -close on -visibility off
+  62.0806 -16.4763
+  151.2465 -89.1808
+  98.4329 -128.2766
+  25.0425 -56.9439
+  62.0806 -16.4763
+endline
+
+area water
+  67ebf444185e443f9468f27281deb474
+endarea
+
 line border -id d16584b6ca3449b1b03d7cf12050b460 -close on -visibility off
   -14.4684 75.8126
   -14.4684 75.8126 24.3386 48.9166 20.1121 40.0794
@@ -111,11 +183,15 @@ area blocks
   d16584b6ca3449b1b03d7cf12050b460
 endarea
 
-point 18.3029 87.278 altitude -value [fix 1300]
+point 18.3029 87.278 altitude
 
-point 19.3029 97.278 altitude
+point 19.3029 97.278 u:rsm
 
-point 20.3029 107.278 label -text "Velika dvorana"
+point 20.3029 107.278 u:r
+
+point 17.3029 77.278 gradient
+
+point 7.3029 67.278 u:r
 
 line wall -subtype bedrock
   -149.6241 75.4802

@@ -3423,6 +3423,8 @@ endscrap
 
 scrap dry01-1p -projection plan -scale [0.0 0.0 500 1000.0 -250 -500 250 500]
 
+point -124.6567 178.0904 altitude
+
 line wall
   209.3009 951.6565
   208.0268 949.7454 204.5231 886.0421 206.4342 876.4865
@@ -3514,973 +3516,973 @@ point -247.7 -932.85 station
 
 point -229.7 -944.42 station
 
-point -229.96 -945.03 station 
+point -229.96 -945.03 station
 
-point -240.58 -937.35 station 
+point -240.58 -937.35 station
 
-point -239.76 -936.28 station 
+point -239.76 -936.28 station
 
-point -225.29 -931.55 station 
+point -225.29 -931.55 station
 
-point -207.42 -919.49 station 
+point -207.42 -919.49 station
 
-point -213.66 -915.16 station 
+point -213.66 -915.16 station
 
-point -226.79 -919.28 station 
+point -226.79 -919.28 station
 
-#point -246.54 -922.35 station 
+#point -246.54 -922.35 station
 
-point -241.23 -914.73 station 
+point -241.23 -914.73 station
 
-point -237.31 -900.38 station 
+point -237.31 -900.38 station
 
-point -228.26 -919.7 station 
+point -228.26 -919.7 station
 
-point -224.15 -916.84 station 
+point -224.15 -916.84 station
 
 point -209.06 -913.52 station -name 2
 
-point -212.76 -909.47 station 
+point -212.76 -909.47 station
 
-point -206.48 -916.07 station 
+point -206.48 -916.07 station
 
-point -208.45 -911.71 station 
+point -208.45 -911.71 station
 
-point -209.13 -913.15 station 
+point -209.13 -913.15 station
 
-point -171.64 -895.11 station 
+point -171.64 -895.11 station
 
-point -194.6 -904.31 station 
+point -194.6 -904.31 station
 
-point -194.23 -900.22 station 
+point -194.23 -900.22 station
 
-point -179.08 -883.44 station 
+point -179.08 -883.44 station
 
-point -187.67 -883.43 station 
+point -187.67 -883.43 station
 
-point -185.67 -864.49 station 
+point -185.67 -864.49 station
 
-point -214.4 -855.92 station 
+point -214.4 -855.92 station
 
-point -209.86 -898.25 station 
+point -209.86 -898.25 station
 
-point -213.0 -838.37 station 
+point -213.0 -838.37 station
 
-point -207.3 -841.63 station 
+point -207.3 -841.63 station
 
 point -194.45 -844.21 station -name 3
 
-point -204.97 -837.94 station 
+point -204.97 -837.94 station
 
-point -185.96 -846.58 station 
+point -185.96 -846.58 station
 
-point -192.69 -842.87 station 
+point -192.69 -842.87 station
 
-point -194.65 -843.78 station 
+point -194.65 -843.78 station
 
-point -172.17 -817.85 station 
+point -172.17 -817.85 station
 
-point -177.63 -805.52 station 
+point -177.63 -805.52 station
 
-point -183.77 -784.86 station 
+point -183.77 -784.86 station
 
-point -210.26 -739.65 station 
+point -210.26 -739.65 station
 
-point -206.62 -823.47 station 
+point -206.62 -823.47 station
 
-point -228.48 -742.51 station 
+point -228.48 -742.51 station
 
 point -197.45 -753.94 station -name 4
 
-point -210.03 -751.83 station 
+point -210.03 -751.83 station
 
-point -189.62 -754.65 station 
+point -189.62 -754.65 station
 
-point -197.07 -751.58 station 
+point -197.07 -751.58 station
 
-point -197.51 -753.75 station 
+point -197.51 -753.75 station
 
-point -205.04 -735.78 station 
+point -205.04 -735.78 station
 
-point -184.5 -738.88 station 
+point -184.5 -738.88 station
 
-point -186.25 -730.16 station 
+point -186.25 -730.16 station
 
-point -181.1 -719.66 station 
+point -181.1 -719.66 station
 
-point -182.73 -701.95 station 
+point -182.73 -701.95 station
 
-point -206.51 -704.05 station 
+point -206.51 -704.05 station
 
 point -198.55 -708.88 station -name 5
 
-point -215.28 -707.21 station 
+point -215.28 -707.21 station
 
-point -182.73 -711.19 station 
+point -182.73 -711.19 station
 
-point -196.94 -707.23 station 
+point -196.94 -707.23 station
 
-point -199.8 -708.5 station 
+point -199.8 -708.5 station
 
-point -178.73 -686.63 station 
+point -178.73 -686.63 station
 
-point -193.98 -682.95 station 
+point -193.98 -682.95 station
 
-point -179.16 -693.01 station 
+point -179.16 -693.01 station
 
-point -201.55 -675.93 station 
+point -201.55 -675.93 station
 
-point -200.54 -693.55 station 
+point -200.54 -693.55 station
 
 point -214.94 -683.45 station -name 6
 
-point -218.08 -684.9 station 
+point -218.08 -684.9 station
 
-point -211.27 -681.22 station 
+point -211.27 -681.22 station
 
-point -219.72 -681.18 station 
+point -219.72 -681.18 station
 
-point -214.88 -684.2 station 
+point -214.88 -684.2 station
 
 point -191.39 -653.77 station -name 7
 
-point -199.32 -652.12 station 
+point -199.32 -652.12 station
 
-point -182.65 -654.38 station 
+point -182.65 -654.38 station
 
-point -190.33 -653.2 station 
+point -190.33 -653.2 station
 
-point -192.2 -653.34 station 
+point -192.2 -653.34 station
 
-point -188.91 -643.03 station 
+point -188.91 -643.03 station
 
-point -190.91 -632.73 station 
+point -190.91 -632.73 station
 
-point -191.89 -642.36 station 
+point -191.89 -642.36 station
 
-point -197.82 -641.31 station 
+point -197.82 -641.31 station
 
-point -199.04 -627.78 station 
+point -199.04 -627.78 station
 
-point -197.03 -625.27 station 
+point -197.03 -625.27 station
 
 point -200.99 -616.91 station -name 8
 
-point -204.78 -617.35 station 
+point -204.78 -617.35 station
 
-point -197.98 -616.01 station 
+point -197.98 -616.01 station
 
-point -203.23 -616.17 station 
+point -203.23 -616.17 station
 
-point -203.23 -617.47 station 
+point -203.23 -617.47 station
 
-point -204.84 -610.19 station 
+point -204.84 -610.19 station
 
-point -199.07 -612.23 station 
+point -199.07 -612.23 station
 
 point -200.96 -601.34 station -name 9
 
-point -204.61 -597.98 station 
+point -204.61 -597.98 station
 
-point -198.2 -604.48 station 
+point -198.2 -604.48 station
 
-point -199.57 -601.09 station 
+point -199.57 -601.09 station
 
-point -201.02 -600.69 station 
+point -201.02 -600.69 station
 
-point -197.37 -595.17 station 
+point -197.37 -595.17 station
 
-point -194.39 -598.42 station 
+point -194.39 -598.42 station
 
-point -192.16 -597.49 station 
+point -192.16 -597.49 station
 
-point -191.7 -592.93 station 
+point -191.7 -592.93 station
 
 point -192.29 -592.63 station -name 10
 
-point -194.06 -573.92 station 
+point -194.06 -573.92 station
 
 point -192.08 -575.34 station -name 11
 
-point -197.49 -573.93 station 
+point -197.49 -573.93 station
 
-point -189.66 -576.42 station 
+point -189.66 -576.42 station
 
-point -192.22 -575.42 station 
+point -192.22 -575.42 station
 
-point -191.78 -575.05 station 
+point -191.78 -575.05 station
 
 point -189.27 -562.27 station -name 12
 
-point -195.58 -560.93 station 
+point -195.58 -560.93 station
 
-point -185.96 -563.8 station 
+point -185.96 -563.8 station
 
-point -187.7 -562.82 station 
+point -187.7 -562.82 station
 
-point -189.75 -561.95 station 
+point -189.75 -561.95 station
 
-point -215.9 -520.8 station 
+point -215.9 -520.8 station
 
-point -207.23 -515.98 station 
+point -207.23 -515.98 station
 
-point -127.33 -520.48 station 
+point -127.33 -520.48 station
 
-point -140.06 -494.29 station 
+point -140.06 -494.29 station
 
-point -120.8 -528.28 station 
+point -120.8 -528.28 station
 
-point -80.57 -408.75 station 
+point -80.57 -408.75 station
 
-point -189.95 -756.0 station 
+point -189.95 -756.0 station
 
-point -142.05 -581.73 station 
+point -142.05 -581.73 station
 
 point -163.61 -467.14 station -name 13
 
-point -189.19 -446.93 station 
+point -189.19 -446.93 station
 
-point -100.67 -499.48 station 
+point -100.67 -499.48 station
 
-point -145.84 -463.84 station 
+point -145.84 -463.84 station
 
-point -163.64 -464.95 station 
+point -163.64 -464.95 station
 
-point -163.36 -464.88 station 
+point -163.36 -464.88 station
 
-point -159.12 -368.34 station 
+point -159.12 -368.34 station
 
-point -158.82 -386.56 station 
+point -158.82 -386.56 station
 
-point -220.15 -392.1 station 
+point -220.15 -392.1 station
 
-point -233.16 -409.8 station 
+point -233.16 -409.8 station
 
-point -151.0 -465.0 station 
+point -151.0 -465.0 station
 
-point -120.88 -467.14 station 
+point -120.88 -467.14 station
 
-point -105.92 -429.68 station 
+point -105.92 -429.68 station
 
-point -97.31 -384.39 station 
+point -97.31 -384.39 station
 
-point -114.46 -381.33 station 
+point -114.46 -381.33 station
 
-point -135.65 -392.77 station 
+point -135.65 -392.77 station
 
 point -91.77 -391.44 station -name 14
 
-point -104.51 -382.68 station 
+point -104.51 -382.68 station
 
-point -80.71 -400.75 station 
+point -80.71 -400.75 station
 
-point -86.29 -398.08 station 
+point -86.29 -398.08 station
 
-point -91.01 -391.17 station 
+point -91.01 -391.17 station
 
-point -89.48 -390.93 station 
+point -89.48 -390.93 station
 
-point -91.55 -348.7 station 
+point -91.55 -348.7 station
 
-point -51.11 -369.18 station 
+point -51.11 -369.18 station
 
-point -63.4 -354.06 station 
+point -63.4 -354.06 station
 
-point -44.07 -289.61 station 
+point -44.07 -289.61 station
 
-point -69.7 -339.93 station 
+point -69.7 -339.93 station
 
 point -58.37 -297.11 station -name 15
 
-point -77.88 -297.82 station 
+point -77.88 -297.82 station
 
-point -32.65 -293.26 station 
+point -32.65 -293.26 station
 
-point -55.78 -296.46 station 
+point -55.78 -296.46 station
 
-point -58.84 -296.14 station 
+point -58.84 -296.14 station
 
-point -88.64 -268.28 station 
+point -88.64 -268.28 station
 
-point -85.87 -236.49 station 
+point -85.87 -236.49 station
 
-point -65.48 -240.83 station 
+point -65.48 -240.83 station
 
-point -51.24 -281.84 station 
+point -51.24 -281.84 station
 
-point -50.39 -267.55 station 
+point -50.39 -267.55 station
 
-point -59.31 -268.63 station 
+point -59.31 -268.63 station
 
 point -57.07 -235.39 station -name 16
 
-point -80.63 -237.7 station 
+point -80.63 -237.7 station
 
-point -27.31 -212.63 station 
+point -27.31 -212.63 station
 
-point -56.22 -233.89 station 
+point -56.22 -233.89 station
 
-point -58.27 -234.41 station 
+point -58.27 -234.41 station
 
-point -56.47 -208.73 station 
+point -56.47 -208.73 station
 
-point -91.64 -207.4 station 
+point -91.64 -207.4 station
 
-point -69.77 -224.62 station 
+point -69.77 -224.62 station
 
-point -100.85 -204.85 station 
+point -100.85 -204.85 station
 
 point -121.31 -112.52 station -name 17
 
-point -155.78 -121.37 station 
+point -155.78 -121.37 station
 
-point -115.15 -111.26 station 
+point -115.15 -111.26 station
 
-point -125.51 -106.76 station 
+point -125.51 -106.76 station
 
-point -119.42 -109.49 station 
+point -119.42 -109.49 station
 
-point -146.6 -61.12 station 
+point -146.6 -61.12 station
 
-point -133.54 -85.18 station 
+point -133.54 -85.18 station
 
-point -117.71 -100.67 station 
+point -117.71 -100.67 station
 
-point -125.55 -113.07 station 
+point -125.55 -113.07 station
 
-point -146.91 -138.67 station 
+point -146.91 -138.67 station
 
-point -153.96 -123.7 station 
+point -153.96 -123.7 station
 
-point -179.95 -50.07 station 
+point -179.95 -50.07 station
 
-point -182.47 -51.57 station 
+point -182.47 -51.57 station
 
 point -185.63 -54.81 station -name 18
 
-point -210.21 -67.44 station 
+point -210.21 -67.44 station
 
-point -155.54 -41.54 station 
+point -155.54 -41.54 station
 
-point -183.43 -52.52 station 
+point -183.43 -52.52 station
 
-point -186.26 -54.88 station 
+point -186.26 -54.88 station
 
-point -182.01 -22.05 station 
+point -182.01 -22.05 station
 
-point -221.98 20.05 station 
+point -221.98 20.05 station
 
 point -200.91 22.35 station -name 19
 
-point -214.3 34.29 station 
+point -214.3 34.29 station
 
-point -188.96 16.19 station 
+point -188.96 16.19 station
 
-point -200.04 24.42 station 
+point -200.04 24.42 station
 
-point -200.89 22.99 station 
+point -200.89 22.99 station
 
-point -187.71 31.22 station 
+point -187.71 31.22 station
 
-point -192.66 41.77 station 
+point -192.66 41.77 station
 
-point -164.33 80.66 station 
+point -164.33 80.66 station
 
-point -122.4 126.91 station 
+point -122.4 126.91 station
 
-point -112.81 138.41 station 
+point -112.81 138.41 station
 
 point -122.5 126.4 station -name 20
 
-point -161.47 157.85 station 
+point -161.47 157.85 station
 
-point -92.29 113.33 station 
+point -92.29 113.33 station
 
-point -120.34 129.43 station 
+point -120.34 129.43 station
 
-point -122.92 126.52 station 
+point -122.92 126.52 station
 
 point -152.99 148.47 station -name 21
 
 point -84.12 205.08 station -name 22
 
-point -107.81 216.79 station 
+point -107.81 216.79 station
 
-point -72.72 201.36 station 
+point -72.72 201.36 station
 
-point -85.27 207.89 station 
+point -85.27 207.89 station
 
-point -88.29 209.61 station 
+point -88.29 209.61 station
 
-point -91.78 227.97 station 
+point -91.78 227.97 station
 
-point -91.53 221.49 station 
+point -91.53 221.49 station
 
-point -112.65 266.25 station 
+point -112.65 266.25 station
 
-point -82.5 338.12 station 
+point -82.5 338.12 station
 
-point -69.8 243.8 station 
+point -69.8 243.8 station
 
-point -79.77 245.82 station 
+point -79.77 245.82 station
 
-point -95.18 252.61 station 
+point -95.18 252.61 station
 
-point -93.16 225.2 station 
+point -93.16 225.2 station
 
-point -86.51 285.58 station 
+point -86.51 285.58 station
 
-point -72.71 315.58 station 
+point -72.71 315.58 station
 
-point -108.49 239.5 station 
+point -108.49 239.5 station
 
-point -67.65 239.62 station 
+point -67.65 239.62 station
 
-point -83.66 337.05 station 
+point -83.66 337.05 station
 
 point -89.45 225.1 station -name 23
 
-point -106.92 223.42 station 
+point -106.92 223.42 station
 
-point -85.11 226.18 station 
+point -85.11 226.18 station
 
-point -89.86 225.46 station 
+point -89.86 225.46 station
 
-point -90.1 225.47 station 
+point -90.1 225.47 station
 
-point -113.3 241.19 station 
+point -113.3 241.19 station
 
-point -90.9 284.28 station 
+point -90.9 284.28 station
 
-point -104.68 319.16 station 
+point -104.68 319.16 station
 
-point -138.68 319.67 station 
+point -138.68 319.67 station
 
 point -122.64 277.6 station -name 24
 
-point -129.27 284.63 station 
+point -129.27 284.63 station
 
-point -126.1 280.45 station 
+point -126.1 280.45 station
 
-point -76.92 266.45 station 
+point -76.92 266.45 station
 
-point -122.76 278.48 station 
+point -122.76 278.48 station
 
-point -123.64 277.97 station 
+point -123.64 277.97 station
 
-point -123.66 292.53 station 
+point -123.66 292.53 station
 
-point -121.46 325.66 station 
+point -121.46 325.66 station
 
-point -138.57 341.51 station 
+point -138.57 341.51 station
 
-point -112.22 307.51 station 
+point -112.22 307.51 station
 
-point -111.67 289.78 station 
+point -111.67 289.78 station
 
-point -89.23 301.78 station 
+point -89.23 301.78 station
 
-point -93.18 330.1 station 
+point -93.18 330.1 station
 
 point -99.35 313.6 station -name 25
 
-point -128.67 320.85 station 
+point -128.67 320.85 station
 
-point -77.49 307.29 station 
+point -77.49 307.29 station
 
-point -98.41 313.85 station 
+point -98.41 313.85 station
 
-point -99.53 313.63 station 
+point -99.53 313.63 station
 
-point -92.45 323.41 station 
+point -92.45 323.41 station
 
-point -103.87 333.32 station 
+point -103.87 333.32 station
 
-point -102.05 315.17 station 
+point -102.05 315.17 station
 
-point -96.14 329.79 station 
+point -96.14 329.79 station
 
-point -101.4 337.97 station 
+point -101.4 337.97 station
 
-point -93.43 350.56 station 
+point -93.43 350.56 station
 
-point -94.81 383.79 station 
+point -94.81 383.79 station
 
-point -101.96 392.32 station 
+point -101.96 392.32 station
 
 point -95.14 410.02 station -name 26
 
-point -89.61 418.98 station 
+point -89.61 418.98 station
 
-point -97.24 381.36 station 
+point -97.24 381.36 station
 
-point -92.3 408.96 station 
+point -92.3 408.96 station
 
-point -94.08 411.5 station 
+point -94.08 411.5 station
 
-point -79.7 411.73 station 
+point -79.7 411.73 station
 
-point -66.82 372.31 station 
+point -66.82 372.31 station
 
-point -70.42 383.61 station 
+point -70.42 383.61 station
 
-point -60.29 381.8 station 
+point -60.29 381.8 station
 
-point -51.15 375.9 station 
+point -51.15 375.9 station
 
-point -31.44 365.26 station 
+point -31.44 365.26 station
 
 point -32.95 374.12 station -name 28
 
-point -44.05 394.07 station 
+point -44.05 394.07 station
 
-point -15.72 354.78 station 
+point -15.72 354.78 station
 
-point -30.87 374.61 station 
+point -30.87 374.61 station
 
-point -33.48 374.66 station 
+point -33.48 374.66 station
 
-point -15.05 382.31 station 
+point -15.05 382.31 station
 
-point -36.06 388.78 station 
+point -36.06 388.78 station
 
-point -37.78 396.86 station 
+point -37.78 396.86 station
 
-point -43.15 405.51 station 
+point -43.15 405.51 station
 
-point -20.33 381.06 station 
+point -20.33 381.06 station
 
-point -16.04 397.91 station 
+point -16.04 397.91 station
 
-point -20.37 402.9 station 
+point -20.37 402.9 station
 
 point -7.53 429.38 station -name 29
 
-point -16.49 429.69 station 
+point -16.49 429.69 station
 
-point -1.88 429.06 station 
+point -1.88 429.06 station
 
-point -8.34 429.87 station 
+point -8.34 429.87 station
 
-point -7.19 431.69 station 
+point -7.19 431.69 station
 
-point -2.49 453.31 station 
+point -2.49 453.31 station
 
-point -27.46 449.79 station 
+point -27.46 449.79 station
 
-point -28.22 466.86 station 
+point -28.22 466.86 station
 
-point -12.29 482.67 station 
+point -12.29 482.67 station
 
-point -10.28 468.62 station 
+point -10.28 468.62 station
 
-point -19.78 486.99 station 
+point -19.78 486.99 station
 
-point -35.72 481.07 station 
+point -35.72 481.07 station
 
-point -45.01 508.3 station 
+point -45.01 508.3 station
 
 point -32.87 495.72 station -name 30
 
-point -52.45 504.2 station 
+point -52.45 504.2 station
 
-point -5.79 496.38 station 
+point -5.79 496.38 station
 
-point -33.81 497.11 station 
+point -33.81 497.11 station
 
-point -34.04 498.9 station 
+point -34.04 498.9 station
 
-point -40.01 504.94 station 
+point -40.01 504.94 station
 
-point -29.31 507.81 station 
+point -29.31 507.81 station
 
-point -30.22 497.67 station 
+point -30.22 497.67 station
 
-point -21.0 557.35 station 
+point -21.0 557.35 station
 
 point 3.49 557.19 station -name 31
 
-point -11.02 570.91 station 
+point -11.02 570.91 station
 
-point 15.97 548.02 station 
+point 15.97 548.02 station
 
-point 3.92 562.82 station 
+point 3.92 562.82 station
 
-point 4.24 559.23 station 
+point 4.24 559.23 station
 
-point 7.36 581.41 station 
+point 7.36 581.41 station
 
-point 26.98 569.27 station 
+point 26.98 569.27 station
 
-point 31.04 579.66 station 
+point 31.04 579.66 station
 
-point 36.22 597.47 station 
+point 36.22 597.47 station
 
-point 36.29 594.93 station 
+point 36.29 594.93 station
 
-point 38.36 593.55 station 
+point 38.36 593.55 station
 
-point 38.46 588.13 station 
+point 38.46 588.13 station
 
-point 36.84 595.16 station 
+point 36.84 595.16 station
 
-point 41.02 595.66 station 
+point 41.02 595.66 station
 
-point 42.92 590.87 station 
+point 42.92 590.87 station
 
-point 51.74 590.35 station 
+point 51.74 590.35 station
 
-point 41.5 579.94 station 
+point 41.5 579.94 station
 
-point 32.6 581.28 station 
+point 32.6 581.28 station
 
-point 28.18 570.93 station 
+point 28.18 570.93 station
 
-point 39.84 587.37 station 
+point 39.84 587.37 station
 
-point 39.54 591.16 station 
+point 39.54 591.16 station
 
-point 42.28 594.92 station 
+point 42.28 594.92 station
 
-point 38.58 595.76 station 
+point 38.58 595.76 station
 
-point 34.68 600.6 station 
+point 34.68 600.6 station
 
-point 21.03 594.81 station 
+point 21.03 594.81 station
 
-point 17.24 592.84 station 
+point 17.24 592.84 station
 
-point 56.82 601.15 station 
+point 56.82 601.15 station
 
-point 60.65 621.81 station 
+point 60.65 621.81 station
 
-point 41.73 604.42 station 
+point 41.73 604.42 station
 
-point 35.57 601.51 station 
+point 35.57 601.51 station
 
 point 69.98 608.77 station -name 32
 
-point 57.69 614.34 station 
+point 57.69 614.34 station
 
-point 72.87 607.58 station 
+point 72.87 607.58 station
 
-point 70.73 611.33 station 
+point 70.73 611.33 station
 
-point 71.0 609.3 station 
+point 71.0 609.3 station
 
-point 79.45 621.47 station 
+point 79.45 621.47 station
 
-point 60.77 648.06 station 
+point 60.77 648.06 station
 
-point 59.65 622.62 station 
+point 59.65 622.62 station
 
-point 60.46 626.6 station 
+point 60.46 626.6 station
 
-point 71.34 623.72 station 
+point 71.34 623.72 station
 
-point 70.82 620.78 station 
+point 70.82 620.78 station
 
-point 66.21 654.64 station 
+point 66.21 654.64 station
 
-point 84.92 662.63 station 
+point 84.92 662.63 station
 
-point 74.95 697.68 station 
+point 74.95 697.68 station
 
-point 91.33 678.6 station 
+point 91.33 678.6 station
 
 point 102.24 686.26 station -name 33
 
-point 97.89 714.67 station 
+point 97.89 714.67 station
 
-point 106.0 678.57 station 
+point 106.0 678.57 station
 
-point 104.84 685.77 station 
+point 104.84 685.77 station
 
-point 101.81 689.02 station 
+point 101.81 689.02 station
 
-point 114.27 738.81 station 
+point 114.27 738.81 station
 
-point 129.61 728.58 station 
+point 129.61 728.58 station
 
-point 151.02 759.4 station 
+point 151.02 759.4 station
 
-point 138.36 754.19 station 
+point 138.36 754.19 station
 
-point 135.32 735.67 station 
+point 135.32 735.67 station
 
-point 175.98 782.01 station 
+point 175.98 782.01 station
 
-point 164.39 673.04 station 
+point 164.39 673.04 station
 
-point 123.75 679.6 station 
+point 123.75 679.6 station
 
-point 138.39 692.5 station 
+point 138.39 692.5 station
 
-point 122.83 688.35 station 
+point 122.83 688.35 station
 
-point 171.16 698.16 station 
+point 171.16 698.16 station
 
-point 115.22 689.3 station 
+point 115.22 689.3 station
 
-point 110.33 689.11 station 
+point 110.33 689.11 station
 
-point 112.67 689.37 station 
+point 112.67 689.37 station
 
-point 150.79 702.03 station 
+point 150.79 702.03 station
 
 point 167.69 695.92 station -name 34
 
-point 160.64 704.59 station 
+point 160.64 704.59 station
 
-point 171.29 692.92 station 
+point 171.29 692.92 station
 
-point 167.16 696.95 station 
+point 167.16 696.95 station
 
-point 166.08 696.73 station 
+point 166.08 696.73 station
 
-point 142.89 757.29 station 
+point 142.89 757.29 station
 
-point 161.09 713.67 station 
+point 161.09 713.67 station
 
-point 157.76 757.19 station 
+point 157.76 757.19 station
 
-point 191.11 743.53 station 
+point 191.11 743.53 station
 
-point 177.11 702.45 station 
+point 177.11 702.45 station
 
-point 182.29 707.2 station 
+point 182.29 707.2 station
 
-point 195.79 729.29 station 
+point 195.79 729.29 station
 
-point 182.61 756.24 station 
+point 182.61 756.24 station
 
-point 167.43 770.56 station 
+point 167.43 770.56 station
 
-point 169.42 720.74 station 
+point 169.42 720.74 station
 
 point 191.56 785.63 station -name 35
 
-point 170.25 803.26 station 
+point 170.25 803.26 station
 
-point 197.29 784.57 station 
+point 197.29 784.57 station
 
-point 190.37 789.02 station 
+point 190.37 789.02 station
 
-point 189.7 784.81 station 
+point 189.7 784.81 station
 
-point 170.08 799.58 station 
+point 170.08 799.58 station
 
-point 170.47 813.2 station 
+point 170.47 813.2 station
 
-point 192.32 834.57 station 
+point 192.32 834.57 station
 
-point 204.4 827.39 station 
+point 204.4 827.39 station
 
-point 212.13 824.0 station 
+point 212.13 824.0 station
 
-point 210.34 864.49 station 
+point 210.34 864.49 station
 
-point 188.15 828.96 station 
+point 188.15 828.96 station
 
-point 221.18 820.56 station 
+point 221.18 820.56 station
 
-point 227.66 848.16 station 
+point 227.66 848.16 station
 
 point 214.82 886.42 station -name 36
 
-point 208.88 890.12 station 
+point 208.88 890.12 station
 
-point 238.85 876.12 station 
+point 238.85 876.12 station
 
-point 222.67 906.64 station 
+point 222.67 906.64 station
 
-point 214.51 886.51 station 
+point 214.51 886.51 station
 
-point 213.81 918.59 station 
+point 213.81 918.59 station
 
-point 233.59 933.09 station 
+point 233.59 933.09 station
 
-point 245.35 916.1 station 
+point 245.35 916.1 station
 
-point 247.7 903.75 station 
+point 247.7 903.75 station
 
-point 237.79 884.89 station 
+point 237.79 884.89 station
 
-point 233.14 905.92 station 
+point 233.14 905.92 station
 
-point 229.37 905.17 station 
+point 229.37 905.17 station
 
-point 225.14 921.22 station 
+point 225.14 921.22 station
 
-point 215.23 945.03 station 
+point 215.23 945.03 station
 
-point 212.69 904.06 station 
+point 212.69 904.06 station
 
 point -93.85 280.99 station -name 37
 
-point -102.27 285.93 station 
+point -102.27 285.93 station
 
-point -68.88 273.07 station 
+point -68.88 273.07 station
 
-point -89.39 280.49 station 
+point -89.39 280.49 station
 
-point -93.24 283.71 station 
+point -93.24 283.71 station
 
-point -67.05 293.83 station 
+point -67.05 293.83 station
 
-point -52.31 322.53 station 
+point -52.31 322.53 station
 
-point -65.98 334.98 station 
+point -65.98 334.98 station
 
-point -81.75 302.81 station 
+point -81.75 302.81 station
 
-point -88.02 332.96 station 
+point -88.02 332.96 station
 
-point -92.98 303.6 station 
+point -92.98 303.6 station
 
-point -69.65 375.9 station 
+point -69.65 375.9 station
 
-point -59.15 382.35 station 
+point -59.15 382.35 station
 
 point -46.6 382.3 station -name 38
 
-point -64.41 398.22 station 
+point -64.41 398.22 station
 
-point -39.38 375.57 station 
+point -39.38 375.57 station
 
-point -42.0 385.41 station 
+point -42.0 385.41 station
 
-point -47.19 385.68 station 
+point -47.19 385.68 station
 
-point -15.18 402.79 station 
+point -15.18 402.79 station
 
-point 8.66 420.0 station 
+point 8.66 420.0 station
 
-point -11.86 431.38 station 
+point -11.86 431.38 station
 
-point -20.32 429.34 station 
+point -20.32 429.34 station
 
-point -52.48 414.66 station 
+point -52.48 414.66 station
 
-point -46.95 407.07 station 
+point -46.95 407.07 station
 
-point -31.65 406.9 station 
+point -31.65 406.9 station
 
-point -16.38 429.2 station 
+point -16.38 429.2 station
 
-point -17.04 452.97 station 
+point -17.04 452.97 station
 
-point -14.16 459.86 station 
+point -14.16 459.86 station
 
 point -16.98 453.48 station -name 39
 
-point -19.7 453.08 station 
+point -19.7 453.08 station
 
-point -14.3 454.15 station 
+point -14.3 454.15 station
 
-point -15.38 454.84 station 
+point -15.38 454.84 station
 
-point -18.1 453.35 station 
+point -18.1 453.35 station
 
-point -19.46 456.63 station 
+point -19.46 456.63 station
 
-point -15.77 455.64 station 
+point -15.77 455.64 station
 
-point -19.34 469.92 station 
+point -19.34 469.92 station
 
-point -17.56 477.25 station 
+point -17.56 477.25 station
 
 point -15.39 488.4 station -name 40
 
-point -20.62 491.43 station 
+point -20.62 491.43 station
 
-point -9.57 488.41 station 
+point -9.57 488.41 station
 
-point -15.29 488.48 station 
+point -15.29 488.48 station
 
-point -16.55 487.86 station 
+point -16.55 487.86 station
 
 point -13.09 507.16 station -name 41
 
-point -17.97 517.54 station 
+point -17.97 517.54 station
 
-point -7.7 501.76 station 
+point -7.7 501.76 station
 
-point -11.28 506.16 station 
+point -11.28 506.16 station
 
-point -14.39 509.93 station 
+point -14.39 509.93 station
 
-point 17.95 531.58 station 
+point 17.95 531.58 station
 
-point 8.22 533.94 station 
+point 8.22 533.94 station
 
-point 13.55 553.49 station 
+point 13.55 553.49 station
 
-point 8.44 562.95 station 
+point 8.44 562.95 station
 
-point 19.93 535.97 station 
+point 19.93 535.97 station
 
 point 12.39 526.71 station -name 42
 
-point 20.0 519.87 station 
+point 20.0 519.87 station
 
-point -16.52 527.98 station 
+point -16.52 527.98 station
 
-point 5.94 522.45 station 
+point 5.94 522.45 station
 
-point 12.19 524.61 station 
+point 12.19 524.61 station
 
-point -4.15 506.21 station 
+point -4.15 506.21 station
 
-point -4.91 506.88 station 
+point -4.91 506.88 station
 
-point -5.44 508.56 station 
+point -5.44 508.56 station
 
-point -5.23 508.02 station 
+point -5.23 508.02 station
 
-point -5.19 507.92 station 
+point -5.19 507.92 station
 
-point -4.68 507.49 station 
+point -4.68 507.49 station
 
-point 30.51 502.41 station 
+point 30.51 502.41 station
 
-point 4.51 502.59 station 
+point 4.51 502.59 station
 
-point -4.48 529.54 station 
+point -4.48 529.54 station
 
-point -5.51 508.11 station 
+point -5.51 508.11 station
 
-point -4.39 507.47 station 
+point -4.39 507.47 station
 
 point -3.94 506.25 station -name 43
 
-point -8.26 507.13 station 
+point -8.26 507.13 station
 
-point 6.64 507.12 station 
+point 6.64 507.12 station
 
-point -2.44 509.55 station 
+point -2.44 509.55 station
 
-point -4.15 506.94 station 
+point -4.15 506.94 station
 
-point -0.66 519.71 station 
+point -0.66 519.71 station
 
-point -0.18 519.38 station 
+point -0.18 519.38 station
 
-point -0.49 523.21 station 
+point -0.49 523.21 station
 
-point 0.94 518.58 station 
+point 0.94 518.58 station
 
-point 1.66 520.33 station 
+point 1.66 520.33 station
 
 point 1.48 517.82 station -name 44
 
-point -6.95 530.17 station 
+point -6.95 530.17 station
 
-point 11.93 516.99 station 
+point 11.93 516.99 station
 
-point 4.96 518.18 station 
+point 4.96 518.18 station
 
-point -5.12 523.57 station 
+point -5.12 523.57 station
 
 point 18.83 548.99 station -name 45
 

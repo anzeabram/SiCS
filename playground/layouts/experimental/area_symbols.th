@@ -6,6 +6,14 @@ code metapost
 	enddef;
 endcode
 
+# Color water areas in light blue
+code metapost
+	def a_water (expr p) =
+		T:=identity;
+		thfill p withcolor (0.87, 0.92, 1);
+	enddef;
+endcode
+
 # Thicker/more compact sand area symbol
 code metapost
       def a_sand_AMER (expr p) =

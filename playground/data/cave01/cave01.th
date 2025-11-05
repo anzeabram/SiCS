@@ -12,6 +12,7 @@ survey cave01 -title "Cave 1"
     # equate S4@sifon3 S2@sifon1
 
     join sump01-1p@sump01 sump02-1p@sump02
+    join sump02-1p@sump02 dry01-1p@dry01
     # join sifon0-1p@sifon0 sifon1-1p@sifon1
     # join sifon1-1p@sifon1 sifon2-1p@sifon2
 
