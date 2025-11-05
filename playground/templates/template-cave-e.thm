@@ -1,0 +1,8 @@
+# Map collection for Cave 01 (extended view)
+
+map m-all-p -projection extended -title "Cave 01"
+	m-sump01-e@sump01
+    m-sump02-e@sump02
+    sump02
+    dry01
+endmap

@@ -118,3 +118,17 @@ legend-width 20 cm
 code metapost
   fontsetup( 6, 8, 10, 12, 16 );
 endcode
+
+# Map collection for Cave 01 - needs to be in .thconfig, survey (cave) data mixes with maps, survey data of a single section will mix with scraps
+
+  source
+    # This map includes the full vrtnarija map (m-all-p) as well as the survey
+    # itself (vrtnarija)
+    map include-centerline -projection plan
+      cave01
+      m-all-p@cave01
+    endmap
+  endsource
+
+  # Select the new map
+  select include-centerline

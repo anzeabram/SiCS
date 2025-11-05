@@ -9,6 +9,7 @@ input dry01-p.th2
 input dry01-e.th2
 
 #map definitions, needs to include all relevant scraps
+
 map m-dry01-p -projection plan
     dry01-1p
 endmap

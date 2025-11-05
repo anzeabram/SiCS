@@ -1,0 +1,32 @@
+encoding  utf-8
+
+survey cave01 -title "Cave 1"
+
+	# input the map definitions
+	input ./cave01-p.thm #plan view
+	input ./cave01-e.thm #extended elevation view
+
+    # input the individual survey data files
+    input ./2025/sump01/sump01.th
+    input ./2025/sump02/sump02.th
+    input ./2025/dry01/dry01.th
+
+    # equate stations between different surveys
+    equate 12@sump01 0@sump02
+    equate 12@sump02 1@dry01
+
+    # connect the individual scraps - plan view
+    join sump01-1p@sump01 sump02-1p@sump02
+    join sump02-1p@sump02 dry01-1p@dry01
+
+    # connect the individual scraps - extended view
+    join sump01-1e@sump01 sump02-1e@sump02
+    join sump02-1e@sump02 dry01-1e@dry01
+
+    centerline
+        cs epsg:3912
+        station 0@sump01 "Cave 1 entrance" entrance
+        fix 0@sump01 445791 89768 293
+    endcenterline
+    
+endsurvey

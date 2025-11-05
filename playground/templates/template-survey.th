@@ -1,0 +1,52 @@
+encoding  utf-8
+
+survey sump01 -title "Sump 1"
+
+# th2 includes with scraps
+
+input sump01-p.th2
+input sump01-e.th2
+
+# map definitions, needs to include all relevant scraps
+
+map m-sump01-p -projection plan
+     sump01-1p
+endmap
+
+map m-sump01-e -projection extended
+    sump01-1e
+endmap
+
+centerline
+    # team members and roles [instruments, notes, assistant, pictures, dimensions]
+    team "Name Surname" instruments
+    team "Name Surname" notes
+
+    # date of survey
+    date 2022.8.26
+
+    # depths as positive numbers
+    calibrate depth 0 -1
+    units length depth meters
+    units compass degrees
+    data diving from to length compass fromdepth todepth left right up down 
+    # direction for extended elevation view
+    extend right
+    
+    0 1 6 152 0 1 0.5 10 15 4
+    1 2 3 120 1 3 0 10 15 4
+    2 3 3 120 3 4 0 2.8 5 2.1
+    3 4 3.3 88 4 6 2.2 2.3 5.4 0.6
+    4 5 3 74 6 7 3.8 2.1 2.7 0
+    5 6 3 118 7 7.5 1.6 1.9 3.3 0
+    6 7 6 118 7.5 5 0.8 0.9 3.4 0
+    7 8 6 165 5 4 0 2 3.3 0.5
+    8 9 2 112 4 3 2.1 2 0 0
+    9 10 3 90 3 1 2 4 0 1
+    10 11 3 110 1 0.5 0 5 0 0
+    11 12 6 140 0.5 0 4 7 4 4
+
+    station 1 "Comment 1"
+endcenterline
+
+endsurvey
