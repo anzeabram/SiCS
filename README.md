@@ -54,3 +54,77 @@ Custom attributes  Objects survey, centreline, scrap, point, line, area, map and
 * black points connected by black lines: final position of pairs of points with maximal distorsion;
 * orange points: points with maximal change of their distance, in the transformation;
 * yellow lines between yello and black points: displacement of these points.
+
+## Add pdfs and images to the map
+
+You can insert a picture in the map header with the following map-image command. Images in pdf, png, jpg are supported. Therefore you can insert photos, logos, and also a map, say the extented elevation on the page of the plan. For example,
+  -layout-map-image 0 50 ne "./elev.pdf"
+
+## Layers
+
+Every graphical element belongs to a layer (or group). The graphical elements are rendered in the cave map following the order of the layers. There are five layers:
+* bottom, the lowest layer. It contains only elements that have the option -place bottom.
+* default-bottom. It contains the areas.
+* default;
+* default-top. This contains the ceiling-step and chimney elements by default.
+* top. It contains the elements that have the option -place top.
+
+## Groups
+
+The "group" type defines groups of symbols. The possible groups are
+* "group centerline"
+    * subgroups: "surface-centerline", "cave-centerline"
+    * lines: survey:surface survey:cave
+    * points: surface-station cave-station
+* "group sections":
+    * lines: section
+    * points: section
+* "group water"
+    * lines: water-flow
+    * points: water-flow, water, sink, spring
+    * areas: water, sump
+* "group sediments"
+    * lines: wall:sand, wall:clay
+    * points: sand, clay, clay-tree, raft, raft-cone, guano
+    * areas: sand, clay,
+* "group passage-fills"
+    * lines: rock-border, rock-edge, water-flow
+    * points: bedrock, sand raft, clay, pebbles, debris, blocks, water, ice, guano, snow
+    * areas: water, sump, bedrock, blocks, clay, debris, ice, pebbles, sand, snow
+* "group equipment"
+    * lines: rope
+    * points: anchor, rope, fixed-ladder, rope-ladder, steps, bridge, traverse, camp, no-equipement
+* "group speleothems"
+    * lines: flowstone, moonmilk
+    * points: flowstone, moonmilk, stalactite, stalagmite, pillar, curtain, helictite, soda-straw, crystal, wall-calcite, popcorn, disk, gypsum, gypsum-flower, aragonite, cave-pearl, rimstone-pool, rimstone-dam,
+    * areas: flowstone, moonmilk
+* "group ice"
+    * lines: wall:ice
+    * points: ice, ice-stalactite, ice-stalagmite, ice-pillar, snow,
+    * areas: ice, snow
+
+
+## Point subtypes
+
+Certain points and lines can be further qualified,
+* "point flags:flag_name"
+    * flag_name: entrance, continuation, sink, spring, doline, dig, air-draught, arch, overhang
+* "line wall", "line wall:subtype"
+    * subtype: bedrock, blocks, clay, debris, ice, pebbles, presumed, sand, underlying, unsurveyed, pit, overlying, moonmilk, flowstone
+* "line water-flow", "line water-flow:subtype"
+    * subtype: conjectural, intermittent, permanent
+* "line border", "line border:subtype"
+    * subtypes: temporary, visible
+* "line survey", "line survey:subtype"
+    * subtype: surface, cave
+* "point station", "point station:subtype"
+    * subtype: fixed, natural, painted, temporary, surface station, cave station
+* "point air-draught", "point air-draught:subtype"
+    * subtypes: winter, summer
+* "point water-flow", "point water-flow:subtype"
+    * subtypes: intermittent, paleo, permanent
+* "point passage-height", "point passage-height:specification"
+    * specification: positive, negative, both, unsigned
+* "point height", "point height:specification"
+    * specification: positive, negative, unsigned
+
