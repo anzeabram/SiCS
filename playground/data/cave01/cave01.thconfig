@@ -195,7 +195,8 @@ layout custom_legendsymbolbox
 legend on
 legend-columns 4
 legend-width 20 cm
-colour-legend off
+
+debug on
 
 endlayout
 
@@ -203,5 +204,6 @@ endlayout
 #export map -projection extended -output 2-extended.pdf
 # export map -projection plan -output 3-sics.pdf -layout sics-plan
 export map -projection plan -output 4-test.pdf -layout custom_legendsymbolbox 
+#export survey-list -output surveys.html 
 
 # -layout-color map-fg 002F6C

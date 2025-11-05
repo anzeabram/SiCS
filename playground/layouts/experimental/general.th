@@ -113,3 +113,8 @@ endcode
 legend on
 legend-columns 2
 legend-width 20 cm
+
+# Adjust font size
+code metapost
+  fontsetup( 6, 8, 10, 12, 16 );
+endcode
