@@ -31,20 +31,15 @@ On the links below you can find a color brewers to be used with carographical da
 
 ## macOS install
 
-
-`cd therion
-
+```
+cd therion
 mkdir build
-
 cd .
-
 cmake -S . -B build
-
 cd build
-
 make
-
-sudo make install`
+sudo make install
+```
 
 ## Custom tags
 
