@@ -102,17 +102,14 @@ lookup altitude:banded
 endlookup
 
 # Translations, add before layout in .thconfig
-
-text en "line wall" "stena / wall"
-text en "area water" "voda / water"
-text en "point u:r" "ožina / restriction (sidemount)"
-text en "point u:rsm" ""
-text en "point altitude" "globina / depth"
-text en "point gradient" "naklon / slope"
-text en "line u:diveline" "vrvica / guideline"
-text en "line u:jumpline" "začasna vrvica / jump line"
+input ../../layouts/translations-si.thl
 
 # Altitude label modification (circled label)
 code metapost
   p_label_mode_altitude:=5;
 endcode
+
+# Legend parameters
+legend on
+legend-columns 2
+legend-width 20 cm

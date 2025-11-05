@@ -9,16 +9,7 @@ encoding  utf-8
 
 source cave01.th
 
-text en "line wall" "stena / wall"
-text en "area water" "voda / water"
-text en "point u:r" "ožina / restriction (sidemount)"
-text en "point u:rsm" ""
-text en "point altitude" "globina / depth"
-text en "point gradient" "naklon / slope"
-text en "line u:diveline" "vrvica / guideline"
-text en "line u:jumpline" "začasna vrvica / jump line"
-
-
+input ../../layouts/translations-si.thl
 
 layout sics-plan
 
@@ -199,9 +190,18 @@ code metapost
 
 endlayout
 
+layout custom_legendsymbolbox
+
+legend on
+legend-columns 4
+legend-width 20 cm
+colour-legend off
+
+endlayout
+
 #export map -projection plan -output 1-plan.pdf
 #export map -projection extended -output 2-extended.pdf
 # export map -projection plan -output 3-sics.pdf -layout sics-plan
-export map -projection plan -output 4-test.pdf -layout test 
+export map -projection plan -output 4-test.pdf -layout custom_legendsymbolbox 
 
 # -layout-color map-fg 002F6C
