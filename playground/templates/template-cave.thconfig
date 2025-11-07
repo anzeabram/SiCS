@@ -1,0 +1,21 @@
+encoding  utf-8
+
+source cave01.th
+
+input ../../layouts/translations-si.thl
+input ../../layouts/base-p.thl
+
+layout plan
+  copy base-p
+
+  doc-author "Name Surname"
+  doc-title "Map of Cave 01"
+
+  # Grid zero for altitude display
+  cs epsg:3912
+  grid-origin 0 0 293 m
+endlayout
+
+select m-all-p@cave01
+
+export map -projection plan -output ../../outputs/cave01-p.pdf -layout plan

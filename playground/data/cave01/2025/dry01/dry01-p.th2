@@ -3423,6 +3423,26 @@ endscrap
 
 scrap dry01-1p -projection plan -scale [0.0 0.0 500 1000.0 -250 -500 250 500]
 
+line section -direction begin
+  -136.5497 -173.6248
+  -131.1881 -169.1211 -84.0065 -129.8745 -56.5554 -107.356
+  smooth off
+endline
+
+point -30.7864 -83.6453 section -scrap dry01-1cs
+
+line border -id 245e51dcc589441d8e67f9524c2ecbec -close on -visibility off
+  -124.1964 -135.5642
+  -92.3186 -135.5642
+  -92.3186 -167.442
+  -124.1964 -167.442
+  -124.1964 -135.5642
+endline
+
+area water
+  245e51dcc589441d8e67f9524c2ecbec
+endarea
+
 point -124.6567 178.0904 altitude
 
 line wall
@@ -4485,6 +4505,20 @@ point 4.96 518.18 station
 point -5.12 523.57 station
 
 point 18.83 548.99 station -name 45
+
+endscrap
+
+
+
+scrap dry01-1cs -projection none -scale [0.0 0.0 0.0 8.0 0.0 0.0 0.0 1.0]
+
+line wall -close on
+  -56.8586 25.0257
+  -24.9808 25.0257
+  -24.9808 -6.8522
+  -56.8586 -6.8522
+  -56.8586 25.0257
+endline
 
 endscrap
 

@@ -1,11 +1,6 @@
 encoding  utf-8
-#_____________________________________________________________
-#                                                             |
-#             THIS IS A THERION LAYOUT DEFINITION FILE        |
-#                                                             |
-#             Used for sketching underwater passages.         |
-#                                                             |
-#_____________________________________________________________|
+
+# Layout file for sketching underwater passages
 
 layout sketch
     grid bottom

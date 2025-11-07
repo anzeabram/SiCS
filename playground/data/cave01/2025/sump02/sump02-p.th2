@@ -98,6 +98,30 @@ endscrap
 
 scrap sump02-1p -projection plan -scale [0.0 0.0 500 1000.0 -250 -500 250 500]
 
+line border -id e6e88bfbfccc4a4cb565946b19b50c6a -close on -visibility off
+  -169.895 127.7475
+  21.953 127.7475
+  21.953 -47.2718
+  -169.895 -47.2718
+  -169.895 127.7475
+endline
+
+area blocks
+  e6e88bfbfccc4a4cb565946b19b50c6a
+endarea
+
+line border -id cddea92b83f643f7bbda70e05b46c9f7 -close on -visibility off
+  -89.1169 71.2028
+  34.0697 71.2028
+  34.0697 -55.3496
+  -89.1169 -55.3496
+  -89.1169 71.2028
+endline
+
+area sand
+  cddea92b83f643f7bbda70e05b46c9f7
+endarea
+
 line border -id 224adb490bf7478d87834451827abc78 -close on -visibility off
   -117.2796 117.3164
   -155.9736 76.6877
