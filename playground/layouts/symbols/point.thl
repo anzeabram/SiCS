@@ -1,0 +1,52 @@
+encoding  utf-8
+
+layout point-symbols
+
+# Gradient symbol
+code metapost
+  def p_gradient_MY (expr pos,theta,sc,al) =
+      U:=(.15u, .4u);
+      T:=identity aligned al rotated theta scaled sc shifted pos;
+      pickup PenC;
+
+      #Left Hand side
+      thdraw (-.2u, -.05u) -- (-.6u, .8u);
+
+      #Centerline
+      thdraw (0u, 0u) -- (0u, .9u);
+
+      #Right side
+      thdraw (.2u, -.05u) -- (.6u, .8u);
+  enddef;
+  
+  initsymbol ("p_gradient_MY");
+endcode
+symbol-assign point gradient MY
+
+# Restriction symbol, call with "point u:r"
+code metapost
+def p_u_r(expr P,R,S,A)=
+  U := (.4u,.4u);
+  T := identity aligned A rotated R scaled S shifted P;
+
+  save txt; picture txt;
+  txt := nullpicture;
+  addto txt also ("r" infont defaultfont scaled defaultscale) withcolor (0,0.2,0.4);
+  p_label.urt(txt, (0,0) transformed T, 0, 8);
+enddef;
+initsymbol("p_u_r");
+
+# Sidemount restriction symbol, call with "point u:rsm"
+code metapost
+def p_u_rsm(expr P,R,S,A)=
+  U := (.4u,.4u);
+  T := identity aligned A rotated R scaled S shifted P;
+
+  save txt; picture txt;
+  txt := nullpicture;
+  addto txt also ("r-sm" infont defaultfont scaled defaultscale) withcolor (0,0.2,0.4);
+  p_label.urt(txt, (0,0) transformed T, 0, 8);
+enddef;
+initsymbol("p_u_rsm");
+
+endlayout

@@ -1,0 +1,25 @@
+encoding  utf-8
+
+layout line-symbols
+
+# Dive line
+code metapost
+  def l_u_diveline (expr P) =
+  T:=identity;
+  pickup PenB;
+  thdraw P withcolor (1, 0.5, 0);
+enddef;
+initsymbol("l_u_diveline");
+endcode
+
+# Jump/Temporary line (dashed)
+code metapost
+  def l_u_jumpline (expr P) =
+  T:=identity;
+  pickup PenB;
+  thdraw P withcolor (1, 0.5, 0) dashed evenly scaled 2;
+enddef;
+initsymbol("l_u_jumpline");
+endcode
+
+endlayout
