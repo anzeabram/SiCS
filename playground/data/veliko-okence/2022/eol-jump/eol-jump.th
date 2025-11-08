@@ -1,0 +1,42 @@
+encoding  utf-8
+
+survey eol-jump -title "Jump to the right near EOL"
+
+# th2 includes with scraps
+
+input eol-jump-p.th2
+# input sump01-e.th2
+
+# map definitions, needs to include all relevant scraps
+
+map m-eol-jump-p -projection plan
+     eol-jump-1p
+endmap
+
+# map m-sump01-e -projection extended
+#     sump01-1e
+# endmap
+
+centerline
+    # team members and roles [instruments, notes, assistant, pictures, dimensions]
+    team "Alan Bizjak" instruments notes
+    team "Anže Abram" instruments notes
+
+    # date of survey
+    date 2022.3.6
+
+    # depths as positive numbers
+    calibrate depth 0 -1
+    units length depth meters
+    units compass degrees
+    data diving from to length compass fromdepth todepth
+    # direction for extended elevation view
+    extend right
+    
+    0	1	2.74	265.8	16.00	16.18
+    1	2	9.45	230.1	16.18	14.77
+    2	3	2.83	290.8	14.77	14.63
+
+endcenterline
+
+endsurvey

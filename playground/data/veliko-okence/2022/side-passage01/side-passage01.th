@@ -1,0 +1,48 @@
+encoding  utf-8
+
+survey side-passage01 -title "First side passage (left)"
+
+# th2 includes with scraps
+
+input side-passage01-p.th2
+# input sump01-e.th2
+
+# map definitions, needs to include all relevant scraps
+
+map m-side-passage01-p -projection plan
+     side-passage01-1p
+endmap
+
+# map m-sump01-e -projection extended
+#     sump01-1e
+# endmap
+
+centerline
+    # team members and roles [instruments, notes, assistant, pictures, dimensions]
+    team "Alan Bizjak" instruments notes
+    team "Anže Abram" instruments notes
+
+    # date of survey
+    date 2022.2.26
+
+    # depths as positive numbers
+    calibrate depth 0 -1
+    units length depth meters
+    units compass degrees
+    data diving from to length compass fromdepth todepth
+    # direction for extended elevation view
+    extend right
+
+    0	1	0.5	251.5	13.22	13.05
+    1	2	0.86	216.1	13.05	13.28
+    2	3	1.71	128.1	13.28	13.33
+    3	4	1.4	139.3	13.33	13.29
+    4	5	9.66	75.2	13.29	9.75
+    5	6	5.15	29.2	9.75	8.37
+    6	7	4.16	5.4	    8.37	7.64
+    7	8	4.61	322.8	7.64	6.31
+    8	9	2.93	353.2	6.31	6.54
+
+endcenterline
+
+endsurvey

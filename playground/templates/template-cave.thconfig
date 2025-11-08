@@ -14,6 +14,9 @@ layout plan
   # Grid zero for altitude display
   cs epsg:3912
   grid-origin 0 0 293 m
+
+  # symbol-hide line survey
+  # symbol-hide point station
 endlayout
 
 select m-all-p@cave01

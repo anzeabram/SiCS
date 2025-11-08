@@ -1,0 +1,46 @@
+encoding  utf-8
+
+survey entrance -title "Entrance temporary line to ML"
+
+# th2 includes with scraps
+
+input entrance-p.th2
+# input sump01-e.th2
+
+# map definitions, needs to include all relevant scraps
+
+map m-entrance-p -projection plan
+     entrance-1p
+endmap
+
+# map m-sump01-e -projection extended
+#     sump01-1e
+# endmap
+
+centerline
+    # team members and roles [instruments, notes, assistant, pictures, dimensions]
+    team "Alan Bizjak" instruments notes
+    team "Anže Abram" instruments notes
+
+    # date of survey
+    date 2022.2.26
+
+    # depths as positive numbers
+    calibrate depth 0 -1
+    units length depth meters
+    units compass degrees
+    data diving from to length compass fromdepth todepth
+    # direction for extended elevation view
+    extend right
+    
+    0  1  2.18  141.5  0  0.28
+    1  2  6.83  160.6  0.28  3.49
+    2  3  5.44  176.5  3.49  4.01
+    3  4  11  198.7  4.01  9.59
+    4  5  12.17  212.1  9.59  14.48
+    5  6  6.94  192.3  14.48  11.83
+
+    station 0 "Rock in front of the cave"
+endcenterline
+
+endsurvey

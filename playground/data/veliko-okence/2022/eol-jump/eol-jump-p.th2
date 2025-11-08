@@ -1,0 +1,63 @@
+encoding  utf-8
+##XTHERION## xth_me_area_adjust -250.0 -500.0 250.0 500.0
+##XTHERION## xth_me_area_zoom_to 100
+
+
+
+scrap DELETE-ME-survey-legs-eol-jump-p -projection plan -scale [0.0 0.0 500 1000.0 -250 -500 250 500]
+
+line survey
+  50.87 20.94
+  29.37 21.18
+endline
+
+line survey
+  29.37 21.18
+  -30.79 -21.18
+endline
+
+line survey
+  -30.79 -21.18
+  -50.87 -11.57
+endline
+
+point 50.87 20.94 station-name -align tr -scale xs -text 0
+
+point 29.37 21.18 station-name -align tr -scale xs -text 1
+
+point -30.79 -21.18 station-name -align tr -scale xs -text 2
+
+point -50.87 -11.57 station-name -align tr -scale xs -text 3
+
+endscrap
+
+
+
+scrap eol-jump-1p -projection plan -scale [0.0 0.0 500 1000.0 -250 -500 250 500]
+
+line u:diveline
+  50.87 20.94
+  29.37 21.18
+endline
+
+line u:diveline
+  29.37 21.18
+  -30.79 -21.18
+endline
+
+line u:diveline
+  -30.79 -21.18
+  -50.87 -11.57
+endline
+
+point 50.87 20.94 station -name 0
+
+point 29.37 21.18 station -name 1
+
+point -30.79 -21.18 station -name 2
+
+point -50.87 -11.57 station -name 3
+
+endscrap
+
+

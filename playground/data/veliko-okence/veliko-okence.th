@@ -1,0 +1,37 @@
+encoding  utf-8
+
+survey veliko-okence -title "Veliko okence"
+
+	# input the map definitions
+	input ./veliko-okence-p.thm #plan view
+	# input ./cave01-e.thm #extended elevation view
+
+    # input the individual survey data files
+    input ./2022/entrance/entrance.th
+    input ./2022/main-line/main-line.th
+    input ./2022/side-passage01/side-passage01.th
+    input ./2022/velika-dvorana-loop/velika-dvorana-loop.th
+    input ./2022/eol-jump/eol-jump.th
+
+    # equate stations between different surveys
+    equate 6@entrance 0@main-line
+    equate 10@main-line 0@side-passage01
+    equate 5@main-line 9@side-passage01
+    equate 31@main-line 0@velika-dvorana-loop
+    equate 17@main-line 14@velika-dvorana-loop
+    equate 47@main-line 0@eol-jump
+
+    # connect the individual scraps - plan view
+    join entrance-1p@entrance main-line-1p@main-line
+
+    # connect the individual scraps - extended view
+    # join sump01-1e@sump01 sump02-1e@sump02
+    # join sump02-1e@sump02 dry01-1e@dry01
+
+    centerline
+        cs epsg:3912
+        station 0@entrance "vhod / entrance" entrance
+        fix 0@entrance 445791 89768 293
+    endcenterline
+    
+endsurvey

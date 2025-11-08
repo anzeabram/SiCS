@@ -1,0 +1,25 @@
+encoding  utf-8
+
+source veliko-okence.th
+
+input ../../layouts/translations-si.thl
+input ../../layouts/base-p.thl
+
+layout plan
+  copy base-p
+
+  doc-author "Alan Bizjak, Jaka Petruša, Anže Abram"
+  doc-title "Map of Veliko okence"
+
+  # Grid zero for altitude display
+  cs epsg:3912
+  grid-origin 0 0 293 m
+
+  symbol-show line survey
+  symbol-hide point station
+
+endlayout
+
+select m-all-p@veliko-okence
+
+export map -projection plan -output ../../outputs/veliko-okence-p.pdf -layout plan

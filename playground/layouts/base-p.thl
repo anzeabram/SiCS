@@ -14,18 +14,15 @@ legend-columns 1
 north true
 
 # Scale
-scale 1 200
+# scale 1 200
 scale-bar 20 m
 # Scale of symbols
-base-scale 1 200
+# base-scale 1 200
 
 # color map-bg [80 80 80]
 # color map-fg [85 96 94] 
 
 language sl
-
-symbol-hide line survey
-symbol-hide point station
 
 copy point-symbols
 copy line-symbols

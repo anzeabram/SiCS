@@ -1,0 +1,94 @@
+encoding  utf-8
+
+survey main-line -title "Main line - to Velika dvorana"
+
+# th2 includes with scraps
+
+input main-line-p.th2
+# input sump01-e.th2
+
+# map definitions, needs to include all relevant scraps
+
+map m-main-line-p -projection plan
+     main-line-1p
+endmap
+
+# map m-sump01-e -projection extended
+#     sump01-1e
+# endmap
+
+centerline
+    # team members and roles [instruments, notes, assistant, pictures, dimensions]
+    team "Alan Bizjak" instruments notes
+    team "Anže Abram" instruments notes
+
+    # date of survey
+    date 2022.2.26
+
+    # depths as positive numbers
+    calibrate depth 0 -1
+    units length depth meters
+    units compass degrees
+    data diving from to length compass fromdepth todepth
+    # direction for extended elevation view
+    extend right
+    
+    0  1  8.49  140.2  11.83  8.21
+    1  2  4.13  191  8.21  6.22
+    2  3  2.52  194.6  6.22  6.35
+    3  4  5.88  182  6.35  6.44
+    4  5  1.91  183.1  6.44  6.54
+    5  6  2.85  210.3  6.54  7.04
+    6  7  4.65  178.5  7.04  8.76
+    7  8  6.58  192.9  8.76  10.17
+    8  9  2.75  296.2  10.17  11.33
+    9  10  3.14  243.6  11.33  13.06
+    10  11  7.31  302.7  13.06  13.49
+    11  12  3.76  311.1  13.49  13.5
+    12  13  7.04  238.3  13.5  13.75
+    13  14  2.81  180  13.75  14.64
+    14  15  3.62  199.1  14.64  14.91
+    15  16  13.39  195.7  14.91  13.5
+    16  17  2.04  143.1  13.5  12.68
+    17  18  3.97  229.3  12.68  12.31
+    18  19  3.8  200.3  12.31  11.57
+    19  20  5.42  152.5  11.57  11.91
+    20  21  4.22  210.1  11.91  13.95
+    21  22  5.79  207  13.95  14.68
+    22  23  3.62  210  14.68  16.22
+    23  24  5.73  175.9  16.22  17.91
+    24  25  1.67  133.8  17.91  18.41
+    25  26  3.04  128.3  18.41  19.39
+    26  27  9.99  231.8  23  24.24
+    27  28  3.01  185.1  24.24  23.12
+    28  29  5.8  110.3  23.12  19.25
+    29  30  6.65  159.8  19.25  16.64
+    30  31  6.13  153.3  16.64  13.27
+    31  32  1.52  144  13.27  12.56
+    32  33  6.98  223.9  12.56  11.75
+    33  34  8.83  259.8  11.75  13.48
+    34  35  2.21  222.6  13.48  14.99
+    35  36  0.69  191.7  14.99  15.27
+    36  37  3.64  165.6  15.27  16.99
+    37  38  9.03  174.9  16.99  17.92
+    38  39  1.58  175.3  17.92  18.85
+    39  40  6.15  190.5  18.85  20.99
+    40  41  1.44  166.7  20.99  20.63
+    41  42  4.84  173  20.63  19.86
+    42  43  2.41  164.5  19.86  19.03
+    43  44  7.39  173.3  19.03  17.14
+    44  45  5.4  179.3  17.14  15.7
+    45  46  7.23  175.8  15.7  16.85
+    46  47  4.11  191.1  16.85  16.00
+    47  48  5.92  191.1  16.00  15.58
+    48  49  4.47  210.1  15.58  13.93
+
+    station 0 "Start of ML"
+    station 5 "Jump to left side passage"
+    station 17 "Velika dvorana loop"
+    station 31 "Velika dvorana loop"
+    station 47 "Jump (right)"
+    station 49 "EOL"
+endcenterline
+
+endsurvey

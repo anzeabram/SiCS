@@ -1,0 +1,9 @@
+# Map collection for Veliko okence (plan view)
+
+map m-all-p -projection plan -title "Veliko okence"
+	m-entrance-p@entrance
+	m-main-line-p@main-line
+	side-passage01
+	velika-dvorana-loop
+	eol-jump
+endmap

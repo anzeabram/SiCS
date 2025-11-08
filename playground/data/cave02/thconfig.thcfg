@@ -215,6 +215,6 @@ export map -projection extended -layout jama -o "iztegnjen.pdf"
 export map -projection plan -layout jama -o "Delovni_tlorisB.pdf" -layout-color map-fg altitude
 #export map -o Debug_scrap.pdf -layout-debug on -layout-color map-fg scraps
 #export database -output "veliko.sql"
-export map -projection plan -layout jama -o veliko.kml
-export model -o 3d.lox
-export model -format esri -output esri-maps -wall-source all
+# export map -projection plan -layout jama -o veliko.kml
+# export model -o 3d.lox
+# export model -format esri -output esri-maps -wall-source all

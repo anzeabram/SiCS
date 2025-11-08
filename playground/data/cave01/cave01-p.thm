@@ -3,5 +3,5 @@
 map m-all-p -projection plan -title "Cave 01"
 	m-sump01-p@sump01
     m-sump02-p@sump02
-    m-dry01-p@dry01
+    dry01
 endmap

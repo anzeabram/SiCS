@@ -1,6 +1,6 @@
 python3 scripts/create_2d.py.py data/system_migovec.th <survey_selector> --projection <projection>
 
-
+example: python3 scripts/create_2d.py data/veliko-okence/veliko-okence.th entrance --projection plan
 
 python3 scripts/create_2d.py data/cave01/cave01.th dry01@cave01 --projection plan
 

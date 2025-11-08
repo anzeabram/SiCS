@@ -1,0 +1,53 @@
+encoding  utf-8
+
+survey velika-dvorana-loop -title "Temporary loop in Velika dvorana"
+
+# th2 includes with scraps
+
+# input sump01-p.th2
+# input sump01-e.th2
+
+# map definitions, needs to include all relevant scraps
+
+# map m-sump01-p -projection plan
+#      sump01-1p
+# endmap
+
+# map m-sump01-e -projection extended
+#     sump01-1e
+# endmap
+
+centerline
+    # team members and roles [instruments, notes, assistant, pictures, dimensions]
+    team "Alan Bizjak" instruments notes
+    team "Anže Abram" instruments notes
+
+    # date of survey
+    date 2022.2.26
+
+    # depths as positive numbers
+    calibrate depth 0 -1
+    units length depth meters
+    units compass degrees
+    data diving from to length compass fromdepth todepth
+    # direction for extended elevation view
+    extend right
+
+    0  1  5.69  265.7  19.39  18.63 #Velika dovaran, cookie 2
+    1  2  2.6  293.7  18.63  16.81
+    2  3  5.94  321.1  16.81  17.18
+    3  4  4.82  14.4  17.18  17.27
+    4  5  4.7  66.5  17.27  15.57
+    5  6  3.91  55.1  15.57  14.61
+    6  7  1  71.1  14.61  14.58
+    7  8  3.06  30.6  14.58  13.7
+    8  9  5.3  347.1  13.7  11.6
+    9  10  8.85  314  11.6  10.95
+    10  11  4.22  51.3  10.95  11.99
+    11  12  4.94  100  11.99  12.04
+    12  13  2.27  115.9  12.04  12.49
+    13  14  1.79  104  12.49  12.68 #Velika dovaran, cookie 1
+
+endcenterline
+
+endsurvey
