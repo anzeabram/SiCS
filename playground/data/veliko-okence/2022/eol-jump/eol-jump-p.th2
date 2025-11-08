@@ -35,7 +35,7 @@ endscrap
 
 scrap eol-jump-1p -projection plan -scale [0.0 0.0 500 1000.0 -250 -500 250 500]
 
-line u:diveline
+line u:jumpline
   50.87 20.94
   29.37 21.18
 endline

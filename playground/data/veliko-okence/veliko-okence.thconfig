@@ -15,7 +15,7 @@ layout plan
   cs epsg:3912
   grid-origin 0 0 293 m
 
-  symbol-show line survey
+  symbol-hide line survey
   symbol-hide point station
 
 endlayout
