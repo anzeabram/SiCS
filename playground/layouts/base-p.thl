@@ -31,4 +31,55 @@ copy point-symbols
 copy line-symbols
 copy area-symbols
 
+# Scalebar
+code metapost
+  def s_scalebar (expr l, units, txt) =
+  % l = value of scale-bar length
+  % units = ??
+  % txt = string representing units
+    begingroup
+      interim warningcheck:=0;
+      tmpl:=l / Scale * cm * units / 2;
+      % tmpl = half plotted length of scale bar from central top insertion point  
+      tmpx:=l / Scale * cm * units / 5;
+      tmph:=5bp; % bar height
+    endgroup;
+    pickup PenC;
+    draw (-tmpl,0)--(tmpl,0)--(tmpl,-tmph)--(-tmpl,-tmph)--cycle;
+    p:=(0,0)--(tmpx,0)--(tmpx,-tmph)--(0,-tmph)--cycle;
+    for i:=-0.5 step 2 until 2:   % start drawing at the third block (leave space for smaller divisions)
+      fill p shifted (i * tmpx,0);
+    endfor;
+    
+    % Draw first part with subdivided blocks
+    p:=(0,0)--(tmpx/5,0)--(tmpx/5,-tmph)--(0,-tmph)--cycle;  % define width of segment (tmpx is length of a normal bar segment)
+    for i:=-2.5 step 2/5 until -0.75:                        % Startpos, segments, count-index
+      fill p shifted (i * tmpx,0) withcolor black;
+    endfor;
+    
+    % Label of scale: Scalebar top, values below
+    begingroup
+      interim labeloffset:=3.5bp;
+      for i:=0 step (l/5) until (l-1):
+        tmpx:=tmpl * (i * 2 / l - 1);
+        label.bot(thTEX(decimal (i)),(tmpx,-tmph));
+      endfor;
+      label.bot(thTEX(decimal (l) & "\thinspace" & txt),(tmpl,-tmph));
+      label.top(thTEX("Merilo/Scale 1 : " & decimal round(Scale*100)),(0,0));
+    endgroup;
+    
+  enddef;
+endcode
+
+# Altitude enclircled
+code metapost
+  p_label_mode_altitude:=5;
+endcode
+
+# Frame
+code metapost
+code tex-map
+   \framethickness=0.5mm
+endcode
+
 endlayout

@@ -21,7 +21,7 @@ centerline
     team "Name Surname" instruments
     team "Name Surname" notes
     # date of survey
-    date 2022.8.27
+    date 2002.8.27
     # depths as positive numbers
     calibrate depth 0 -1
     units length depth meters
