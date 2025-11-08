@@ -2,8 +2,9 @@
 
 map m-all-p -projection plan -title "Veliko okence"
 	m-entrance-p@entrance
-	m-main-line-p@main-line
+
 	m-side-passage01-p@side-passage01
 	velika-dvorana-loop
 	m-eol-jump-p@eol-jump
+	m-main-line-p@main-line
 endmap

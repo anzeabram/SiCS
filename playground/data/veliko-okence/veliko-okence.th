@@ -24,6 +24,7 @@ survey veliko-okence -title "Veliko okence"
     # connect the individual scraps - plan view
     join entrance-1p@entrance main-line-1p@main-line
     join main-line-1p@main-line side-passage01-1p@side-passage01 -count 2
+    join main-line-1p@main-line eol-jump-1p@eol-jump
 
     # connect the individual scraps - extended view
     # join sump01-1e@sump01 sump02-1e@sump02
