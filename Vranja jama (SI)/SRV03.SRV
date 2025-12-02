@@ -1,12 +1,12 @@
-; Line name: Vranja jama, tretji del. Merjeno VEN							
-; Team: Igor Vrhovec, Sebastjan Gantar							
-#DATE  2019-09-14							
-#UNITS meters ORDER=DA Tape=SS							
+; Line name: Vranja jama, tretji del. Merjeno VEN
+; Team: Igor Vrhovec, Sebastjan Gantar
+#DATE  2019-09-14
+#UNITS meters ORDER=DA Tape=SS
 ; From 	To 	Dist 	Az 	D-From  	D-To	LRUD	Comment
-ML33	ML32	6.42	64.6	52.03	55.06	<0,0,0,0>	; 
-ML32	ML31	2.68	154	55.37	56.01	<0,0,0,0>	; 
-ML31	ML30	8.39	134	56.03	52.87	<0,0,0,0>	; 
-ML30	ML29	4.11	195.8	52.88	51.9	<0,0,0,0>	; 
-ML29	ML28	4.32	183.5	51.69	49.83	<0,0,0,0>	; 
-ML28	ML27	10.32	237.8	49.58	44.63	<0,0,0,0>	; 
-ML27	ML26	7.02	166	44.16	40.43	<0,0,0,0>	; 
+;ML33	ML32	6.42	64.6	52.03	55.06	<0,0,0,0>	;
+;ML32	ML31	2.68	154	55.37	56.01	<0,0,0,0>	;
+;ML31	ML30	8.39	134	56.03	52.87	<0,0,0,0>	;
+ML30	ML29	4.11	195.8	52.88	51.9	<0,0,0,0>	;
+ML29	ML28	4.32	183.5	51.69	49.83	<0,0,0,0>	;
+ML28	ML27	10.32	237.8	49.58	44.63	<0,0,0,0>	;
+ML27	ML26	7.02	166	44.16	40.43	<0,0,0,0>	;
