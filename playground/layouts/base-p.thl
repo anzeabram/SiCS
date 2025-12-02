@@ -13,6 +13,8 @@ legend-columns 1
 # map-header-bg on
 north true
 
+map-header 30 90 e # This probably needs a better way to handle positioning
+
 # Scale
 # scale 1 200
 scale-bar 20 m

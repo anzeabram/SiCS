@@ -723,9 +723,9 @@ line wall
 endline
 
 line wall
-  -258.8009 -664.2342
-  -249.5353 -668.767 -255.3837 -669.1955 -240.5131 -670.6731
-  -194.583 -675.237 -179.1537 -594.1582 -177.0242 -591.3187
+  -249.2488 -666.8059
+  -239.9832 -671.3387 -246.5664 -669.1955 -231.6958 -670.6731
+  -185.7657 -675.237 -179.1537 -594.1582 -177.0242 -591.3187
   -174.8946 -588.4793 -172.7651 -479.5169 -174.8946 -470.6437
   -177.0242 -461.7706 -175.9595 -355.2926 -173.12 -344.29
   -170.2806 -333.2872 -178.7988 -228.9388 -178.444 -203.3841
@@ -759,7 +759,7 @@ line wall
   smooth off
 endline
 
-line border -id eae67be72e694288a3f5c03900e1ba13 -close on -visibility off
+line border -id b47a602aaa8d465cbcfb811db71ba7be -close on -visibility off
   -341.9045 681.3905
   257.8935 681.3905
   257.8935 -682.6662
@@ -768,7 +768,7 @@ line border -id eae67be72e694288a3f5c03900e1ba13 -close on -visibility off
 endline
 
 area water
-  eae67be72e694288a3f5c03900e1ba13
+  b47a602aaa8d465cbcfb811db71ba7be
 endarea
 
 point 201.1882 655.9345 station -name 0
@@ -889,7 +889,7 @@ line rock-border -close on
   68.1007 582.1336 53.6715 588.0885 76.8041 590.3789
 endline
 
-line border -id 4c15ba92a83c4e93bf1541738351f17e -close on -visibility off
+line border -id 7b6208fe8ad24046953c313a5cfc8dfd -close on -visibility off
   33.7453 629.315
   92.6076 629.315
   92.6076 576.6367
@@ -898,7 +898,7 @@ line border -id 4c15ba92a83c4e93bf1541738351f17e -close on -visibility off
 endline
 
 area water
-  4c15ba92a83c4e93bf1541738351f17e
+  7b6208fe8ad24046953c313a5cfc8dfd
 endarea
 
 line wall -close on
