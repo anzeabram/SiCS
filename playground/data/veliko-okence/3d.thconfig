@@ -1,0 +1,13 @@
+encoding  utf-8
+
+source veliko-okence.th
+
+# EXPORT to 3D lox file
+export model -o ../../outputs/3d-centerline.lox -wall-source centerline
+export model -o ../../outputs/3d-maps.lox -wall-source maps
+
+# EXPORT to 3D survex file
+export model -fmt survex -o ../../outputs/3d-survex.3d
+
+# EXPORT to esri shapefiles
+export model -format esri -output ../../outputs/esri -wall-source maps
