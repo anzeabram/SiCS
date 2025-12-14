@@ -1,4 +1,4 @@
-# Malo Okence missions log
+# Malo Okence mission log
 Sem naj gre tekst, ki je v zapisniku za kataster
 Sometext
 ### 2025 12 13 - Scout dive
