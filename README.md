@@ -1,11 +1,13 @@
 # SiCS - Slovenian Cave Survey
 
-This is a repository for underwater survey projects run within Slovenia. Each folder represents a cave project run on voluntary basis by avid cave divers. Each foder contains:
+This is a repository for underwater survey projects run in Slovenia. Each folder represents a cave project run on voluntary basis by avid cave divers. Each folder contains:
 -	raw survey data (.xls exports from MNemo device for UW survey and plaintext from DistoX laser measurements for dry sections.)
 -	formatted survey files and project files for “Walls”, a dedicated program for cave survey data management (free: https://texasspeleologicalsurvey.org/software/walls/tsswalls.php)
 -	vector graphic files and .pdf exports of finalized maps (Adobe Illustrator)
 
-With this repository, we aim to preserve the raw data and allow for further collaboration and advancement in exploration and survey efforts. If you would like to contribute or work on the data, drops us a dm.
+With this repository, we aim to preserve the raw data and allow for further collaboration and advancement in exploration and survey efforts. If you would like to contribute, let us know (find us on social networks)
+
+Moreover, we recently (late 2025) began to experiment with Therion workflow. This would allow us to keep all the data (survey data and the drawings) in plain formats, without the need of propertary software. Our Therion 'playground' can be found in [playground](https://github.com/anzeabram/SiCS/tree/master/playground) folder 
 
 Contributors:
 - Anže Abram
@@ -20,6 +22,7 @@ On the links below you can find a color brewers to be used with carographical da
 
 [Colorbrewer](https://colorbrewer2.org)
 [Colorcodes](https://colorcodes.io)
+[playground](./playground)
 
 ## Resources for metapost code and layouts
 
