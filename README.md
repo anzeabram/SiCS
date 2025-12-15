@@ -7,32 +7,30 @@ This is a repository for underwater survey projects run in Slovenia. Each folder
 
 With this repository, we aim to preserve the raw data and allow for further collaboration and advancement in exploration and survey efforts. If you would like to contribute, let us know (find us on social networks)
 
-Moreover, we recently (late 2025) began to experiment with Therion workflow. This would allow us to keep all the data (survey data and the drawings) in plain formats, without the need of propertary software. Our Therion 'playground' can be found in [playground](https://github.com/anzeabram/SiCS/tree/master/playground) folder 
+Moreover, we recently (late 2025) began to experiment with Therion workflow. This would allow us to keep all the data (survey data and the drawings) in plain formats, without the need of propertary software. Our Therion 'playground' can be found in [playground](./playground) folder, and the process documented below.
 
 Contributors:
 - Anže Abram
 - Sebastjan Gantar
 - Alan Bizjak
 
-# Placeholder
+# How to work with Therion
 
-## Coloring
+During the learning process, several sites and repositories have been of tramendous help. Several pieces of text below are taken from those sites.
 
-On the links below you can find a color brewers to be used with carographical data
+- [Migovec Resurvey Project](https://github.com/tr1813/migresurvey)
+- [Speleo Philippines Expeditions](https://github.com/speleo/SpeleoPhilippines/tree/master)
+- [Therion Wiki](https://therion.speleo.sk/wiki/start)
+- [Therion by examples](http://marcocorvi.altervista.org/caving/tbe/fulltoc.htm)
+- [The Therion book](http://therion.speleo.sk/downloads/thbook.pdf)
 
-[Colorbrewer](https://colorbrewer2.org)
-[Colorcodes](https://colorcodes.io)
-[playground](./playground)
+## Prerequisites
 
-## Resources for metapost code and layouts
+The data is stored in plain text and needs to be compiled with dedicated software. Therion GUI interface is rather archaic and can be avoided completly by the use of extensions.
 
-- https://therion.speleo.sk/wiki/metapost
-- https://github.com/speleo/SpeleoPhilippines/tree/master/CodeLibrary
-- https://therion.speleo.sk/wiki/templates
-- https://therion.speleo.sk/wiki/drawingchecklist
+For compiling and exporting:
 
-
-## macOS install
+[Therion](https://therion.speleo.sk/download.php) - The main compiler. It includes xtherion (a GUI) and Loch for displaying 3d exports. Installation on Windows and Linux is trivial. Users using macOS can either use [Homebrew](https://github.com/ladislavb/homebrew-therion) or compile it themselves.
 
 ```
 cd therion
@@ -43,6 +41,25 @@ cd build
 make
 sudo make install
 ```
+
+For drawing we are using Inkscape and the Therion Inkscape extensions because we think its nicer than using the Therion editor:
+
+[Inkscape](https://inkscape.orghttps//github.com/iccaving/migovec-survey-data/release/) - Vector drawing program
+[Inkscape Therion Extensions](https://github.com/speleo3/inkscape-speleo/) - The extensions that allow you to draw Therion scraps in Inkscape.
+
+For editing the text files:
+
+[VSCode](https://code.visualstudio.com/Download)
+[VSCode Therion Extension](https://marketplace.visualstudio.com/items?itemName=rhystyers.therion) You can also find this one within VSCode Marketplace.
+[VSCode Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) We use python scripts to create .th2 files from survey data.
+
+## Coloring
+
+On the links below you can find a color brewers to be used with carographical data
+
+[Colorbrewer](https://colorbrewer2.org)
+[Colorcodes](https://colorcodes.io)
+
 
 ## Custom tags
 
