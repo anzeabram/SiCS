@@ -7,7 +7,7 @@ This is a repository for underwater survey projects run in Slovenia. Each folder
 
 With this repository, we aim to preserve the raw data and allow for further collaboration and advancement in exploration and survey efforts. If you would like to contribute, let us know (find us on social networks)
 
-Moreover, we recently (late 2025) began to experiment with Therion workflow. This would allow us to keep all the data (survey data and the drawings) in plain formats, without the need of propertary software. Our Therion 'playground' can be found in [playground](./playground) folder, and the process documented below.
+Moreover, we recently (late 2025) began to experiment with Therion workflow. This would allow us to keep all the data (survey data and the drawings) in plain formats, without the need of propertary software and easily integrate to GIS. Our Therion 'playground' can be found in [playground](./playground) folder, and the process documented below.
 
 Contributors:
 - Anže Abram
@@ -272,7 +272,7 @@ python3 scripts/create_2d.py data/cave01/cave01.th passage01@cave01 --projection
 
 - draw walls and other features to both `.th2` files in Inkscape
 - include both `.th2` files to a `.th` survey file of a passage (check `templates`)
-- include scraps in plan and extended view maps
+- include scraps in plan and extended view maps in `{cave}.thm` file
 - join the scraps within `{cave}.th` file
 
 ## Drawing in Inkscape
@@ -286,26 +286,42 @@ Have a look at the layers panel, there should be four:
 - **Symbol legend** : Displays all the possible Therion objects you can place. The intention is that you can copy and paste them from here into the {passage}-1p layer. You should always hide this layer when you are done.
 - **Background images** : Somewhere to import images to help drawing (old surveys, uw drawings).
 
-### Start drawing
+Create hotkeys for 'Set Point/Line/Area type' within Inkscape as you will be using those a lot.
 
-#### Drawing walls
+### Drawing walls
 Use the pen tool to draw the walls around the stations. Make sure the nodes are all connected in one long polygon, except where passages will join in from other sides. In order to set the type of lines as walls or pits or anything else you fancy, select for instance all the lines that you wish to 'set', navigate to Extensions>Therion>Set Line Type>... choose from the dropdown menu and click 'Apply' and let it run. This usually changes the styling of the line, depending on what you've chosen. Wall lines do not change too much, but pits are now barbed, chimneys are steepled lines, rock-borders are slightly thinner etc... Make sure that the 'tails' at the ends of wall feature point inwards.
 
-#### Drawing points
-You can choose them from the 'Symbol Legends' layer, and copy paste them wherever they are needed (but it needs to be in the scrap layer). I tend to use: 'narrow-end' (=) or 'continuation' (?) often. You can reset the type to anything you want using Extensions>Therion>Set Point Type and change the storming lead to a boulder choke and so forth.
+### Drawing points
+You can choose them from the `Symbol Legends` layer, and copy paste them wherever they are needed (but it needs to be in the scrap layer). I tend to use: 'narrow-end' (=) or 'continuation' (?) often. You can reset the type to anything you want using Extensions>Therion>Set Point Type and change the storming lead to a boulder choke and so forth.
 
-#### Add labels
+### Add labels
 I usually just draw a rectangle (does not matter the size or the styling), select the rectangle, navigate to object properties and write the label there.
 
-Syntax: point label -scale <xs/s/m/l/xl> -align <br/r/t/b/tl/tr/bl> -text [mylabel] Choose the scale of the point label carefully.
+Syntax: `point label -scale <xs/s/m/l/xl> -align <br/r/t/b/tl/tr/bl> -text [mylabel]` Choose the scale of the point label carefully.
 
-#### Add depth/altitude
+### Add depth/altitude
 
 The depth of the passage can be displayed via point altitude feature. The data is drawn from the survey data.
 
-#### Drawing cross-sections
+### Drawing cross-sections
 
 Drawing cross-sections consists of two parts. Firstly, you need to create a new layer (scrap) named `scrap passage01-1cs -projection none -scale [7.87402 1 m]` in which to draw the outline of the passage. Secondly, position drawn outline inside your original plan view scrap using `point section -scrap name-of-the-scrap`. Draw `line section` as brezier line. It takes "begin" (beginning of the section line), "end", "both", "none" and "point" as arguments for arrows. Section lines are drawn differently than regular lines. When you place the line, make it a bezier curve and place the control handle that you use to bend the line around next to the spot where you want it to disappear. Do that on both ends of the line. The portions of the section line between the "inside" end points of any two consecutive control points are not drawn. You can also draw poligonal section lines.
+
+### Drawing permanent/temporary line
+
+First copy the survey legs from `DELETE-ME-survey-legs` layer into your scrap layer. Change them from `line survey` to `line u:diveline` or `line u:jumpline` if you want to desplay a dashed line (for jumps or entrance area where reel is primarely used).
+
+### Labeling restrictions
+
+Use user-defined point symbols with arguments `u:r` or `u:rsm` for sidemount restriction. Example:
+
+```
+point 20.3029 107.278 u:r
+```
+
+### Gradient symbols
+
+Add gradients (slope) as `point gradient` and rotate acordingly.
 
 ## Additional helpers
 
