@@ -18,7 +18,7 @@ Contributors:
 
 During the learning process, several sites and repositories have been of tramendous help. Several pieces of text below are taken from those sites.
 
-- [Migovec Resurvey Project](https://github.com/tr1813/migresurvey) The repository structure, text below and layouts were heavily inspired by their work.
+- [Migovec Resurvey Project](https://github.com/tr1813/migresurvey) The repository structure, text below and layouts were *heavily* inspired by their work.
 - [Speleo Philippines Expeditions](https://github.com/speleo/SpeleoPhilippines/tree/master)
 - [Therion Wiki](https://therion.speleo.sk/wiki/start)
 - [Therion by examples](http://marcocorvi.altervista.org/caving/tbe/fulltoc.htm)
@@ -61,10 +61,10 @@ Therion has a complex vocabulary of its own so here is a basic translation.
 
 ### Internal Data
 
-- **survey** - main data structure, which can be nested ad nauseam to represent karst areas, caves or passages. Each survey has an object id, which must be unique within the scope of the higher level survey. Likewise, any object within a survey has unique id (from stations, to maps, scraps). This allows for simple naming of stations within survey files.
+- **survey** : main data structure, which can be nested ad nauseam to represent karst areas, caves or passages. Each survey has an object id, which must be unique within the scope of the higher level survey. Likewise, any object within a survey has unique id (from stations, to maps, scraps). This allows for simple naming of stations within survey files.
 - **centreline** : survey data specification., with syntex mostly derived from Survex. DistoX export will add splays to this section as well.
 - **scrap** : The most basic drawing element, a piece of 2D map (plan, extended, or none - used for drawing cross-sections). It will consist of the walls and stations of the passage as well as lots of extra information like boulders, pits, passage gradients etc. A single set of survey data (a single passage) can have many scraps associated with it. It is often good to split the drawing over many scraps as this allows Therion to do clever things (like depth colouring). Scraps cannot overlap themselves.
-- *map* : The higher level drawing element. A map can be made of scraps, or it can be a map of maps. It can also incorporate stick map of undrawn passages with correct layout options. Maps are how you collect individual drawn passages into larger blocks. For example a cave like ```Cave01``` will have its scraps (that is, drawings from individual passages like `m-passage01-p`, `m-passage02-p`,...) collected in a map called `m-all-p` (`-p` for plan view, `-e` for extended). The maps can be nested and allow for smart exclusion or inclusion of specific sections of the cave.
+- **map** : The higher level drawing element. A map can be made of scraps, or it can be a map of maps. It can also incorporate stick map of undrawn passages with correct layout options. Maps are how you collect individual drawn passages into larger blocks. For example a cave like ```Cave01``` will have its scraps (that is, drawings from individual passages like `m-passage01-p`, `m-passage02-p`,...) collected in a map called `m-all-p` (`-p` for plan view, `-e` for extended). The maps can be nested and allow for smart exclusion or inclusion of specific sections of the cave.
 
 ### Exported Data
 
@@ -102,7 +102,7 @@ In the `data\{cave}` folders you will find `.th` files that define how these ind
 - `{name}.th` will be used to defined equates in the survey and join scraps between passages.
 - `{name}.thm` will be used to combine individual passage maps into larger maps. If maps are not defined, all survey within the scope of the cave are used. The use of the maps allows for easy adjustments and incorporation of stick maps for undrawn passages.
 
-In the `{name}.th` file, passages are arranged by year of discovery. In the `{name}.thm` file, passage map definitions are ordered by cave sub-region, and these subregions are themselves ordered into a map definition for the cave (a high level m-all-p, within the scope of the cave).
+In the `{name}.th` file, passages are arranged by year of discovery. In the `{name}.thm` file, passage map definitions are ordered by cave sub-region, and these subregions are themselves ordered into a map definition for the cave (a high level `m-all-p`, within the scope of the cave).
 
 ### Exports
 
@@ -118,7 +118,9 @@ In the `layouts` folders there are layout files (`.thl`) these are complicated b
 
 The easy way is to find yourself the config file that already does what you want. You can find config templates in `configs` folder and `.theconfig` files for specific cave in their top folder. You can either run it from VSCode through the plugin or in command line. It outputs to `outputs` folder.
 
-```therion data/cave01/cave01.thconfig```
+```
+therion data/cave01/cave01.thconfig
+```
 
 ### Make your own config
 
@@ -131,7 +133,8 @@ You can easily create exports of your own. Every `.thconfig` file follows a simi
 
 A template config file will look like this:
 
-```encoding  utf-8
+```
+encoding  utf-8
 
 source cave01.th
 
@@ -154,7 +157,8 @@ endlayout
 
 select m-all-p@cave01
 
-export map -projection plan -output ../../outputs/cave01-p.pdf -layout plan```
+export map -projection plan -output ../../outputs/cave01-p.pdf -layout plan
+```
 
 ## Coloring
 
@@ -162,7 +166,6 @@ On the links below you can find a color brewers to be used with carographical da
 
 [Colorbrewer](https://colorbrewer2.org)
 [Colorcodes](https://colorcodes.io)
-
 
 ## Custom tags
 
