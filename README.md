@@ -30,7 +30,7 @@ The data is stored in plain text and needs to be compiled with dedicated softwar
 
 For compiling and exporting:
 
-- [Therion](https://therion.speleo.sk/download.php) - The main compiler. It includes xtherion (a GUI) and Loch for displaying 3d exports. Installation on Windows and Linux is trivial. Users using macOS can either use [Homebrew](https://github.com/ladislavb/homebrew-therion) or compile it themselves.
+- [Therion](https://therion.speleo.sk/download.php) - The main compiler. It includes xtherion (a GUI) and Loch for displaying 3d exports. Installation on Windows and Linux is trivial. Users using macOS can either use [Homebrew](https://github.com/ladislavb/homebrew-therion) or compile it themselves. You can also find a [Therion docker container](https://github.com/matteopic/therion-container).
 
 To compile therion on macOS via cmake, first clone the repository and run the following commands.
 
@@ -218,6 +218,8 @@ endcenterline
 
 endsurvey
 ```
+
+`calibrate depth 0 -1` allows for dpeths as positive integers (used for UW survey)
 
 Find the `{cave}.th` file in the `data/{cave}` folder. This file contains a series of input `./year/passage/passage.th` commands to tell the therion compiler to include the relevant survey data. Adding the command input `./year/passage/my_new_passage.th` to this file in the correct year folder is necessary, but we now need to connect the new data to an existing point in the survey, i.e. equate.
 
