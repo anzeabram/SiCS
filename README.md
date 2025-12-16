@@ -53,7 +53,7 @@ For editing the text files:
 
 - [VSCode](https://code.visualstudio.com/Download)
 - [VSCode Therion Extension](https://marketplace.visualstudio.com/items?itemName=rhystyers.therion) You can also find this one within VSCode Marketplace.
-- [VSCode Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) We use python scripts to create .th2 files from survey data (original scripts from [Migovec Survey](https://github.com/tr1813/migresurvey/tree/master/scripts)).
+- [VSCode Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) We use python scripts to create `.th2` files from survey data (original scripts from [Migovec Survey](https://github.com/tr1813/migresurvey/tree/master/scripts)).
 
 ## Therion Glossary
 
@@ -162,7 +162,7 @@ export map -projection plan -output ../../outputs/cave01-p.pdf -layout plan
 
 ## Adding data
 
-You have produced some survey data, either by DistoX (dry sections) or with MNemo (submerged passages). TopoDroid can export in Therion format, but you will have to covert the data from MNemo. First create a new folder for a given passage, following `data/{cave}/{year}/{passage}` hierarchy. Next, use a `.th` template from `templates` folder and fill in the metadata along with the survey data. Name the passage with lower case name (as far as possible, use dashes (-) as spaces). The typical `.th` survey file looks like this:
+You have produced some survey data, either by DistoX (dry sections) or with MNemo (submerged passages). TopoDroid can export in Therion format, but you will have to covert the data from MNemo (script in the works). First create a new folder for a given passage, following `data/{cave}/{year}/{passage}` hierarchy. Next, use a `.th` template from `templates` folder and fill in the metadata along with the survey data. Name the passage with lower case name (as far as possible, use dashes (-) as spaces). The typical `.th` survey file looks like this:
 
 ```
 encoding  utf-8
@@ -429,9 +429,5 @@ Certain points and lines can be further qualified,
 ### Column in the passage
 
 The hole inside the area is bordered by a "wall" line (with "-outline in").
-
-### Labels
-
-Labels are points of type label. The text to display must be written in the "options" textbox as -text .... Enclose the text in double quotes if it contains blank spaces. You may use HTML tags to format the text: <it>for italics, <bf>for boldface, and so on. Use <br>for a new-line, and <right>to right justify the text. The switch <lang:XX>specifes the language. The position of the text can be aligned to the placed point with the "-align" option. This takes values "r" (right), "l" (left), "t" (top), "b" (bottom), "c" (center), "tl", "tr", etc. For example "-align tl" means that the text is placed to the top and left of the point, ie, the point is the bottom-right corner of the text rectangle.
 
 
