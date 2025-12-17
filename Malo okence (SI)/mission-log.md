@@ -11,7 +11,7 @@ Removed the T in the first deep section and create a jump instead. Move the line
 
 **Comments:**
 
-The team was diving 2x Liberty SM RBs (Sebastjan, Simon) and Anže on OC (Air, EAN50, O2). Due to the bursted HP hose, Anže had to shorten the dive. Simon and Sebastjan managed to complete the designated tasks. However, the side line that starts near 'Polica' needs to be resurveyed. The aim is to find a shallower connection to the deeper section (45 m) in order to avoid zig-zag profile.
+The team was diving 2x Liberty SM RBs (Sebastjan, Simon) and Anže on OC (Air, EAN50, O2). Due to the bursted HP hose, Anže had to shorten the dive. Simon and Sebastjan managed to complete the designated tasks. However, the side line that starts near 'Polica' needs to be resurveyed. The aim is to find a shallower connection to the deeper section (45 m) in order to avoid zig-zag profile. The visibility was much worse than 4 days prior without significant rainfall in-between.
 
 ---
 ### 2025 12 13 - Scout dive
