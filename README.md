@@ -44,7 +44,7 @@ make
 sudo make install
 ```
 
-For drawing we are using Inkscape and the Therion Inkscape extensions because we think its nicer than using the Therion editor:
+For sketching we use Inkscape along with Therion Inkscape extensions:
 
 - [Inkscape](https://inkscape.orghttps//github.com/iccaving/migovec-survey-data/release/) - Vector drawing program
 - [Inkscape Therion Extensions](https://github.com/speleo3/inkscape-speleo/) - The extensions that allow you to draw Therion scraps in Inkscape.
@@ -62,8 +62,8 @@ Therion has a complex vocabulary of its own so here is a basic translation.
 ### Internal Data
 
 - **survey** : main data structure, which can be nested ad nauseam to represent karst areas, caves or passages. Each survey has an object id, which must be unique within the scope of the higher level survey. Likewise, any object within a survey has unique id (from stations, to maps, scraps). This allows for simple naming of stations within survey files.
-- **centreline** : survey data specification., with syntex mostly derived from Survex. DistoX export will add splays to this section as well.
-- **scrap** : The most basic drawing element, a piece of 2D map (plan, extended, or none - used for drawing cross-sections). It will consist of the walls and stations of the passage as well as lots of extra information like boulders, pits, passage gradients etc. A single set of survey data (a single passage) can have many scraps associated with it. It is often good to split the drawing over many scraps as this allows Therion to do clever things (like depth colouring). Scraps cannot overlap themselves.
+- **centreline** : survey data specification, with syntax mostly derived from Survex. DistoX export will add splays to this section as well.
+- **scrap** : The most basic drawing element, a piece of 2D map (plan, extended, or none - used for drawing cross-sections). It will consist of the walls and stations of the passage as well as lots of extra information like boulders, pits, passage gradients etc. A single set of survey data (a single passage) can have many scraps associated with it. It is often good to split the drawing over many scraps as this allows Therion to do clever things (like depth coloring). Scraps cannot overlap themselves.
 - **map** : The higher level drawing element. A map can be made of scraps, or it can be a map of maps. It can also incorporate stick map of undrawn passages with correct layout options. Maps are how you collect individual drawn passages into larger blocks. For example a cave like ```Cave01``` will have its scraps (that is, drawings from individual passages like `m-passage01-p`, `m-passage02-p`,...) collected in a map called `m-all-p` (`-p` for plan view, `-e` for extended). The maps can be nested and allow for smart exclusion or inclusion of specific sections of the cave.
 
 ### Exported Data
@@ -127,7 +127,7 @@ therion data/cave01/cave01.thconfig
 You can easily create exports of your own. Every `.thconfig` file follows a similar patter:
 
 - specify the data source (the `.th` file)
-- include layout potions from `.thl` files and include them to the layout that will be used in the export
+- include layout segments from `.thl` files and include them to the layout that will be used in the export
 - select which map from the cave you wish to export
 - define export options and the path where they should be saved
 
@@ -162,7 +162,7 @@ export map -projection plan -output ../../outputs/cave01-p.pdf -layout plan
 
 ## Adding data
 
-You have produced some survey data, either by DistoX (dry sections) or with MNemo (submerged passages). TopoDroid can export in Therion format, but you will have to covert the data from MNemo (script in the works). First create a new folder for a given passage, following `data/{cave}/{year}/{passage}` hierarchy. Next, use a `.th` template from `templates` folder and fill in the metadata along with the survey data. Name the passage with lower case name (as far as possible, use dashes (-) as spaces). The typical `.th` survey file looks like this:
+You have produced some survey data, either by DistoX/BRIC/.. (dry sections) or with MNemo (submerged passages). TopoDroid can export in Therion format, but you will have to covert the data from MNemo (script in the works). First create a new folder for a given passage, following `data/{cave}/{year}/{passage}` hierarchy. Next, use a `.th` template from `templates` folder and fill in the metadata along with the survey data. Name the passage with lower case name (as far as possible, use dashes (-) as spaces). The typical `.th` survey file looks like this:
 
 ```
 encoding  utf-8
@@ -219,13 +219,13 @@ endcenterline
 endsurvey
 ```
 
-`calibrate depth 0 -1` allows for dpeths as positive integers (used for UW survey)
+`calibrate depth 0 -1` allows for depths as positive integers (used for UW survey)
 
-Find the `{cave}.th` file in the `data/{cave}` folder. This file contains a series of input `./year/passage/passage.th` commands to tell the therion compiler to include the relevant survey data. Adding the command input `./year/passage/my_new_passage.th` to this file in the correct year folder is necessary, but we now need to connect the new data to an existing point in the survey, i.e. equate.
+Find the `{cave}.th` file in the `data/{cave}` folder. This file contains a series of input `./year/passage/passage.th` commands to tell the Therion compiler to include the relevant survey data. Adding the command input `./year/passage/my_new_passage.th` to this file in the correct year folder is necessary, but we now need to connect the new data to an existing point in the survey, i.e. equate.
 
-Below the input blocks, you will find a series of `equate` commands, this is where you can tie in your new cave passage to the existing centrelines.
+Below the input blocks, you will find a series of `equate` commands, this is where you can tie in your new cave passage to the existing centerlines.
 
-The main `{cave}.th` file will therefore look similar to this (a template from `tempaltes` folder):
+The main `{cave}.th` file will therefore look similar to this (a template from `templates` folder):
 
 ```
 encoding  utf-8
@@ -277,18 +277,18 @@ python3 scripts/create_2d.py data/cave01/cave01.th passage01@cave01 --projection
 - include scraps in plan and extended view maps in `{cave}.thm` file
 - join the scraps within `{cave}.th` file
 
-## Drawing in Inkscape
+## Sketching in Inkscape
 
-Open the `{passage}-p.th2` file in Inkscape. You should see a centreline of the passage you're editing with some station objects at each node.
+Open the `{passage}-p.th2` file in Inkscape. You should see a centerline of the passage you are editing with some station objects at each node.
 
 Have a look at the layers panel, there should be four:
 
 - **{passage}-1p** : This contains the stations and is where you should draw things like walls.
-- **DELETE-ME-survey-legs** : Shows the survery legs to help you draw. This should be deleted or not saved after the passage is drawn.
+- **DELETE-ME-survey-legs** : Shows the survey legs to help you draw. This should be deleted or not saved after the passage is drawn.
 - **Symbol legend** : Displays all the possible Therion objects you can place. The intention is that you can copy and paste them from here into the {passage}-1p layer. You should always hide this layer when you are done.
-- **Background images** : Somewhere to import images to help drawing (old surveys, uw drawings).
+- **Background images** : Somewhere to import images to help drawing (old surveys, underwater sketches).
 
-Create hotkeys for 'Set Point/Line/Area type' within Inkscape as you will be using those a lot.
+Tip: Create hotkeys for 'Set Point/Line/Area type' in Inkscape as you will be using those a lot.
 
 ### Drawing walls
 Use the pen tool to draw the walls around the stations. Make sure the nodes are all connected in one long polygon, except where passages will join in from other sides. In order to set the type of lines as walls or pits or anything else you fancy, select for instance all the lines that you wish to 'set', navigate to Extensions>Therion>Set Line Type>... choose from the dropdown menu and click 'Apply' and let it run. This usually changes the styling of the line, depending on what you've chosen. Wall lines do not change too much, but pits are now barbed, chimneys are steepled lines, rock-borders are slightly thinner etc... Make sure that the 'tails' at the ends of wall feature point inwards.
@@ -297,21 +297,21 @@ Use the pen tool to draw the walls around the stations. Make sure the nodes are 
 You can choose them from the `Symbol Legends` layer, and copy paste them wherever they are needed (but it needs to be in the scrap layer). I tend to use: 'narrow-end' (=) or 'continuation' (?) often. You can reset the type to anything you want using Extensions>Therion>Set Point Type and change the storming lead to a boulder choke and so forth.
 
 ### Add labels
-I usually just draw a rectangle (does not matter the size or the styling), select the rectangle, navigate to object properties and write the label there.
+Draw a rectangle (does not matter the size or the styling), select the rectangle, navigate to object properties and write the label there.
 
 Syntax: `point label -scale <xs/s/m/l/xl> -align <br/r/t/b/tl/tr/bl> -text [mylabel]` Choose the scale of the point label carefully.
 
 ### Add depth/altitude
 
-The depth of the passage can be displayed via point altitude feature. The data is drawn from the survey data.
+The depth of the passage can be displayed via point altitude feature. The value is obtained from the survey data.
 
 ### Drawing cross-sections
 
-Drawing cross-sections consists of two parts. Firstly, you need to create a new layer (scrap) named `scrap passage01-1cs -projection none -scale [7.87402 1 m]` in which to draw the outline of the passage. Secondly, position drawn outline inside your original plan view scrap using `point section -scrap name-of-the-scrap`. Draw `line section` as brezier line. It takes "begin" (beginning of the section line), "end", "both", "none" and "point" as arguments for arrows. Section lines are drawn differently than regular lines. When you place the line, make it a bezier curve and place the control handle that you use to bend the line around next to the spot where you want it to disappear. Do that on both ends of the line. The portions of the section line between the "inside" end points of any two consecutive control points are not drawn. You can also draw poligonal section lines.
+Drawing cross-sections consists of two parts. Firstly, you need to create a new layer (scrap) named `scrap passage01-1cs -projection none -scale [7.87402 1 m]` in which to draw the outline of the passage. Secondly, position drawn outline inside your original plan view scrap using `point section -scrap name-of-the-scrap`. Draw `line section` as Bézier line. It takes "begin" (beginning of the section line), "end", "both", "none" and "point" as arguments for the arrows. Section lines are drawn differently than regular lines. When you place the line, make it a bezier curve and place the control handle that you use to bend the line around next to the spot where you want it to disappear. Do that on both ends of the line. The portions of the section line between the "inside" end points of any two consecutive control points are not drawn. You can also draw polygonal section (Bézier) lines.
 
-### Drawing permanent/temporary line
+### Drawing permanent/temporary line for underwater passages
 
-First copy the survey legs from `DELETE-ME-survey-legs` layer into your scrap layer. Change them from `line survey` to `line u:diveline` or `line u:jumpline` if you want to desplay a dashed line (for jumps or entrance area where reel is primarely used).
+First copy the survey legs from `DELETE-ME-survey-legs` layer into your scrap layer. Change them from `line survey` to `line u:diveline` or `line u:jumpline` if you want to display them as dashed lines (for jumps or entrance area where line is temporary).
 
 ### Labeling restrictions
 
@@ -323,7 +323,7 @@ point 20.3029 107.278 u:r
 
 ### Gradient symbols
 
-Add gradients (slope) as `point gradient` and rotate acordingly.
+Add gradients (slope) as `point gradient` and rotate accordingly.
 
 ## Additional helpers
 
@@ -333,40 +333,42 @@ Use `sketch.thconfig` to produce a `.svg` file export with a stick map of the su
 
 ### Coloring
 
-On the links below you can find a color brewers to be used with carographical data
+On the links below you can find a color brewers to be used with cartographical data.
 
 - [Colorbrewer](https://colorbrewer2.org)
 - [Colorcodes](https://colorcodes.io)
 
 ### Custom tags
 
-Custom attributes  Objects survey, centreline, scrap, point, line, area, map and surface can contain userdefined attributes in a form -attr <name> <value>. <name> may contain alphanumeric  characters, <value> is a string.  The custom attributes are used in map exports depending on the output format:  • in shapefile export they are written directly to the associated dbf file,  • in maps generated using METAPOST (PDF, SVG) the attributes are written in the  METAPOST source file as strings (named like ATTR_<name>) and can be evaluated and  used by the user to define symbols in macros.
+Custom attributes can contain user-defined attributes in a form -attr <name> <value>. <name> may contain alphanumeric characters, <value> is a string. The custom attributes are used in map exports depending on the output format:
+- in shapefile export they are written directly to the associated dbf file
+- in maps generated using METAPOST (.pdf, .svg) the attributes are written in the METAPOST source file as strings (named like ATTR_<name>) and can be evaluated and used by the user to define symbols in macros.
 
 ### Use 'debug on' to check scrap stitching
 
-- red lines: the original scraps (after rotation and rescaling);
-- blue lines: the scraps adjusted to the "station" positions (before the joins);
-- red points: original positions of the "station" points;
-- yellow points connected by yellow lines: initial positions of the pairs of points with maximal distorsion;
-- black points connected by black lines: final position of pairs of points with maximal distorsion;
-- orange points: points with maximal change of their distance, in the transformation;
-- yellow lines between yello and black points: displacement of these points.
+- red lines: the original scraps (after rotation and rescaling)
+- blue lines: the scraps adjusted to the "station" positions (before the joins)
+- red points: original positions of the "station" points
+- yellow points connected by yellow lines: initial positions of the pairs of points with maximal distorsion
+- black points connected by black lines: final position of pairs of points with maximal distorsion
+- orange points: points with maximal change of their distance, in the transformation
+- yellow lines between yellow and black points: displacement of these points
 
 ### Add pdfs and images to the map
 
-You can insert a picture in the map header with the following map-image command. Images in pdf, png, jpg are supported. Therefore you can insert photos, logos, and also a map, say the extented elevation on the page of the plan. For example,
+You can insert a picture in the map header with the following `map-image` command. Images in `.pdf`, `.png`, `.jpg` are supported. Therefore you can insert photos, logos, and also a map, say the extended elevation on the page of the plan. For example:
 ```
   -layout-map-image 0 50 ne "./elev.pdf"
 ```
 
 ### Layers
 
-Every graphical element belongs to a layer (or group). The graphical elements are rendered in the cave map following the order of the layers. There are five layers:
-* bottom, the lowest layer. It contains only elements that have the option -place bottom.
-* default-bottom. It contains the areas.
-* default;
-* default-top. This contains the ceiling-step and chimney elements by default.
-* top. It contains the elements that have the option -place top.
+Every graphical element belongs to a layer (or a group). The graphical elements are rendered in the cave map following the order of the layers. There are five layers:
+- bottom, the lowest layer. It contains only elements that have the option `-place bottom`.
+- default-bottom. It contains the areas.
+- default;
+- default-top. This contains the `ceiling-step` and `chimney` elements by default.
+- top. It contains the elements that have the option `-place top`.
 
 ### Groups
 
@@ -428,6 +430,6 @@ Certain points and lines can be further qualified,
 
 ### Column in the passage
 
-The hole inside the area is bordered by a "wall" line (with "-outline in").
+The hole inside the area is bordered by a `wall` line (with `-outline in` argument).
 
 
