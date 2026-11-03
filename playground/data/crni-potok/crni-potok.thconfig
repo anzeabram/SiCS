@@ -1,0 +1,26 @@
+encoding  utf-8
+
+source crni-potok.th
+
+input ../../layouts/translations-si.thl
+input ../../layouts/base-p.thl
+
+layout plan
+  copy base-p
+
+  doc-author "Anže Abram"
+  doc-title "Šratlova jama / Izvir Črnega potoka"
+
+  # Grid zero for altitude display
+  cs epsg:3912
+  grid-origin 0 0 510 m
+
+  # symbol-hide line survey
+  # symbol-hide point station
+
+  debug on
+endlayout
+
+select m-all-p@crni-potok
+
+export map -projection plan -output ../../outputs/crni-potok-p.pdf -layout plan

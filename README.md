@@ -162,7 +162,7 @@ export map -projection plan -output ../../outputs/cave01-p.pdf -layout plan
 
 ## Adding data
 
-You have produced some survey data, either by DistoX/BRIC/.. (dry sections) or with MNemo (submerged passages). TopoDroid can export in Therion format, but you will have to covert the data from MNemo (script in the works). First create a new folder for a given passage, following `data/{cave}/{year}/{passage}` hierarchy. Next, use a `.th` template from `templates` folder and fill in the metadata along with the survey data. Name the passage with lower case name (as far as possible, use dashes (-) as spaces). The typical `.th` survey file looks like this:
+You have produced some survey data, either by DistoX/BRIC/.. (dry sections) or with MNemo (submerged passages). TopoDroid can export in Therion format, but you will have to covert the data from MNemo (use `scripts/mnemo_xlsx_to_th.py`). First create a new folder for a given passage, following `data/{cave}/{year}/{passage}` hierarchy. Next, use a `.th` template from `templates` folder and fill in the metadata along with the survey data. Name the passage with lower case name (as far as possible, use dashes (-) as spaces). The typical `.th` survey file looks like this:
 
 ```
 encoding  utf-8
@@ -221,7 +221,7 @@ endsurvey
 
 `calibrate depth 0 -1` allows for depths as positive integers (used for UW survey)
 
-Find the `{cave}.th` file in the `data/{cave}` folder. This file contains a series of input `./year/passage/passage.th` commands to tell the Therion compiler to include the relevant survey data. Adding the command input `./year/passage/my_new_passage.th` to this file in the correct year folder is necessary, but we now need to connect the new data to an existing point in the survey, i.e. equate.
+Find the `{cave}.th` file in the `data/{cave}` folder. This file contains a series of `input ./year/passage/passage.th` commands to tell the Therion compiler to include the relevant survey data. Adding the command input `./year/passage/my_new_passage.th` to this file in the correct year folder is necessary, but we now need to connect the new data to an existing point in the survey, i.e. equate.
 
 Below the input blocks, you will find a series of `equate` commands, this is where you can tie in your new cave passage to the existing centerlines.
 
@@ -266,12 +266,13 @@ endsurvey
 
 The steps go as follow:
 
-- generate `.th2` files for plan and extended view from a newly included survey (passage) via python script. Note that there shouldn't be any `.th2` includes within the `passage01.th` file. Comment them out. Example:
+- generate `.th2` files for plan and extended view from a newly included survey (passage) via python script. Note that there shouldn't be any `.th2` includes within the `passage01.th` file at this point. Comment them out. Example:
 
 ```
 python3 scripts/create_2d.py data/cave01/cave01.th passage01@cave01 --projection plan
 ```
 
+- change `--projection plan` to `--projection extended` to generate extended profile
 - draw walls and other features to both `.th2` files in Inkscape
 - include both `.th2` files to a `.th` survey file of a passage (check `templates`)
 - include scraps in plan and extended view maps in `{cave}.thm` file
@@ -345,6 +346,8 @@ Custom attributes can contain user-defined attributes in a form -attr <name> <va
 - in maps generated using METAPOST (.pdf, .svg) the attributes are written in the METAPOST source file as strings (named like ATTR_<name>) and can be evaluated and used by the user to define symbols in macros.
 
 ### Use 'debug on' to check scrap stitching
+
+You can add `debug on` to the `layout` section of `.thconfig` file.
 
 - red lines: the original scraps (after rotation and rescaling)
 - blue lines: the scraps adjusted to the "station" positions (before the joins)
