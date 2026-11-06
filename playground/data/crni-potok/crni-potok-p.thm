@@ -1,8 +1,8 @@
-# Map collection for Šratlova jama / Izvir Črnega potoka (plan view)
+# Map collection for Izvir Črnega potoka (Šratlova jama) (plan view)
 
-map m-all-p -projection plan -title "Šratlova jama / Izvir Črnega potoka"
-	m-sump01-p@sump01
-    # m-sump02-p@sump02
+map m-all-p -projection plan -title "Izvir Črnega potoka (Šratlova jama)"
+	# m-sump01-p@sump01
+    # m-dry01-p@dry01
     sump01
-    # dry01
+    dry01
 endmap

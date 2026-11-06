@@ -1,6 +1,6 @@
 encoding  utf-8
 
-survey crni-potok -title "Šratlova jama / Izvir Črnega potoka"
+survey crni-potok -title "Izvir Črnega potoka (Šratlova jama)"
 
 	# input the map definitions
 	input ./crni-potok-p.thm #plan view
@@ -9,10 +9,10 @@ survey crni-potok -title "Šratlova jama / Izvir Črnega potoka"
     # input the individual survey data files
     # input ./2026/entrance/entrance.th
     input ./2026/sump01/sump01.th
-    # input ./2026/dry01/dry01.th
+    input ./2026/dry01/dry01.th
 
     # equate stations between different surveys
-    # equate 12@sump01 0@sump02
+    equate -1@sump01 0@dry01
     # equate 12@sump02 1@dry01
 
     # connect the individual scraps - plan view
