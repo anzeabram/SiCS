@@ -7,7 +7,7 @@ This is a repository for underwater survey projects run in Slovenia. Each folder
 
 With this repository, we aim to preserve the raw data and allow for further collaboration and advancement in exploration and survey efforts. If you would like to contribute, let us know (find us on social networks)
 
-Moreover, we recently (late 2025) began to experiment with Therion workflow. This would allow us to keep all the data (survey data and the drawings) in plain formats, without the need of propertary software and easily integrate to GIS. Our Therion 'playground' can be found in [playground](./playground) folder, and the process documented below.
+Moreover, we recently (late 2025) began to experiment with Therion workflow. This would allow us to keep all the data (survey data and the drawings) in plain formats, which can be edited in open-source software and easily integrate to GIS. Our Therion 'playground' can be found in [playground](./playground) folder, and the process documented below.
 
 Contributors:
 - Anže Abram
@@ -16,7 +16,7 @@ Contributors:
 
 # How to work with Therion
 
-During the learning process, several sites and repositories have been of tramendous help. Several pieces of text below are taken from those sites.
+During the learning process, several sites and repositories have been of tremendous help. Several pieces of text below are taken from those sites.
 
 - [Migovec Resurvey Project](https://github.com/tr1813/migresurvey) The repository structure, text below and layouts were *heavily* inspired by their work.
 - [Speleo Philippines Expeditions](https://github.com/speleo/SpeleoPhilippines/tree/master)
@@ -32,7 +32,7 @@ For compiling and exporting:
 
 - [Therion](https://therion.speleo.sk/download.php) - The main compiler. It includes xtherion (a GUI) and Loch for displaying 3d exports. Installation on Windows and Linux is trivial. Users using macOS can either use [Homebrew](https://github.com/ladislavb/homebrew-therion) or compile it themselves. You can also find a [Therion docker container](https://github.com/matteopic/therion-container).
 
-To compile therion on macOS via cmake, first clone the repository and run the following commands.
+To compile Therion on macOS via cmake, first clone the repository and run the following commands.
 
 ```
 cd therion
@@ -52,7 +52,7 @@ For sketching we use Inkscape along with Therion Inkscape extensions:
 For editing the text files:
 
 - [VSCode](https://code.visualstudio.com/Download)
-- [VSCode Therion Extension](https://marketplace.visualstudio.com/items?itemName=rhystyers.therion) You can also find this one within VSCode Marketplace.
+- [VSCode Therion Extension](https://marketplace.visualstudio.com/items?itemName=rhystyers.therion) You can also find this one on VSCode Marketplace.
 - [VSCode Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) We use python scripts to create `.th2` files from survey data (original scripts from [Migovec Survey](https://github.com/tr1813/migresurvey/tree/master/scripts)).
 
 ## Therion Glossary
@@ -74,12 +74,12 @@ Therion can export to a number of formats.
 - **Atlas** : A 2D representation of the survey data split into pages for convenient printing.
 - **Model** : A 3D representation of the survey data. Usually a `.3d` or `.lox` file viewed in aven or loch.
 - **Database** : Survey data dumped to a database for whatever reason. Usually a `.sql` file.
-- **Esri** : Shapefile export that can be inported to GIS software (e.g. [QGIS](https://github.com/qgis/QGIS))
+- **Esri** : Shapefile export that can be imported to GIS software (e.g. [QGIS](https://github.com/qgis/QGIS))
 
 ### Other Key Words
 
 - **equate** : An equate lets Therion know that two stations are the same (that they are joined). This is how basically all the export formats are constructed.
-- **join** : A join lets Therion know that two scraps, or lines should be joined. It does its best to match up any walls that are nearby each other to create a seamless passage when exporting maps and atlases. You can also specify at how many point the scraps should be joined.
+- **join** : A `join` lets Therion know that two scraps, or lines should be joined. It does its best to match up any walls that are nearby each other to create a seamless passage when exporting maps and atlases. You can also specify how many passages you are joining with `-count 2` argument (you have to state the number of passages, not the number of lines/walls).
 
 ## Repository and File Structure
 
@@ -162,7 +162,7 @@ export map -projection plan -output ../../outputs/cave01-p.pdf -layout plan
 
 ## Adding data
 
-You have produced some survey data, either by DistoX/BRIC/.. (dry sections) or with MNemo (submerged passages). TopoDroid can export in Therion format, but you will have to covert the data from MNemo (use `scripts/mnemo_xlsx_to_th.py`). First create a new folder for a given passage, following `data/{cave}/{year}/{passage}` hierarchy. Next, use a `.th` template from `templates` folder and fill in the metadata along with the survey data. Name the passage with lower case name (as far as possible, use dashes (-) as spaces). The typical `.th` survey file looks like this:
+You have produced some survey data, either by DistoX/BRIC/.. (dry sections) or with MNemo (submerged passages). TopoDroid can export in Therion format, but you will have to covert the data from MNemo (use `scripts/mnemo_xlsx_to_th.py`). First create a new folder for a given passage, following `data/{cave}/{year}/{passage}` hierarchy. Next, use a `.th` template from `templates` folder and fill in the metadata along with the survey data. Name the passage with lower case name (as far as possible, use dashes (-) as spaces). A typical `.th` survey file for the submerged part looks like this:
 
 ```
 encoding  utf-8
@@ -220,6 +220,64 @@ endsurvey
 ```
 
 `calibrate depth 0 -1` allows for depths as positive integers (used for UW survey)
+
+A typical `.th` survey file for the dry part looks like this:
+
+```
+encoding  utf-8
+
+survey entrance -title "Dry part"
+
+# th2 includes with scraps
+
+input dry01-p.th2
+input dry01-e.th2
+
+# map definitions, needs to include all relevant scraps
+
+map m-dry01-p -projection plan
+     dry01-1p
+endmap
+
+map m-dry01-e -projection extended
+    dry01-1e
+endmap
+
+centerline
+    # team members and roles [instruments, notes, assistant, pictures, dimensions]
+    team "Person 1" instruments
+    team "Person 2" assistant
+
+    # date of survey
+    date 2024.8.10
+
+    units length meter
+    units compass clino degree
+    data normal from to length compass clino
+
+    # direction for extended elevation view
+    extend right
+
+    0 1 8.50 353 -22.5
+    1 . 2.80 196 18 # Those are splays
+    1 . 3.10 253 27
+    1 . 3.65 105 -14
+    1 2 3.30 21.5 -19
+    2 3 1.95 334 -30
+    3 4 3.20 283 0
+    4 5 2.80 0 0
+    1 6 5.00 225 17
+    6 . 3.70 182 -50
+    6 . 7.60 155 -23
+    6 . 2.80 205 24
+    6 . 5.00 224 40
+
+    station 0 "Entrance"
+
+endcenterline
+
+endsurvey
+```
 
 Find the `{cave}.th` file in the `data/{cave}` folder. This file contains a series of `input ./year/passage/passage.th` commands to tell the Therion compiler to include the relevant survey data. Adding the command input `./year/passage/my_new_passage.th` to this file in the correct year folder is necessary, but we now need to connect the new data to an existing point in the survey, i.e. equate.
 
@@ -302,13 +360,15 @@ Draw a rectangle (does not matter the size or the styling), select the rectangle
 
 Syntax: `point label -scale <xs/s/m/l/xl> -align <br/r/t/b/tl/tr/bl> -text [mylabel]` Choose the scale of the point label carefully.
 
+Example: `point label -scale l -align right -text [Sump 2]`
+
 ### Add depth/altitude
 
 The depth of the passage can be displayed via point altitude feature. The value is obtained from the survey data.
 
 ### Drawing cross-sections
 
-Drawing cross-sections consists of two parts. Firstly, you need to create a new layer (scrap) named `scrap passage01-1cs -projection none -scale [7.87402 1 m]` in which to draw the outline of the passage. Secondly, position drawn outline inside your original plan view scrap using `point section -scrap name-of-the-scrap`. Draw `line section` as Bézier line. It takes "begin" (beginning of the section line), "end", "both", "none" and "point" as arguments for the arrows. Section lines are drawn differently than regular lines. When you place the line, make it a bezier curve and place the control handle that you use to bend the line around next to the spot where you want it to disappear. Do that on both ends of the line. The portions of the section line between the "inside" end points of any two consecutive control points are not drawn. You can also draw polygonal section (Bézier) lines.
+Drawing cross-sections consists of two parts. Firstly, you need to create a new layer (scrap) named `passage01-1cs -projection none -scale [7.87402 1 m]` in which to draw the outline of the passage. Secondly, position drawn outline inside your original plan view scrap using `point section -scrap name-of-the-scrap`. Draw `line section`. It takes "begin" (beginning of the section line), "end", "both", "none" and "point" as `-direction` argument for the arrows. Section lines are drawn differently than regular lines. When you place the line, make it a Bézier curve and place the control handle that you use to bend the line around next to the spot where you want it to disappear. Do that on both ends of the line. The portions of the section line between the "inside" end points of any two consecutive control points are not drawn. You can also draw polygonal section (Bézier) lines.
 
 ### Drawing permanent/temporary line for underwater passages
 

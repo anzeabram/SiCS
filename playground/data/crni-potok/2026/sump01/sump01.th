@@ -20,8 +20,8 @@ endmap
 centerline
     # team members and roles [instruments, notes, assistant, pictures, dimensions]
     team "Anže Abram" instruments
-    team "Igor Vrhovec" notes
-    team "Simon Burja" notes
+    team "Igor Vrhovec" assistant
+    team "Simon Burja" assistant
 
     # date of survey
     date 2026.10.16
@@ -32,7 +32,7 @@ centerline
     units compass degrees
     data diving from to length compass fromdepth todepth
     # direction for extended elevation view
-    extend right
+    extend left
     
     -1 0  3.50  238.6   0.43  0.00 # Correction of the first shot, to match the dry part
     0  1  4.34  208.15  0.43  2.62

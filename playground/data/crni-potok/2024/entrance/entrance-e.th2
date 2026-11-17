@@ -1,0 +1,89 @@
+encoding  utf-8
+##XTHERION## xth_me_area_adjust -250.0 -500.0 250.0 500.0
+##XTHERION## xth_me_area_zoom_to 100
+
+
+
+scrap entrance-1e -projection extended -scale [7.87402 1 m]
+
+line border -id 3cb78c25f36f4ab89a3a9f884ca429b9 -close on -visibility off
+  57.9997 -7.8219
+  19.4095 -7.8219
+  25.9013 -25.8546
+  59.0816 -18.8219
+  57.9997 -7.8219
+endline
+
+area water
+  3cb78c25f36f4ab89a3a9f884ca429b9
+endarea
+
+line border -id 3154f31cd15f4e9a84ba513bd3504d26 -close on -visibility off
+  -39.5811 -15.5373
+  -6.2485 -15.5373
+  -18.3535 -20.813
+  -35.5461 -19.3742
+  -39.5811 -15.5373
+endline
+
+area water
+  3154f31cd15f4e9a84ba513bd3504d26
+endarea
+
+line wall
+  50.8786 -8.2813
+  50.4423 -2.0424 48.1774 0.6112 44.8235 5.3988
+  41.4695 10.1863 40.4945 11.5509 39.0959 16.3722
+  37.6973 21.1935 33.4548 22.3749 27.343 26.9935
+  21.2312 31.6121 11.7236 42.9011 4.1714 39.7485
+  -3.3809 36.5958 -0.2165 21.7482 -9.3215 18.1821
+  -18.4265 14.6161 -33.4197 12.2371 -44.5878 14.6063
+  -55.7559 16.9755 -79.5875 22.8972 -79.5875 22.8972
+  smooth off
+endline
+
+line wall
+  -79.6962 5.9088
+  -79.6962 5.9088 -56.1512 5.5702 -48.6841 1.1782
+  -41.217 -3.2138 -43.0853 -11.6751 -36.069 -15.1163
+  -29.0528 -18.5576 -16.9552 -18.1619 -9.7876 -15.1163
+  -2.62 -12.0708 -0.3767 -2.5659 4.4044 -0.3987
+  9.1855 1.7685 10.0656 2.7831 15.4426 0.1269
+  20.8195 -2.5293 22.6004 -0.2391 24.4051 -5.4054
+  26.2097 -10.5717 27.8159 -14.5522 27.8159 -14.5522
+  smooth off
+endline
+
+point -77.18 15.28 station -name 0
+
+point -15.34 -10.31 station -name 1
+
+point -34.64 -3.54 station
+
+point 3.89 0.71 station
+
+point -25.79 -17.32 station
+
+point 9.22 -18.82 station -name 2
+
+point 22.52 -26.46 station -name 3
+
+point 47.72 -26.46 station -name 4
+
+point 69.76 -26.46 station -name 5
+
+point 22.3 1.18 station -name 6
+
+point 39.67 -21.18 station
+
+point 77.18 -22.2 station
+
+point 36.55 10.16 station
+
+point 35.52 26.46 station
+
+point 39.1 -4.96 station -name 7
+
+endscrap
+
+

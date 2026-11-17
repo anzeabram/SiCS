@@ -9,18 +9,35 @@ layout plan
   copy base-p
 
   doc-author "Anže Abram"
-  doc-title "Šratlova jama / Izvir Črnega potoka"
+  doc-title "Šratlova jama"
 
   # Grid zero for altitude display
   cs epsg:3912
   grid-origin 0 0 510 m
 
-  # symbol-hide line survey
-  # symbol-hide point station
+  symbol-hide line survey
+  symbol-hide point station
 
-  debug on
+  # debug on
+endlayout
+
+layout extended
+  copy base-p
+
+  doc-author "Anže Abram"
+  doc-title "Šratlova jama"
+
+  # Grid zero for altitude display
+  cs epsg:3912
+  grid-origin 0 0 510 m
+
+  symbol-hide line survey
+  symbol-hide point station
+
+  # debug on
 endlayout
 
 select m-all-p@crni-potok
 
 export map -projection plan -output ../../outputs/crni-potok-p.pdf -layout plan
+export map -projection extended -output ../../outputs/crni-potok-e.pdf -layout extended

@@ -73,4 +73,43 @@ code metapost
 	initsymbol("a_blocks_MY");
     symbol-assign area blocks MY
 
+# grey pebbles, randomly oriented in area
+		def a_pebbles_MY (expr p) =
+			T:=identity;
+			
+			pickup PenD;
+			path q; q = bbox p;
+			picture tmp_pic;
+			picture tmp_pebblea;
+			picture tmp_pebbleb;
+			pair z;
+			pair za;
+			tmp_pebblea := image (
+			draw (((-.12u,0)..(.05u,0)..(.007u,0.003u)..(-0.004u,0.005u)--cycle) scaled 0.035u) withcolor(0.3,0.3,0.3);
+			fill (((-.12u,0)..(.05u,0)..(.007u,0.003u)..(-0.004u,0.005u)--cycle) scaled 0.035u) withcolor(1,1,1);
+			);
+
+			tmp_pebbleb := image (
+			draw (((((-.12u,0)..(.05u,0)..(.007u,0.003u)..(-0.004u,0.005u)--cycle)rotated 35)  scaled 0.025u) shifted (0.2u,0.2u)) withcolor(0.3,0.3,0.3);
+			fill (((((-.12u,0)..(.05u,0)..(.007u,0.003u)..(-0.004u,0.005u)--cycle)rotated 35) scaled 0.025u) shifted (0.2u,0.2u)) withcolor(1,1,1);
+			);
+			tmp_pic := image(
+			for i = xpart llcorner q step .4u until xpart urcorner q:
+			for j = ypart llcorner q step .4u until ypart urcorner q:
+			z := ((i,j) randomized 0.4u);
+			za :=((i,j) randomized 0.4u) ;
+			if xpart (p intersectiontimes ((bbox tmp_pebblea) shifted z)) < 0:
+			draw tmp_pebblea shifted z;
+			draw tmp_pebbleb shifted z;
+			fi;
+			endfor;
+			endfor;
+			);
+			clip tmp_pic to p;
+			drawoptions();
+			draw tmp_pic;
+		enddef;
+		initsymbol("a_pebbles_MY");
+		symbol-assign area pebbles MY
+
 endlayout

@@ -20,7 +20,7 @@ endmap
 centerline
     # team members and roles [instruments, notes, assistant, pictures, dimensions]
     team "Anže Abram" instruments
-    team "Simon Burja" notes
+    team "Simon Burja" instruments
 
     # date of survey
     date 2026.10.23

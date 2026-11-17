@@ -49,4 +49,10 @@ def p_u_rsm(expr P,R,S,A)=
 enddef;
 initsymbol("p_u_rsm");
 
+# Altitude/depth symbol color change - red
+symbol-color point altitude [100 0 0]
+
+# Water Flow symbol color change - blue
+symbol-color point water-flow [0 20 40]
+
 endlayout

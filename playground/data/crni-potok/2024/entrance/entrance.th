@@ -1,0 +1,60 @@
+encoding  utf-8
+
+survey entrance -title "Entrance"
+
+# th2 includes with scraps
+
+input entrance-p.th2
+input entrance-e.th2
+
+# map definitions, needs to include all relevant scraps
+
+map m-entrance-p -projection plan
+     entrance-1p
+endmap
+
+map m-entrance-e -projection extended
+    entrance-1e
+endmap
+
+centerline
+    # team members and roles [instruments, notes, assistant, pictures, dimensions]
+    team "Anton Della/Schiava" instruments
+    team "Matjaž Belšak" instruments
+    team "Jaka Petruša" instruments
+    team "Aljoša Volk" assistant
+    team "Alan Bizjak" instruments
+    team "Anton Oberstar" assistant
+
+    # date of survey
+    date 2024.8.10
+
+    units length meter
+    units compass clino degree
+    data normal from to length compass clino
+
+    # direction for extended elevation view
+    extend right
+
+    0 1 8.50 353 -22.5
+    1 . 2.80 196 18
+    1 . 3.10 253 27
+    1 . 3.65 105 -14
+    1 2 3.30 21.5 -19
+    2 3 1.95 334 -30
+    3 4 3.20 283 0
+    4 5 2.80 0 0
+    1 6 5.00 225 17
+    6 . 3.70 182 -50
+    6 . 7.60 155 -23
+    6 . 2.80 205 24
+    6 . 5.00 224 40
+    6 7 2.27 160 -20 # Correction to the water surface
+
+    station 0 "Entrance"
+    station 5 "Sump 3"
+    station 7 "Sump 2"
+
+endcenterline
+
+endsurvey
