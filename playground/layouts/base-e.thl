@@ -1,0 +1,100 @@
+encoding  utf-8
+
+input ./symbols/point.thl
+input ./symbols/line.thl
+input ./symbols/area.thl
+
+layout base-e
+
+legend on
+legend-columns 1
+# legend-width 20 cm
+# map-header x y position
+map-header-bg on
+north true
+
+map-header 9 30 e # This probably needs a better way to handle positioning
+
+# Scale
+# scale 1 200
+scale-bar 20 m
+# Scale of symbols
+# base-scale 1 200
+
+# color map-bg [80 80 80]
+# color map-fg [85 96 94]
+
+grid bottom
+grid-size 10 10 5 m
+grid-coords border
+
+language sl
+
+copy point-symbols
+copy line-symbols
+copy area-symbols
+
+# Scalebar
+code metapost
+  def s_scalebar (expr l, units, txt) =
+  % l = value of scale-bar length
+  % units = ??
+  % txt = string representing units
+    begingroup
+      interim warningcheck:=0;
+      tmpl:=l / Scale * cm * units / 2;
+      % tmpl = half plotted length of scale bar from central top insertion point  
+      tmpx:=l / Scale * cm * units / 5;
+      tmph:=5bp; % bar height
+    endgroup;
+    pickup PenC;
+    draw (-tmpl,0)--(tmpl,0)--(tmpl,-tmph)--(-tmpl,-tmph)--cycle;
+    p:=(0,0)--(tmpx,0)--(tmpx,-tmph)--(0,-tmph)--cycle;
+    for i:=-0.5 step 2 until 2:   % start drawing at the third block (leave space for smaller divisions)
+      fill p shifted (i * tmpx,0);
+    endfor;
+    
+    % Draw first part with subdivided blocks
+    p:=(0,0)--(tmpx/5,0)--(tmpx/5,-tmph)--(0,-tmph)--cycle;  % define width of segment (tmpx is length of a normal bar segment)
+    for i:=-2.5 step 2/5 until -0.75:                        % Startpos, segments, count-index
+      fill p shifted (i * tmpx,0) withcolor black;
+    endfor;
+    
+    % Label of scale: Scalebar top, values below
+    begingroup
+      interim labeloffset:=3.5bp;
+      for i:=0 step (l/5) until (l-1):
+        tmpx:=tmpl * (i * 2 / l - 1);
+        label.bot(thTEX(decimal (i)),(tmpx,-tmph));
+      endfor;
+      label.bot(thTEX(decimal (l) & "\thinspace" & txt),(tmpl,-tmph));
+      label.top(thTEX("Merilo/Scale 1 : " & decimal round(Scale*100)),(0,0));
+    endgroup;
+    
+  enddef;
+endcode
+
+# Altitude enclircled
+code metapost
+  p_label_mode_altitude:=5;
+endcode
+
+# Frame
+code metapost
+code tex-map
+   \framethickness=0.5mm
+endcode
+
+# Depth dashed lines
+code metapost
+  def s_vgrid (expr xpos, ypos, xsize, ysize) =
+    pickup PenD;
+    draw (
+      if xpos < 0: 0 else: -xsize/2 fi, 0
+      ) -- (
+      if xpos > 0: 0 else: xsize/2 fi, 0
+      ) dashed evenly withcolor (0.6, 0.6, 0.6);
+  enddef;
+endcode
+
+endlayout

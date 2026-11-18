@@ -499,6 +499,38 @@ endscrap
 
 scrap sump01-1e -projection extended -scale [7.87402 1 m]
 
+point 1425.1964 221.7907 altitude
+
+point 1168.2735 212.8801 altitude
+
+point 753.9297 173.2773 altitude
+
+point 328.2001 214.3652 altitude
+
+point 118.3056 174.7624 altitude
+
+point 52.961 139.615 altitude
+
+point -154.9535 79.7158 altitude
+
+point -246.5348 -40.0825 altitude
+
+point -398.0153 -168.2964 altitude
+
+point -483.6563 -230.1757 altitude
+
+point -763.8457 -196.0183 altitude
+
+point -912.8511 -112.8526 altitude
+
+point -1108.3897 -32.657 altitude
+
+point -1243.5341 46.0535 altitude
+
+point -1335.1155 109.4179 altitude
+
+point -1405.9054 162.3866 altitude
+
 line u:diveline
   1460.62 232.91
   1431.11 215.67

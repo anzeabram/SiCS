@@ -4,12 +4,15 @@ source crni-potok.th
 
 input ../../layouts/translations-si.thl
 input ../../layouts/base-p.thl
+input ../../layouts/base-e.thl
 
 layout plan
   copy base-p
 
   doc-author "Anže Abram"
   doc-title "Šratlova jama"
+
+  map-comment "Izvir Črnega potoka"
 
   # Grid zero for altitude display
   cs epsg:3912
@@ -22,10 +25,12 @@ layout plan
 endlayout
 
 layout extended
-  copy base-p
+  copy base-e
 
   doc-author "Anže Abram"
   doc-title "Šratlova jama"
+
+  map-comment "Izvir Črnega potoka"
 
   # Grid zero for altitude display
   cs epsg:3912
